@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="IDL_OE_ORD_DTL" directorySegmentName="seg_1" id="842A0254-D7B7-A768-E57F-51A02F67927C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE6EEBB9-0063-E3CD-F3F5-55D108F32C7C</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="IDL_OE_ORD_DTL_NBR" id="256E9D5C-D3E3-8C9C-EDA0-BE4135FD57A0">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORD_CD" id="33C0BBA4-D516-E9C5-F719-BA2F614F1F4C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_CD" id="38ED6BE7-A7EC-F42A-01D1-015F82655A95">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RQST_DT_TEXT" id="3B39F0E6-9AD1-2E89-9951-DAE4F2DC4C03">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="RQST_DT" id="3EEBDD2E-5A10-060F-D215-EB34AB7714F3">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_CD_CUST" id="49D11B9F-04E1-5652-4E7A-7A64DCD3A6D7">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUST_PO_CD" id="56682CB3-38FB-C615-1EE6-54254A04D7DC">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LINE_NBR" id="5C800BAD-54C4-958E-E73F-5939D07CA01C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FOB_CD" id="63C508E4-7B1C-3B2B-5D29-5CDC846E73B7">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORD_DT" id="66D489FE-61B6-1994-7AE1-400113A88BBD">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORG_CD_CUST" id="739651F2-24A7-AC36-9F0B-4791E2B922FC">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PROM_DT" id="84026EA7-7804-62FD-FB78-75ABF32344F6">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIP_FROM_FACILITY" id="8EA252B5-97AF-470C-9DBA-135E2E8F501F">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORD_TYPE_CD" id="97EB3D92-C510-9466-E8FC-6C9980130A6B">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALES_TERR_CD" id="9AFA403F-8D49-4219-7978-568E5ADF2456">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PROM_DT_TEXT" id="A6144A56-2BF7-E62E-CEEA-C5B632EF55F1">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SELL_UM" id="AE786467-3E1B-40C4-C8A0-EF8391DAA8E3">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TERM_CD" id="B119027F-ADC4-9672-1052-0B7FF547F5EB">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QTY_ORD" id="CEB94E60-6DDD-1228-55A2-D00D7771907B">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CURR_CD" id="CEC8EF63-72FF-D227-1FA3-62AFDC22C23A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORD_DT_TEXT" id="FF1F654F-AC31-17A0-B26C-AEA2186A1017">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHIP_VIA_CD" id="FF30D39F-69FA-0750-E3D0-2F7BFE828B14">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDL_OE_ORD_DTL_NDX_01" id="B6A05B99-6D7C-DD24-4014-B44EA4FAC99A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<segment>FDE8DACF-6553-A53B-F936-D56A2B10157D</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+</IndexProxy>
+</indexProxies>
+</TableProxyOraclev11g>

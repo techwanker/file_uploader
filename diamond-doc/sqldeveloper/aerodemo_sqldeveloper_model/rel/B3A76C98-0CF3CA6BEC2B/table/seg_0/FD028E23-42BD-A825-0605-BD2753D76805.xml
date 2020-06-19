@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FD028E23-42BD-A825-0605-BD2753D76805" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="CAL_HOLIDAY">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CAL_HOLIDAY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAL_HOLIDAY_NBR" id="BDFE04C2-6CFB-F10E-A0FC-B8631A71E11C">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>CAL_HOLIDAY_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALENDAR" id="968AFDEB-FE61-432D-887E-9FD605D5AAF6">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>CALENDAR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTH" id="BC821E2D-6C46-5FE8-098C-B3E1CE5D6799">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>MONTH</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAY_OF_MONTH" id="E29AC363-6E34-54B8-6E00-E93D7B261F2C">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>DAY_OF_MONTH</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECURS" id="77BCC605-30F5-53E4-0C31-FCCDD1300847">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>RECURS</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALIGN" id="CB36D742-48DB-9019-EEAF-7B11DA4BB87F">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>ALIGN</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>&apos;PREVWK&apos; - Previous Work Day&lt;br/&gt;&apos;NEXTWK&apos; - Next Work Day&lt;br/&gt;&apos;IFWK&apos;        - If a work day&lt;br/&gt;&apos;CLOSEST&apos; - Closest work day</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<constraintName>ALIGN_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;CLOSEST&apos;" description=""/>
+<valueDef value="&apos;IFWORK&apos;" description=""/>
+<valueDef value="&apos;NEXTWORK&apos;" description=""/>
+<valueDef value="&apos;PREVWORK&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_DT" id="4751689F-7816-2232-278B-C924EE2AD9C9">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>START_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_DT" id="38D82E1D-3A1E-25E1-8936-6445DB163E25">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>END_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OCCURENCE" id="9EA96E8C-9C39-AC9F-B804-F52A161FAA89">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>OCCURENCE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>&apos;1ST&apos;,&apos;2ND&apos;,&apos;3RD&apos;,&apos;4TH&apos;,&apos;5TH&apos;,&apos;LAST&apos;</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<constraintName>CK_OCCURENCE</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;1ST&apos;" description=""/>
+<valueDef value="&apos;2ND&apos;" description=""/>
+<valueDef value="&apos;3RD&apos;" description=""/>
+<valueDef value="&apos;4TH&apos;" description=""/>
+<valueDef value="&apos;5TH&apos;" description=""/>
+<valueDef value="&apos;LAST&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DAY_OF_WEEK" id="5BDF4719-E07D-AE49-F893-214E7F5936FA">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_HOLIDAY</sourceObjSchema>
+<sourceObjName>DAY_OF_WEEK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

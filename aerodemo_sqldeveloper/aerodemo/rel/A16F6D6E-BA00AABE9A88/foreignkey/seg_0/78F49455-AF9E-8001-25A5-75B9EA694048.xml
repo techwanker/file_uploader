@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="78F49455-AF9E-8001-25A5-75B9EA694048" containerWithKeyObject="694AD07F-DD5C-30A1-C400-CF26A300713A" localFKIndex="A786F4A6-7261-D04F-B93F-30F481497989" name="IIA_IIM_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IIA_IIM_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:31 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<referredTableLongName>AERODEMO.IC_ITEM_MAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D1ADEBF1-323B-BADF-2950-99294D2C3B2B</referredTableID>
+<keyObject>54A26792-1B8D-88B4-F459-BA55A2A30C9F</keyObject>
+<referredKeyID>54A26792-1B8D-88B4-F459-BA55A2A30C9F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ITEM_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

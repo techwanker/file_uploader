@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="APS_IDEAL_GLOBAL_REPLEN" directorySegmentName="seg_1" id="8D2C7710-B2AB-91DE-C9EA-B7BB533EC047">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE6EEBB9-0063-E3CD-F3F5-55D108F32C7C</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="REPLEN_DT" id="4FB1E0A0-EBF8-4422-E66E-6577B7AB23BE">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_NBR" id="85989F6E-EC07-4E4F-59AB-0B32B7E24152">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REPLEN_QTY" id="FBC61622-9A5F-CD02-F4D1-53B4422669E3">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="APS_IDEAL_GLOBAL_REPLEN_PK" id="F94709D3-1DA4-FA22-D131-069A04D44731">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<segment>FDE8DACF-6553-A53B-F936-D56A2B10157D</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="APS_IDEAL_GLOBAL_REPLEN_PK" id="09669F91-4138-F759-D858-6ED9C4D509A6">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:27 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<segment>FDE8DACF-6553-A53B-F936-D56A2B10157D</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+<existingIndex>F94709D3-1DA4-FA22-D131-069A04D44731</existingIndex>
+<indexSegment>FDE8DACF-6553-A53B-F936-D56A2B10157D</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

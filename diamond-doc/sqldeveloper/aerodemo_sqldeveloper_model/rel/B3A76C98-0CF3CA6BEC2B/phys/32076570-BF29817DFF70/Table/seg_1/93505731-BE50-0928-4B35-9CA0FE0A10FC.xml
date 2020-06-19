@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="IDL_CUST_MAST" directorySegmentName="seg_1" id="93505731-BE50-0928-4B35-9CA0FE0A10FC">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>DE6EEBB9-0063-E3CD-F3F5-55D108F32C7C</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FCST_GRP" id="208D858C-C93B-268D-2A5F-673EEF701A3F">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IDL_CUST_MAST_NBR" id="2A0C85A6-DDDD-0186-B752-2066CC01CB3A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SLS_GRP" id="2C99C4CF-417E-BCEF-8654-3B6731AF48FD">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ORG_CD_CUST" id="3BB99994-CBC5-46CD-B591-B7A871C7F0AA">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SALESMAN_CD" id="6766495F-78F4-93CD-19E6-96EBA3563497">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SLS_TERR_CD" id="A9BB7D23-5EF6-B3D2-821E-38DCECA41F3C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IDL_CUST_MAST_UK" id="205A2619-A823-851B-1C72-A1D6400A8AA3">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+<segment>FDE8DACF-6553-A53B-F936-D56A2B10157D</segment>
+<tableSpace>2F79DF2C-B330-1435-F3B7-ADD6FC3016F1</tableSpace>
+</IndexProxy>
+</indexProxies>
+</TableProxyOraclev11g>

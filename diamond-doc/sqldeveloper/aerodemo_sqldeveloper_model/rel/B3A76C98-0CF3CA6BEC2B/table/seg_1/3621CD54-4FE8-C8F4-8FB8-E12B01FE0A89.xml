@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3621CD54-4FE8-C8F4-8FB8-E12B01FE0A89" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_RESCHED">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_RESCHED</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PO_LINE_DTL_NBR" id="CFABCAEC-A3BE-08E1-47D4-A5173029EF4B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_RESCHED</sourceObjSchema>
+<sourceObjName>PO_LINE_DTL_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESCHED_DT" id="4E251CBD-E631-CA59-33AD-F74356BB9BCB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_RESCHED</sourceObjSchema>
+<sourceObjName>RESCHED_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESCHED_QTY" id="50D7631A-1219-8817-5C51-917E042B76B8">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_RESCHED</sourceObjSchema>
+<sourceObjName>RESCHED_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,13,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORG_NBR_VND" id="F828BBD1-1EA6-DB11-F06A-77B6A6D13A83">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_RESCHED</sourceObjSchema>
+<sourceObjName>ORG_NBR_VND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_DT" id="958DC16E-9F0B-EA95-5086-1EAC87FEE6CB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_RESCHED</sourceObjSchema>
+<sourceObjName>PRD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C49BE9B3-7E43-B1DD-A3AD-1161CFA73313" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_RESCHED_NDX_01">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_RESCHED_NDX_01</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F828BBD1-1EA6-DB11-F06A-77B6A6D13A83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D5925A9-0402-ED73-FE6A-0CA4C63364DC" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_RESCHED_NDX_02">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_RESCHED_NDX_02</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFABCAEC-A3BE-08E1-47D4-A5173029EF4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

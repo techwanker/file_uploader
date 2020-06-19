@@ -1,0 +1,5 @@
+
+description = 'javautil-diff-match'
+dependencies {
+    compile group: 'name.fraser.neil', name: 'diff-match', version:'1.0'
+}

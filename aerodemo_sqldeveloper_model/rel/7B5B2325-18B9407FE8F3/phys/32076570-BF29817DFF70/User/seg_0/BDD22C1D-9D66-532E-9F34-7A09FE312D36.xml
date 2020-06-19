@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="AERODEMO" directorySegmentName="seg_0" id="BDD22C1D-9D66-532E-9F34-7A09FE312D36">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjName>AERODEMO</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:00 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57</schemaObject>
+</UserOraclev10g>

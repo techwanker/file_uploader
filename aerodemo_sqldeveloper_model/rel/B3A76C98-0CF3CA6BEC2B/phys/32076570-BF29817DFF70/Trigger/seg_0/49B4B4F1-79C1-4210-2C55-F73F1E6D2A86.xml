@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="FC_ITEM_MAST_AU" directorySegmentName="seg_0" id="49B4B4F1-79C1-4210-2C55-F73F1E6D2A86">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_AU</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>UPDATE</actions>
+<body>BEGIN&lt;br/&gt;	IF :NEW.safety_stk_adj IS NOT NULL THEN&lt;br/&gt;		IF :NEW.safety_stk_adj != NVL(:OLD.safety_stk_adj,0) THEN&lt;br/&gt;			INSERT INTO aps_rqst_queue (item_nbr)&lt;br/&gt;			VALUES (:NEW.item_nbr) ;&lt;br/&gt;		END IF;&lt;br/&gt;	ELSE&lt;br/&gt;		IF :OLD.safety_stk_adj IS NOT NULL THEN&lt;br/&gt;			INSERT INTO aps_rqst_queue (item_nbr)&lt;br/&gt;			VALUES (:NEW.item_nbr) ;&lt;br/&gt;		END IF;&lt;br/&gt;	END IF;&lt;br/&gt;END	fc_item_mast_au ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<columns>66905AB6-3E26-E128-8320-208F79A99E53</columns>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>57D9AEE2-88C3-E507-58CA-C71DA0657363</table>
+</TriggerOraclev10g>

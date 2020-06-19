@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="609D32E5-C95E-B4BB-FF38-4D6686AFBACE" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_ITEM_ATTR">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_ATTR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITEM_NBR" id="36144AAA-69B3-0A49-566B-F6C5D61DF030">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_ATTR</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>A foreign key back to the item master.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E53185B-54EB-DA1A-C8A5-71B18491AA8F" referredColumn="861936C9-7214-4ACB-53B4-BBA07C43C816"/>
+</associations>
+</Column>
+<Column name="IC_ATTR_NBR" id="E4DF681C-1E36-AD78-5502-0A2CF1ED08AF">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_ATTR</sourceObjSchema>
+<sourceObjName>IC_ATTR_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Surrogate primary key for IC_ATTR_NBR</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATTR_VAL" id="5412BBFB-32D9-6273-1136-474700AD0364">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_ATTR</sourceObjSchema>
+<sourceObjName>ATTR_VAL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Attribute value.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UT_USER_NBR" id="607B53A0-55CF-B306-AF26-4E9F545EBC6F">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_ATTR</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Surrogate primary key for UT_USER</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="7A3B7A82-83A4-3D71-7209-C052EFFD4364">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_ATTR</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EED9860E-507A-6F5A-1A60-D3BC701CD5A8" name="IC_ITEM_ATTR_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_ATTR_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:28 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36144AAA-69B3-0A49-566B-F6C5D61DF030"/>
+<colUsage columnID="E4DF681C-1E36-AD78-5502-0A2CF1ED08AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49D5FA75-DD47-BDDB-CFE7-1721D6D500D2" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_ITEM_ATTR_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_ATTR_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36144AAA-69B3-0A49-566B-F6C5D61DF030"/>
+<colUsage columnID="E4DF681C-1E36-AD78-5502-0A2CF1ED08AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6CF952F1-4037-9B5C-F82C-965EC2842886" name="IIA_IIM_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36144AAA-69B3-0A49-566B-F6C5D61DF030"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

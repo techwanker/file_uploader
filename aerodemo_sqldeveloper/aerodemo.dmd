@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="aerodemo" id="9478BBB7-E2F6-8DC3-4666-A49C46D06A29" version="3.5">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:42:42 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9478BBB7-E2F6-8DC3-4666-A49C46D06A29</designId>
+</OSDM_Design>

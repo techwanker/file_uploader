@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="2A2E883D-5E5C-EDB9-4EFA-B99C3B61E44F" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_ITEM_MAST_EQUIV_REF">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_MAST_EQUIV_REF</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITEM_NBR" id="E159C2B0-6146-8E01-CB50-DFF9FEDEE54E">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_MAST_EQUIV_REF</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_NBR_EQUIV" id="F465F0ED-7CF2-DC4B-30DF-F4EA966C7801">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_MAST_EQUIV_REF</sourceObjSchema>
+<sourceObjName>ITEM_NBR_EQUIV</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UT_USER_NBR" id="4F283E3E-C567-DA6B-AACE-F9371AAE06C3">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_MAST_EQUIV_REF</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="15BA44E1-6483-1ABA-6005-7B1B5E8323B7">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_ITEM_MAST_EQUIV_REF</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C47591ED-F6F2-77EB-3EE4-2A8B3D85D6EE" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_ITEM_MAST_EQUIV_REF_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_MAST_EQUIV_REF_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E159C2B0-6146-8E01-CB50-DFF9FEDEE54E"/>
+<colUsage columnID="F465F0ED-7CF2-DC4B-30DF-F4EA966C7801"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

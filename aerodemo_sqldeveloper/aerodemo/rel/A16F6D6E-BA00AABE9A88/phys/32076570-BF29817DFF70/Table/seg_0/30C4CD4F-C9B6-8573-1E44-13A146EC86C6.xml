@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="IC_ITEM_MAST_CERT" directorySegmentName="seg_0" id="30C4CD4F-C9B6-8573-1E44-13A146EC86C6">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<schemaObject>820C0878-9F8C-8827-2E3D-80EBBED23712</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FF783AA-F8CF-2545-3821-D2EA0BBE5077</segment>
+<tableSpace>91FF4C3C-7E96-6B65-2E9B-A327586AFFFE</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ITEM_NBR" id="3855CC46-95B1-E777-4763-16E758A0B151">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CERT_CD" id="3CA8027F-5A6C-4AD2-5AC6-3A7C1FA1D9CA">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UT_USER_NBR" id="5B285636-B214-4008-57E1-ECA0A60305A8">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_MOD_DT" id="9402FCD3-3A88-1944-5C21-1205B4CFF00A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="IC_ITEM_MAST_CERT_PK" id="F58D554E-1791-56BD-C9C5-C37B676F9F62">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:30 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<schemaObject>820C0878-9F8C-8827-2E3D-80EBBED23712</schemaObject>
+<segment>31DCCF12-0887-7C11-2F30-DF06189746AE</segment>
+<tableSpace>91FF4C3C-7E96-6B65-2E9B-A327586AFFFE</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="IC_ITEM_MAST_CERT_IC_CERT_CD_FK" id="37B90194-AFBA-068E-3A74-64AFB74B2784">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:31 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="IC_ITEM_MAST_CERT_IC_ITEM_MAST_FK" id="B18AE443-ACBF-7AD3-B76E-310A5D103F6E">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:31 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="IC_ITEM_MAST_CERT_PK" id="BE079827-D128-3573-FA9F-9A3C155A22DF">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:30 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<segment>31DCCF12-0887-7C11-2F30-DF06189746AE</segment>
+<tableSpace>91FF4C3C-7E96-6B65-2E9B-A327586AFFFE</tableSpace>
+<existingIndex>F58D554E-1791-56BD-C9C5-C37B676F9F62</existingIndex>
+<indexSegment>31DCCF12-0887-7C11-2F30-DF06189746AE</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

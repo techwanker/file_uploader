@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="95ABA2BC-9807-2711-96BB-8BF167C212EB" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="WH_PICK_DTL_TRANS_RQST">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WH_PICK_DTL_TRANS_RQST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WH_PICK_DTL_TRANS_RQST_NBR" id="4307F005-E67E-17F8-3D30-2DC98825DFB2">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>WH_PICK_DTL_TRANS_RQST_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WH_PICK_BATCH_TRANS_NBR" id="50EAA657-F806-7EFC-7104-6AA2A6AF1A85">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>WH_PICK_BATCH_TRANS_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IC_ITEM_LOC_NBR" id="6E6BFCC7-FE33-53D8-3727-4B8C9CDDE717">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>IC_ITEM_LOC_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOX_CD" id="EBD268CC-311F-85E7-EBF8-E64B4828D17A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>BOX_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRANS_PICK_QTY_RQST" id="04CE3388-C944-C03C-4AD5-A662A32D0526">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>TRANS_PICK_QTY_RQST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,13,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRANS_PICK_QTY_ACT" id="616CD920-3927-DCB5-888F-A5CE041A4BF1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>TRANS_PICK_QTY_ACT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,13,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WH_FACILITY_TRANS_ONHAND_NBR" id="B711E50B-1ED5-45BE-A409-AE8555292F26">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>WH_FACILITY_TRANS_ONHAND_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WH_PICK_DTL_TRANS_RQST_NBR_SRC" id="3381FC3C-9E58-AE31-149A-07ECEC36F37F">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>WH_PICK_DTL_TRANS_RQST_NBR_SRC</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOX_CD_DEST" id="ADF38990-4705-84D2-0A4B-192EB1ED5C6D">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>BOX_CD_DEST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BOX_CNT" id="166C6822-783B-6DED-70BB-A93DB044BE2A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>BOX_CNT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PICK_SCAN_CD" id="CB936758-F4ED-EA83-DCC2-AFF222CCB660">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WH_PICK_DTL_TRANS_RQST</sourceObjSchema>
+<sourceObjName>PICK_SCAN_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

@@ -1,0 +1,209 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC08975C-8310-18BD-0BFE-E2650BA79A84" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_QUEUE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_QUEUE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITEM_NBR" id="1C9B86D0-28CC-44D3-27D0-33AC40D57291">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DMD_OO_FLG" id="6097D0E9-48A1-2178-2012-3AE75039012D">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>DMD_OO_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DMD_FC_FLG" id="D3C6AB85-48D4-9CA8-0492-7BB5DD8926EF">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>DMD_FC_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DMD_WO_FLG" id="0251FBC7-21C1-1129-BAE2-87BDCD4ED21A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>DMD_WO_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPLY_OH_FLG" id="184FFEA9-956E-C66F-EC96-8692C812C0CB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>SPLY_OH_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPLY_PO_FLG" id="F0F9CAE4-328C-3B3B-EDA3-2DEC9C7C0DB0">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>SPLY_PO_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SPLY_WO_FLG" id="9AA82396-B683-BE8D-E4C9-0A431DB43AD7">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>SPLY_WO_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RQST_TM" id="F028D932-DE5B-ACE7-3206-310D720E3F34">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>RQST_TM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APS_EXCEPTION" id="60500521-4E01-FCDC-5EF3-EFEAB78BF034">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>APS_EXCEPTION</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2048 BYTE</dataTypeSize>
+<ownDataTypeParameters>2048 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_PRTY" id="A0751084-4522-66AD-8C79-3CE58A61089D">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>ITEM_PRTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>9</defaultValue>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DISPATCH_TM" id="9A8C4CBF-7F42-D5A6-FA19-EDA73C92DC66">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>DISPATCH_TM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RQST_SRC" id="29C971AE-B778-C6C4-83FA-65020370FA13">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_QUEUE</sourceObjSchema>
+<sourceObjName>RQST_SRC</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>61 BYTE</dataTypeSize>
+<defaultValue>&apos;UNKNOWN&apos;</defaultValue>
+<ownDataTypeParameters>61 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9EA9D4CD-A741-66AC-53CA-ACB7CC2C71D0" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_QUEUE_NDX">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_QUEUE_NDX</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C9B86D0-28CC-44D3-27D0-33AC40D57291"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

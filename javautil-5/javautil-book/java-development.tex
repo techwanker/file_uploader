@@ -1,0 +1,61 @@
+\documentclass[a4paper,10pt]{book}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage[dvips]{graphicx}
+\usepackage{alltt} 
+\usepackage{alltt} 
+ \usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry} 
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{underscore}
+%opening
+\title{Java Development}
+\author{james.joseph.schmidt@gmail.com}
+\hypersetup{
+pdfauthor = {Jim Schmidt},
+pdftitle = {Java Development},
+pdfsubject = {Java Development},
+pdfkeywords = {Java Development},
+pdfcreator = {LaTeX with hyperref package},
+pdfproducer = {dvips + ps2pdf}}
+
+
+\begin{document}
+\title{Java Development}
+\author{Jim Schmidt\\
+  \texttt{james.joseph.schmidt@gmail.com}}
+\date{\today}
+\maketitle
+\tableofcontents
+\chapter{Introduction}
+This book serves as an introduction to several frameworks commonly employed in production shops.
+
+I will walk you through creating a server, some virtual machines and configuring some appliances to facilitate development.
+
+The provide javautil code will be used to show
+
+Technologies to be covered include:
+\begin{itemize}
+ \item Linux distributions
+ \item Virtual Machines and Containers
+ \item Integrated Development Environment
+ \item Eclipse
+ \item Build Tools
+  Maven
+ \item Object Relational Mapping using Hibernate
+ \item Unit Testing 
+   Junit 
+    Cobertura
+ \item Source Control 
+   Git
+\end{itemize}
+
+\include{LinuxDistributions}
+\include{Linux}
+\include{OperatingSystemContainers}
+\include{IntegratedDevelopmentEnvironment}
+
+
+
+
+\end{document}

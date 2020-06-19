@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="PO_LINE_HDR_CERT_AIUD" directorySegmentName="seg_0" id="EC6C95D6-B6D2-ED5B-03E5-90D70C6DEA8E">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_HDR_CERT_AIUD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body>BEGIN&lt;br/&gt; UPDATE ut_cache&lt;br/&gt;  SET cache_change_nbr = cache_change_nbr + 1&lt;br/&gt; WHERE object_name = &apos;PoLineHdrCertS&apos; ;&lt;br/&gt;END po_line_hdr_cert_aiud ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<scope>FOR EACH STATEMENT</scope>
+<table>02B686D6-793A-BE13-DF96-B24B8A61DE17</table>
+</TriggerOraclev10g>

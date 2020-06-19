@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0B472996-5201-C99B-62E1-E5DAFA3F77EB" containerWithKeyObject="8671EF37-73B4-38D2-85F5-4982DA0ED7F0" localFKIndex="E627F014-7E74-3170-D437-F34F6DA4C917" name="PLD_PLH_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PLD_PLH_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.PO_LINE_HDR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6511CC97-FD3C-2C1F-B55A-5C6A318C86BD</referredTableID>
+<keyObject>1676502A-A503-8FAB-BDC0-C35FE6336E6C</keyObject>
+<referredKeyID>1676502A-A503-8FAB-BDC0-C35FE6336E6C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PO_LINE_HDR_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,31 @@
+Dexterous Quick Help
+-baseDirectory <dir> 
+                    base directory for spooled output (optional)
+                    when spool files are specified this path is prepended to the specified file name
+-config <f>         configuration file  (optional)
+                    The configuration file which contains dataSource definitions, can be a full 
+                    machine-config.xml file
+                    If the argument is not specified the Environment variable 
+                    JAVAUTIL_DATA_SOURCE_CONFIG should be set to the fully qualified path of the file 
+                    or a relative path from the directory in which dex was started
+-dataSource <s>     name of the DataSource (optional)
+                    Name of the DataSource that 
+-disableCache       disable Cache default true (optional)
+                    prevent responses from being served up from the cache response
+-echo               echo input (optional)
+-event <s>          eventName example '-event=TRANSFORM,8' (optional)
+                    debugging information to be set as specified from support if you encounter trouble
+-h                  prints usage to stdout; exits (optional)
+-help               displays verbose help information (optional)
+-logLevel <s>       logging level  (optional)
+                    debugging and information level
+-mimeType <s>       default mime type  (optional)
+                    the default output type to be created
+-prompt <s>         the prompt text (optional)
+-stickyCommands <f> file containing commands that may not be over-ridden in
+                    script files  (optional)
+-stickyViolationPolicy <s> 
+                    action to take when a sticky rule is violated (optional)
+-username <s>       username or username/password (optional)
+-version            displays command's version (optional)
+=========================================================================================================

@@ -1,0 +1,256 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="IC_ITEM_MAST_BOM" directorySegmentName="seg_0" id="CD8098E1-D561-BC2B-C359-41139864C6A2">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<schemaObject>820C0878-9F8C-8827-2E3D-80EBBED23712</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3FF783AA-F8CF-2545-3821-D2EA0BBE5077</segment>
+<tableSpace>91FF4C3C-7E96-6B65-2E9B-A327586AFFFE</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HARMONIZED_CD" id="0ABA2163-5AC8-EA7D-192A-B0F70E3A2C40">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NON_STK_FLG" id="1216230A-E5CC-CBC3-4F45-72936DE9BB94">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IC_RECV_RULE_CD" id="147D1CB5-7C02-1630-C44A-7F3028E0CA01">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SPLIT_AT_BIN_FLG" id="16658094-FCF9-06FE-03A0-6524CB695BA8">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FIFO_DT_ID" id="1BD90486-8ACF-EF77-50C4-2A20B67120A8">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SELL_UM" id="32CD086C-4A50-D7B2-94CD-C8F4724B1C44">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IC_CATEGORY_NBR" id="3A4BCBEA-EC0E-16E8-78BB-F50A489D29CB">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SLS_QTY_MIN" id="3B8AFBEA-E837-156F-F44B-EED83EA783DD">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MFR_LOT_CTRL_FLG" id="4B0BDC5A-6E92-BF1F-F043-F6A6FB25F2A8">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SELL_FLG" id="4B58E344-DCEC-432D-68B1-4E839FF48CB9">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REQR_MFR_FLG" id="4BF9307C-5E49-E34F-F436-7A51C03F11B4">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LEAD_TM_DY" id="4E1C0ACB-CA17-44F2-4650-7D9257E0D326">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_WGHT" id="5157B226-D26D-5B64-5516-25A0F33747B1">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="KIT_FLG" id="5D321EA7-9378-DB03-DFAD-BB5A58DA65AF">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INSPECT_REQR_FLG" id="680A8081-8CD5-BC52-9DBA-AF05595EA64E">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_NBR_SUPERSEDE" id="6AD1244A-BE6A-DC26-9D0F-B1847265529C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PICK_SCAN_ID" id="71D54229-E5A8-C14C-A1BE-9B0A80A237BA">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LIST_PRICE" id="795C813D-4B81-6A5D-C30F-EBBBD6AB38F4">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INTRO_DT" id="7A037A5B-7B2C-49C7-81C9-A12A182B0854">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHELF_LIFE_DY" id="7DE9E85A-C6CA-B1DB-BB57-893F8FC83B8D">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CYCLE_CNT_RULE_CD" id="7EFFCA45-ADA9-9E12-1E76-AD69E5C27120">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STD_COST" id="7F8D6F36-2017-5B11-EE5C-4A5AD13F35B4">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_NBR" id="844C1CF9-B500-C776-A0F0-D441812FBD89">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STK_UM" id="8523ED4C-8242-B1A4-390E-94FE2590071B">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_CD" id="8B404462-0EE3-A6C7-2A87-C5385394410A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CTN_VOLUME" id="8DC04976-171E-6468-7455-8AFCFE9EC231">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EAN" id="90781AE6-15CF-1758-8DFB-AB242DE88962">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PLAN_BUCKET_SZ" id="9CE6EC96-34B9-52BF-4CE9-3F7AF4FCE4E1">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_NBR_PRIMARY" id="A3F5D720-7D90-58F4-335D-412E5E2DD0CD">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="INDIV_NBR_BUYER" id="AA1A445B-D09B-C621-EE3A-537B615A1C3C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SER_NBR_REQR_FLG" id="ADF6A799-B006-4F8D-4F85-C8B0663D689B">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REPLEN_QTY_MIN" id="B5BA018D-1FE5-8A1E-E35D-8B37D48F51BF">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ITEM_DESCR" id="B8882730-F8BD-6F67-D770-DC554FFC7A4C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QTY_PER_BOX" id="B8D8859F-8332-CD3C-A99B-337947C31D78">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SLS_QTY_INCR" id="BC6FEC9F-9D50-48A0-129B-50E46B7618A9">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UPC_CD" id="BE162F23-3799-FF68-77E8-C2A98E7782CE">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRICE_CHG_FLG" id="C8340D94-BBB7-A526-2E45-F9541B6ABEF2">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REPLEN_TYPE_ID" id="CAB34E75-2659-5DA6-0AD4-FAE1F9E9532B">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SCHED_QTY_OPTIMAL" id="CC4D0314-E019-A5C5-1696-AA86857BAA67">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REPLEN_QTY_INCR" id="D12A6003-C183-C7C3-9779-E9973815986C">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LAST_MOD_DT" id="D716C010-78FC-7BB8-36CA-125E4A6DD838">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMG_IMAGE_SET_HDR_NBR" id="DBCFD7CF-E730-A5F8-F64B-98713EEACC34">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MFR_SER_NBR_REQR_FLG" id="E53D7E08-0F7A-55CD-7DAD-D873B506071A">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CURR_CD" id="E55AF020-281E-8966-AD6E-71FEC71AA159">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LABEL_NM_BOX" id="E81C753A-E967-B376-FAE8-24EA03C64F67">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STAT_ID" id="F7F19F1C-1846-3F66-1FFF-4FF2EC697606">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UT_USER_NBR" id="F8A7C3ED-CE8D-2BE0-491C-97B380455A40">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BOX_PER_CTN" id="FEF7DBAF-2D55-C764-121C-8E16B7123AEF">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:29 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

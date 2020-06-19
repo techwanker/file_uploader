@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<!-- http://maven.apache.org/plugins/maven-dependency-plugin/ -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.javautil</groupId>
+	<artifactId>javautil-pom</artifactId>
+	<version>0.11.3</version>
+	<packaging>pom</packaging>
+	<name>javautil</name>
+	<url>http://maven.apache.org</url>
+
+	<!-- maven dependencies -->
+	<!-- maven versions:display-dependency-updates -->
+
+	<dependencies>
+		<!-- We are using java 5 or better, xerces conflicts with java provided 
+			classes in some Spring tests -->
+		<!-- <dependency> <groupId>xerces</groupId> <artifactId>xercesImpl</artifactId> 
+			<version>2.2.1</version> <scope>provided</scope> </dependency> -->
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.6.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xmlParserAPIs</artifactId>
+			<version>2.6.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+
+
+	<modules>
+		<!-- <module>../caribbeandataservices-vendreporting</module> -->
+		<module>../javautil-addressvalidation</module>
+		<module>../javautil-apex</module>
+		<module>../javautil-commandline</module>
+		<!-- <module>../javautil-conditionidentification</module> -->
+		<module>../javautil-core</module>
+		<module>../javautil-databases</module>
+		<module>../javautil-dblogging</module>
+		<module>../javautil-dbunit</module>
+		<module>../javautil-dexterous</module>
+		<module>../javautil-diff-match</module>
+		<module>../javautil-hibernate</module>
+		<module>../javautil-hibernatesalesdata</module>
+		<module>../javautil-jdbc</module>
+		<!-- <module>../javautil-jfm</module> -->
+		<!-- <module>../javautil-mp3</module> -->
+		<module>../javautil-oracle</module>
+		<module>../javautil-poi</module>
+		<module>../javautil-proxy</module>
+		<module>../javautil-test</module>
+		<!-- <module>../javautil-springhibernate</module> -->
+		<!-- <module>../javautil-spring-hibernate</module> -->
+		<module>../javautil-web</module>
+	</modules>
+	<properties>
+		<!-- test requiring an oracle instance -->
+		<skip.oracle.test>true</skip.oracle.test>
+		<!-- -->
+
+		<bsh.version>2.0b4</bsh.version>
+		<com.h2database.version>1.4.193</com.h2database.version>  <!-- 1.3.168 -->
+		<com.mchange.version>0.9.1</com.mchange.version>
+		<commons.configuration.version>1.7</commons.configuration.version>
+		<commons-dbcp.version>1.2.2</commons-dbcp.version>
+		<commons.io.version>1.4</commons.io.version>
+		<commons.lang.version>2.4</commons.lang.version>
+		<com.oracle.version>12c</com.oracle.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<gson.version>1.3</gson.version>
+		<hibernate.version>3.2.3.GA</hibernate.version>
+		<javassist.version>3.8.0.GA</javassist.version>
+		<javautil.version>0.11.0</javautil.version>
+		<javax.mail.version>1.4.1</javax.mail.version>
+		<javax.servlet.version>2.5</javax.servlet.version>
+		<jaxen.version>1.1.1</jaxen.version>
+		<jcmdline.version>1.0.3</jcmdline.version>
+		<junit.version>4.4</junit.version>
+		<log4j.version>1.2.14</log4j.version>
+		<org.apache.commons-codec.version>1.5</org.apache.commons-codec.version>
+		<org.apache.commons-collections.version>3.2.1</org.apache.commons-collections.version>
+		<org.apache.commons.version>1.3.2</org.apache.commons.version>
+		<org.apache.openejb.version>5.0-1</org.apache.openejb.version>
+		<org.apache.poi.version>3.7</org.apache.poi.version>
+		<org.freemarker.version>2.3.15</org.freemarker.version>
+		<org.hibernate.core.version>3.3.1.GA</org.hibernate.core.version>
+		<org.hibernate.ehcache.version>3.3.1.GA</org.hibernate.ehcache.version>
+		<org.javautil.commandline.version>0.11.0</org.javautil.commandline.version>
+		<org.javautil.core.version>0.11.0</org.javautil.core.version>
+		<org.javautil.databases.version>0.11.0</org.javautil.databases.version>
+		<org.javautil.diff-match.version>0.11.0</org.javautil.diff-match.version>
+		<org.javautil.hibernatesalesdata.version>0.11.0</org.javautil.hibernatesalesdata.version>
+		<org.javautil.hibernate.version>0.11.0</org.javautil.hibernate.version>
+		<org.javautil.jdbc.version>0.11.0</org.javautil.jdbc.version>
+		<org.javautil.oracle.version>0.11.0</org.javautil.oracle.version>
+		<org.javautil.poi.version>0.11.0</org.javautil.poi.version>
+		<org.javautil.test.version>0.11.0</org.javautil.test.version>
+		<org.slf4j.version>1.5.6</org.slf4j.version>
+		<org.springframework.security>2.0.4</org.springframework.security>
+		<org.springframework.version>2.5.6</org.springframework.version>
+		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
+	</properties>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<!-- Version 2.4 is broken reverting to 2.2. -->
+				<version>2.2</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<!-- This is horribly slow and throws errors, known bug in report -->
+							<!-- <report>dependencies</report> -->
+							<report>project-team</report>
+							<report>mailing-list</report>
+							<report>cim</report>
+							<report>issue-tracking</report>
+							<report>license</report>
+							<report>scm</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+
+			<!-- Description of a Project -->
+			<!-- http://maven.apache.org/plugins/maven-doap-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-doap-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<doapOptions>
+						<programmingLanguage>java</programmingLanguage>
+						<category>build-management</category>
+					</doapOptions>
+					<asfExtOptions>
+						<included>false</included>
+					</asfExtOptions>
+				</configuration>
+			</plugin>
+
+			<!-- Javadoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8.1</version>
+			</plugin>
+
+			<!-- Java Cross Reference -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+
+			<!-- Suboptimal coding detection pmd) Copy/Paste Detector (cpd) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.7.1</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>pmd</report>
+							<report>cpd</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+				<configuration>
+					<targetJdk>1.8</targetJdk>
+				</configuration>
+			</plugin>
+
+			<!-- cobertura code coverage reports -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+						<format>html</format>
+					</formats>
+				</configuration>
+			</plugin>
+
+			<!-- Surefire integration testing reports -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.19.1</version>
+			</plugin>
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>cobertura-maven-plugin</artifactId> 
+				</plugin> -->
+			<!-- force surefire to read log4j.xml file -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<systemProperties>
+						<property>
+							<name>log4j.configuration</name>
+							<value>file:target/test-classes/log4j.xml</value>
+						</property>
+					</systemProperties>
+				</configuration>
+			</plugin>
+
+
+
+			<!-- you can suppress the generation of the dependency report to speed 
+				up builds by uncommenting this -->
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-project-info-reports-plugin</artifactId> 
+				<configuration> <dependencyLocationsEnabled>false</dependencyLocationsEnabled> 
+				</configuration> <version>2.2</version> </plugin> -->
+
+		</plugins>
+	</reporting>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>2.2</version>
+				<dependencies>
+					<!-- For SyntaxHighlighter macro: http://code.google.com/p/m2-site-tools/ -->
+					<!-- http://maven.apache.org/doxia/doxia/doxia-maven-plugin -->
+					<dependency>
+						<groupId>com.anasoft.os</groupId>
+						<artifactId>m2st-doxia-macros</artifactId>
+						<version>2.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.8.1</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-sink-api</artifactId>
+						<version>1.1.3</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-core</artifactId>
+						<version>1.1.3</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- mvn failsafe:integration-test -->
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- <plugin> <groupId>com.sun.tools.xjc.maven2</groupId> <artifactId>maven-jaxb-plugin</artifactId> 
+				<executions> <execution> <goals> <goal>generate</goal> </goals> </execution> 
+				</executions> </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<!-- doxia:render-books -->
+			<!-- not all projects have books and this doesn't work anyway -->
+			<!-- <plugin> <groupId>org.apache.maven.doxia</groupId> <artifactId>doxia-maven-plugin</artifactId> 
+				<version>1.1.4</version> <executions> <execution> <phase>pre-site</phase> 
+				<goals> <goal>render-books</goal> </goals> </execution> </executions> <configuration> 
+				<books> <book> <directory>src/books/example-book</directory> <descriptor>src/books/example-book.xml</descriptor> 
+				<formats> <format> <id>latex</id> </format> <format> <id>xdoc</id> </format> 
+				<format> <id>pdf</id> </format> <format> <id>rtf</id> </format> </formats> 
+				</book> </books> </configuration> </plugin> -->
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Internal Releases</name>
+			<url>http://nexus:8081/nexus/content/repositories/releases</url>
+		</repository>
+
+
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://nexus:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

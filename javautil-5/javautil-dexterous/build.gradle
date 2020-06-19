@@ -1,0 +1,7 @@
+
+description = 'Dexterous'
+dependencies {
+  compile project(':javautil-core')
+  compile project(':javautil-jdbc')
+    compile group: 'org.apache.poi', name: 'poi', version:'3.7'
+}

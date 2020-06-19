@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C5454CCB-289A-DB7E-83D3-AC2CECDCAEB0" containerWithKeyObject="6D80AB72-021F-11BB-A6F4-906BE530A101" localFKIndex="DFD8B20C-4A5C-9322-5E36-EEC1B8869FA4" name="IC_ITEM_RESTRICT_CUST_OE_CUST_MAST_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_RESTRICT_CUST_OE_CUST_MAST_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:31 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<referredTableLongName>AERODEMO.OE_CUST_MAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<mandatory>true</mandatory>
+<refColNames>ORG_NBR_CUST</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

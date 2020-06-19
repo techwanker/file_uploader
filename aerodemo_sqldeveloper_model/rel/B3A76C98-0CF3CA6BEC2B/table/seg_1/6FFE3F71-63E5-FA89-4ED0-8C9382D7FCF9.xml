@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="6FFE3F71-63E5-FA89-4ED0-8C9382D7FCF9" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_MULTIPLE_CERT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PO_LINE_HDR_NBR" id="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>PO_LINE_HDR_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_NBR" id="D74C361E-B693-10F5-3DE8-3D7E61662BA6">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UT_USER_NBR" id="2064604D-CC7D-01E6-50FD-18BCECF551E1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="3EB4367C-8AE8-EAEE-6E40-B757F7B2B7B5">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CA1FC57A-F52A-F87B-2A9C-E2DEB459F1E9" name="PO_LINE_MULTIPLE_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:29 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0"/>
+<colUsage columnID="D74C361E-B693-10F5-3DE8-3D7E61662BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="194B4028-208F-A3DD-1F99-773DD6C85E21" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_MULTIPLE_CERT_AK1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT_AK1</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F42C854-467F-20FB-DD36-8E6A133DD733" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_MULTIPLE_CERT_NDX_01">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT_NDX_01</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D74C361E-B693-10F5-3DE8-3D7E61662BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A15677E-F51D-398D-6F6F-C2614976BE16" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_MULTIPLE_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0"/>
+<colUsage columnID="D74C361E-B693-10F5-3DE8-3D7E61662BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2951C0E0-A238-B139-F8EA-48C1AEC9BE34" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_MULTIPLE_CERT_PPK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_MULTIPLE_CERT_PPK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D74C361E-B693-10F5-3DE8-3D7E61662BA6"/>
+<colUsage columnID="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

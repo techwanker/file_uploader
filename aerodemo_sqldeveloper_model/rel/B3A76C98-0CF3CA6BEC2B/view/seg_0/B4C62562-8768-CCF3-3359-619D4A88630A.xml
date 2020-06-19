@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="B4C62562-8768-CCF3-3359-619D4A88630A" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_DMD_FC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_DMD_FC</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_RQST_DMD_FC&lt;br/&gt;AS &lt;br/&gt;SELECT	item_nbr&lt;br/&gt;FROM	fc_item_mast</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR_ORD" id="9C3798D7-F5BD-758E-DC09-39BB7B7B25B2">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_DMD_FC</sourceObjSchema>
+<sourceObjName>ITEM_NBR_ORD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR_ORD</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR_ORD</headerAlias>
+<reference>false</reference>
+<referencedColumn>2B7F5F1C-709F-B477-42C5-55D7846F0F73</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2B7F5F1C-709F-B477-42C5-55D7846F0F73">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>FC_ITEM_MAST</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="57D9AEE2-88C3-E507-58CA-C71DA0657363">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>FC_ITEM_MAST</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

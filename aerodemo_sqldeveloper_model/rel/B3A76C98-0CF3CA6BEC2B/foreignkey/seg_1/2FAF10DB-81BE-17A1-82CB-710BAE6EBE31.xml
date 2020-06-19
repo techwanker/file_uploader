@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="2FAF10DB-81BE-17A1-82CB-710BAE6EBE31" containerWithKeyObject="BA394464-EE68-9F42-01B2-DE0C0810A8E8" localFKIndex="EC03F94A-CA46-1A39-2DB5-E41EC210BCE3" name="SYS_C00125515">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>SYS_C00125515</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>2502D1F8-BD8A-E569-E42C-60FECB6732EF</importedID>
+<referredTableLongName>AERODEMO.IMG_IMAGE_SET_HDR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6158914A-1F44-399D-6C9D-A7D108D85BE4</referredTableID>
+<keyObject>F390C21B-1D98-09D4-074A-F15C9EBF2B0B</keyObject>
+<referredKeyID>F390C21B-1D98-09D4-074A-F15C9EBF2B0B</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>IMG_IMAGE_SET_HDR_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

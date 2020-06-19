@@ -1,0 +1,94 @@
+\documentclass[a4paper,10pt]{book}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage[dvips]{graphicx}
+\usepackage{alltt} 
+\usepackage{alltt} 
+ \usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry} 
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{underscore}
+%opening
+\title{Exception Generation with Javautil}
+\author{jim.schmidt@dbexperts.com}
+\hypersetup{
+pdfauthor = {jim.schmidt@dbexperts.com},
+pdftitle = {Exception Generation with Javautil},
+pdfsubject = {Exception Generation with Javautil},
+pdfkeywords = {Exception, Installation, Configuration, Dexterous},
+pdfcreator = {LaTeX with hyperref package},
+pdfproducer = {dvips + ps2pdf}}
+
+\begin{document}
+\title{Exception Generation with Javautil}
+\author{Jim Schmidt\\
+  \texttt{jjs-javautil@dbexperts.com}}
+\date{\today}
+\maketitle
+\tableofcontents
+\chapter{Introduction}
+This book serves as an introduction to javautil.
+
+Javautil is a collection of projects.
+
+We will be covering 
+Hibernate
+Spring 
+Maven
+
+
+
+\begin{tabular}{l | l}
+
+javautil-core & No dependencies on any other javautil project. \\ \hline
+javautil-commandline & A declarative command line processor \\ \hline
+javautil-jdbc & Metadata information, connection helpers for performance , QueryHelpers \\ \hline
+
+javautil-conditionidentification \\ \hline
+
+
+javautil-hibernate & \\ \hline 
+javautil-addressvalidation & standardizes address formats and validates US addresses against using the USPS web service \\ \hline 
+javautil-dblogging & a logging facility that stores log information in a relational database \\ \hline
+javautil-hibernate & TODO describe \\ \hline
+
+javautil-jfm & Code generator using freemarker templates \\ \hline
+javautil-oracle & java utilities for Oracle databases \\ \hline
+javautil-poi & utilities for creating Excel workbooks using POI from apache \\ \hline
+javautil-spring-hibernate & \\ 
+
+
+\end{tabular} 
+
+\section{javautil-core}
+Datasets, XM
+
+\section{javautil-hibernate}
+Creating a hibernate.cfg.xml file
+Reverse engineering a schema - generating class files and mapping files
+Configuring Spring
+Unit Testing With Spring - setting the database to a known state
+external queries
+turning on oracle tracing 
+todo show what happens with two different threads hitting the same table when one is deleted
+
+cascade deletes
+
+external queries
+
+how to make deletes faster by populating a temporary table
+reducing parsing on joins
+
+Deleting an object does not necessarily hit the database until a commit statement.  Even a flush operation doesn't help.
+
+\chapter{Prerequisites}
+Eclipse
+Maven
+Java
+\section{Eclipse}
+\section{Maven}
+\section{Java}
+Version 6 or 7
+\section{Git}
+
+\end{document}

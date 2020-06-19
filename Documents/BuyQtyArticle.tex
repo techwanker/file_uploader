@@ -1,0 +1,137 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Optimal Replenishment Quantities in Aerospace}
+\author{Jim Schmidt}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+\section(Economic Order Qty) 
+Variables
+
+    T = total annual inventory cost
+    P = purchase unit price, unit production cost
+    Q = order quantity.
+    E = optimal order quantity.
+    D = annual demand quantity.
+    K = fixed cost per order, setup cost (not per unit, typically cost of ordering and shipping and handling. This is not the cost of goods)
+    h = annual holding cost per unit, also known as carrying cost or storage cost (capital cost, warehouse space, refrigeration, insurance, etc. usually not related to the unit production cost)
+\section{Quantity Pricing}
+
+Let us assume that there is a setup cost and an incremental cost to create a part such that the following relationship exists:
+
+u = unit cost
+s =  setup cost
+i = incremental cost
+n = number of units
+t = total cost
+
+This results in the very simple:
+
+t = s + (n * i)
+
+The unit cost is then
+
+u = t / n
+
+or
+
+u = (s + (n * i)) / n
+
+let s = 2800
+let i = .28
+
+
+
+\section{Computing Setup and Incremental Cost}
+
+Let us now examine two actual quotes
+
+\begin{tabular}{ r | r | r }
+Qty  & Quoted Per each  & Total Quoted   \\ 
+1000 & 3.02             & 3,020 \\
+2500 & 1.6471           & 4,117.75 \\
+ 
+\end{tabular}
+
+t = s + (n * i)
+
+3020 = s + (1000 * i)
+
+4117.75 = s + (2500 * i)
+
+3020 - s = 1000 * i
+
+-s = (1000 * i) - 3020
+
+s = - (1000 * i) + 3020
+
+s = 3020 - (1000 * i)
+
+2,500 * 1.6471 = 3020 - (1000 * i) + (2500 * i)
+
+4117.75 = 3020 - (3500 * i)
+
+4117.75 - 3020 = 3500 * i
+
+1097.75 = 3500 * i
+
+1097.75 / 3500 = i
+
+.31364 = i
+
+s = 3020 - (1000 * .31364)
+
+s = 2706.36
+
+Let's double check:
+
+t = s + (n * i)
+
+t = 2706.36 + 1000 * .31364
+t = 2706.36 + 313.64
+t = 3080    
+
+t = 2766.36 + 2500 * .31364
+t = 3550.46  WTF?
+
+
+We have computed the setup cost as 2783.5 and the incremental cost of .2965, let's see 
+how our estimates compare to actual quotes
+
+\begin{tabular}{ r | r | r | r | r}
+Actual Quote & Qty & Computed Cost Per Unit & Pct Higher cost Prior break &    Total Cost \\
+  &  1 & 2,800.28000&2800.28 \\
+  &  2 & 1,400.28000&99.98&2800.56 \\
+  &  4 & 700.28000&99.96&2801.12 \\
+  &  8 & 350.28000&99.92&2802.24 \\
+  & 16 & 175.28000&99.84&2804.48 \\
+  &  100 & 28.28000&519.80&2828.00 \\
+3.02000 & 1000&3.08000&818.18&3080.00 \\
+1.64710 & 2500&1.40000&120.00&3500.00 \\
+  &  10000 & 0.56000&150.00&5600.00 \\
+0.48760&11000&0.53455&4.76&5880.00 \\
+0.39600&17700&0.43819&21.99&7756.00 \\
+    20000&0.42000&4.33&8400.00 \\
+0.32260&25000&0.39200&7.14&9800.00 \\
+    30000&0.37333&5.00&11200.00 \\
+    40000&0.35000&6.67&14000.00 \\
+0.32100&50000&0.33600&4.17&16800.00 \\
+    60000&0.32667&2.86&19600.00 \\
+    70000&0.32000&2.08&22400.00 \\
+    80000&0.31500&1.59&25200.00 \\
+    90000&0.31111&1.25&28000.00 \\
+    100000&0.30800&1.0&30800.00 \\
+\end{tabular}
+
+
+
+\end{document}

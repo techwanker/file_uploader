@@ -1,0 +1,105 @@
+echodo() {
+	echo $*
+	$*
+}
+
+check-javautil-lib() {
+	if [ ${JAVAUTIL_LIB}XX = XX ] ; then
+		echo JAVAUTIL_LIB is not set consider ~/workspace/javautil-lib >&2
+		exit 1
+	fi 
+
+	if [ ! -d ${JAVAUTIL_LIB} ] ; then 
+		echo JAVAUTIL_LIB $JAVAUTIL_LIB is not a directory >&2
+		exit 1
+	fi
+}
+
+get-h2-jar() {
+	check-javautil-lib
+	jarfile=${JAVAUTIL_LIB}/h2-1.3.159.jar
+	#echo using $jarfile
+	if [ ! -f $jarfile ] ; then
+		echo no such file $jarfile
+		exit 1
+	fi
+	echo  $jarfile
+}
+
+h2-console() {
+	classpath=`get-h2-jar`
+	echodo java -cp $classpath org.h2.tools.Server $*
+}
+
+
+h2-shell() {
+	# example ./h2 shell -url jdbc:h2:wank -user sa -password sa
+	classpath=`get-h2-jar`
+	echodo java -cp $classpath org.h2.tools.Shell $*
+}
+
+h2-run-script() {
+	# example ./h2 script -url jdbc:h2:wank -user sa -password sa
+	classpath=`get-h2-jar`
+	if [ $? != 0 ] ; then
+		exit 1
+	fi
+	echodo java -cp $classpath org.h2.tools.RunScript $*
+}
+
+
+h2-init() {
+	#while getopts “s:” OPTION
+	#do
+     		#case $OPTION in
+         			#s) SCRIPT=$OPTARG
+				   #echo SCRIPT is $SCRIPT
+            				#;;
+         			#?)
+             				#usage
+             				#exit
+             				#;;
+     	#esac
+	#done
+	getopts "s:" OPTION
+	SCRIPT=$OPTARG	
+	echo SCRIPT is $SCRIPT
+	
+	# example ./h2 script -url jdbc:h2:wank -user sa -password sa
+	classpath=`get-h2-jar`
+	echodo java -cp $classpath org.h2.tools.RunScript $*
+}
+
+COMMAND=$1
+   case $COMMAND in
+       console) shift 
+		h2-console $*
+            	;;
+       shell) shift 
+		h2-shell $*
+            	;;
+       script) shift 
+		h2-run-script $*
+            	;;
+       ?) usage
+          exit
+          ;;
+    esac
+
+NOISE() {
+if [ $1 = console ] ; then
+  h2-console
+fi
+if [ $1 = shell ] ; then
+  shift
+  h2-shell $*
+fi
+if [ $1 = script ] ; then
+  shift
+  h2-run-script $*
+fi
+if [ $1 = init ] ; then
+   shift
+   h2-init $*
+fi
+}

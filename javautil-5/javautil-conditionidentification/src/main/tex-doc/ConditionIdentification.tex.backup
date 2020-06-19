@@ -1,0 +1,143 @@
+
+\chapter{Introduction}
+Condition Identification supports the declarative identification of records that meet one or more criteria.
+
+It works by running a set of SQL queries against the data and persisting the identification rule identifier and
+the primary key for the records that satisfy the query.
+
+\section{Features}
+
+
+\section{Concepts}
+\part{Installation}
+
+\section{Terminology}
+\subsection{Rule Group}
+A rule group is a set of rules that collectively define the conditions to be isolated.
+\subsection{Run Parms}
+Run Parms are bind variables used for the various rules.
+\section{Metrics}
+Metrics may be gathered for 
+\section{UT_TABLE_RULE}
+This table identifies the database table that contains the primary key for table that is being identified.
+
+\chapter{Schema}
+TODO list tables
+
+\chapter{Processing}
+\chapter{Components}
+\section{Rule Processor}
+\section{Invocation}
+TODO dbms_pipe
+\section{Classes}
+\subsection{ExceptionRuleService}
+TODO what it does
+
+\section{todo}
+\section{Parallism}
+\section{Data Setup}
+\section{Output Review}
+\section{Fatal and Warn}
+\begin{itemize} 
+ \item fix schema tables with no surrogate key, no foreign keys etc. See exception processing.mer
+ \item document the package
+ \item document logging
+ \item document metrics
+ \item document ut_table_msg
+ \item document ut_table_report_sum
+ \item document exclusion rules
+ \item need functional area
+ \item document calling as a procedure
+ \item what does ut_query do with anything
+ \item no real support for ut_table_msg
+  \item todo what is ds_table and why does ut_query reference it?
+ \item document ut_table_rule and hist figure out what all of these columns are used for
+ \begin{itemize}
+  \item is ut_query used
+ \end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+ \item Primary Keys
+ \item Foreign Keys
+ \item Not Null
+ \item Check Constraints
+\end{itemize}
+However, there are many logical conditions which are beyond the scope of available functionality.
+
+The Javautil Exception Generator allows you to set up simple rules to identify records or tables that fail
+to meet business requirements.
+
+\section{Benefits}
+
+\chapter{Pre-requisites}
+\begin{itemize}
+ \item Obtain javautil code
+ \item configure machine
+ \item configure datasources
+\end{itemize}
+\chapter{How it works}
+\section{Overview}
+\begin{itemize}
+ \item getParms();
+ \item getRun();
+ \item getRules();
+ \item getBinds();
+ \item createProcessLog();
+ \item processRules();
+ \item updateRunStatus();
+ \item acknowledge()
+\end{itemize}
+\section{Creating the User}
+grant create sequence to &&user;
+\section{Parameters}
+\subsection{Run Number}
+\paragraph{UT_RULE_GRP_RUN_NBR}
+\section{Get UtRuleGrpRun}
+\section{Get UT_TABLE_RULE}
+Get the rules for the run.
+\section{Get UT_RULE_GRP_RUN_PARMS}
+\section{Process Rules}
+Connect to source - todo describe data
+Connect to destination
+binds
+Run the query
+insert into gtt_ut_table_row_msg
+merge into ut_table_row
+delete where they don't exist
+\chapter {Database Objects}
+Also depends on the logging tables in Dbexperts3/ddl/oracle/logging
+%\includegraphics*[width=\textwidth,viewport=0 0 3046 1632, bb=0 0  0 0]{ExceptionProcessing.jpeg}
+
+\includegraphics*[width=\textwidth,viewport=0 0 3046 1632, bb=0 0 3046 1632]{ExceptionProcessing.jpeg}
+
+\begin{itemize}
+	\item huh
+\end{itemize}
+
+To generate the tables not only are the mapping files required, the associated beans are even though they are 
+never used. 
+
+The dto's must be in the classpath.
+
+http://docs.jboss.org/hibernate/core/3.3/reference/en/html/toolsetguide.html#toolsetguide-s1-2
+
+
+
+
+source and destination databases may be different 
+
+declarative rules
+
+TODO need to support initialization procedure
+\section{Installation}
+\subsection{Create Database Objects}
+\subsubsection{Oracle}
+
+cd ~/workspace-javautil/javautil-conditionidentification/src/main/ddl/oracle
+sqlplus sys/password as sysdba @create_user
+sqlplus condition/identification @ 
+
+
+\end{document}

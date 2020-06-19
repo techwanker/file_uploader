@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BB3EA748-27D0-986C-9593-6EA2CD957592" containerWithKeyObject="E616CA4B-4BB2-2C99-BBEE-7B236516EA5B" localFKIndex="F99ED639-3907-63DC-D736-6B3B4AA89C06" name="IKM_ASRS_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IKM_ASRS_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.APS_SRC_RULE_SET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A41D47CB-F8F5-DC95-C98A-F9A856BDB22A</referredTableID>
+<keyObject>D784BC87-CD29-09C3-1809-A1BBA8AFDA4B</keyObject>
+<referredKeyID>D784BC87-CD29-09C3-1809-A1BBA8AFDA4B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>APS_SRC_RULE_SET_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

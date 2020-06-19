@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A150453E-7E1A-6753-6982-6EEF3B83B9FE" containerWithKeyObject="F27A05D4-48A2-7CC6-8581-F77C9E14494E" localFKIndex="7014C0FF-A909-0E66-C11D-07CC7920D71C" name="IC_UM_CNVT_ITEM_IC_ITEM_MAST_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_UM_CNVT_ITEM_IC_ITEM_MAST_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:48:31 UTC</createdTime>
+<ownerDesignName>aerodemo</ownerDesignName>
+<referredTableLongName>AERODEMO.IC_ITEM_MAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D1ADEBF1-323B-BADF-2950-99294D2C3B2B</referredTableID>
+<keyObject>54A26792-1B8D-88B4-F459-BA55A2A30C9F</keyObject>
+<referredKeyID>54A26792-1B8D-88B4-F459-BA55A2A30C9F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ITEM_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

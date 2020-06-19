@@ -1,0 +1,8 @@
+
+description = 'javautil-commandline'
+dependencies {
+    compile group: 'jcmdline', name: 'jcmdline', version:'1.0.3'
+    compile group: 'commons-configuration', name: 'commons-configuration', version:'1.7'
+  compile project(':javautil-core')
+  testCompile project(':javautil-test')
+}

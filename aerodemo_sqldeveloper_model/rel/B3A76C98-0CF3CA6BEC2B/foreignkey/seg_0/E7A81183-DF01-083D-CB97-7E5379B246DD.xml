@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E7A81183-DF01-083D-CB97-7E5379B246DD" containerWithKeyObject="57D9AEE2-88C3-E507-58CA-C71DA0657363" localFKIndex="1751F46A-45D4-1FD8-48DD-9C4CB377D621" name="FIM_OCM_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FIM_OCM_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.OE_CUST_MAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8505F936-9DBE-9621-545C-24905892C6BD</referredTableID>
+<keyObject>EC20C001-5FE9-2AE7-38ED-9098749519C3</keyObject>
+<referredKeyID>EC20C001-5FE9-2AE7-38ED-9098749519C3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ORG_NBR_CUST</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

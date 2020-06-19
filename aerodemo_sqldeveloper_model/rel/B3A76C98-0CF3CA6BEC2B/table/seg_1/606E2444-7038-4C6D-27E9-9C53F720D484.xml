@@ -1,0 +1,277 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="606E2444-7038-4C6D-27E9-9C53F720D484" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IDL_PO_ORD_DTL">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IDL_PO_ORD_DTL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<commentInRDBMS>Interface table for purchase orders to vendors, not to be used for purchase orders from customers.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDL_PO_ORD_DTL_NBR" id="75D42E2D-C1F7-C304-6790-01A6BFBB1F3B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>IDL_PO_ORD_DTL_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Surrogate key for internal purposes.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PO_CD" id="A5108920-9611-A106-61D6-CDEF6D401118">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>PO_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Legacy purchase order code, identifies the purchase order.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURR_CD" id="223EB7EC-1B1A-D707-73F9-532B9A562675">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>CURR_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The ANSI X.12 currency code associated with the unit cost.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PO_DT" id="F0C07E54-D61E-D732-E878-9D4D9B4FBD80">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>PO_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The date the purchase order was created.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORG_CD_VND" id="E3F89665-D08C-FF4B-FE51-C9AC0B90AF02">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>ORG_CD_VND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Identifies the organization from which this is being purchased.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PO_LINE_NBR" id="2CBA5030-0CF5-7CA4-A227-812083D091E1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>PO_LINE_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Identifier for the line on the purchase order.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_CD" id="9DBF1640-BF94-00B7-2ADC-D6E516D99502">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>ITEM_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The part identifier.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_UM" id="F184D744-E509-DE1B-195F-01AFA326CA60">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>REPLEN_UM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>ANSI X.12 unit of measure.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIT_COST" id="16FF3027-D46F-04AD-0877-E41644F141AB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>UNIT_COST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Cost per unit in the replenishment unit of measure and currency.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_QTY" id="73332680-2E86-3F3D-E785-BB3A27CE4E4D">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>REPLEN_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Replenishment quantity in the replenishment unit of measure.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_CURR_EST_DT" id="89DDD782-AFB8-1494-345F-985616DEFCAB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>REPLEN_CURR_EST_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Current estimated availability date of the schedule.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELIVERY_FACILITY" id="979932CD-ED83-3F01-3551-F5F8C5DED3E0">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>DELIVERY_FACILITY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Identifier for  the facility to which the goods are to be delivered.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELIVERY_SPLY_POOL_CD" id="A6C03967-98CA-BDD0-50AB-CA25FB9E5FAB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>DELIVERY_SPLY_POOL_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>Identifier for the supply pool which is to be replenished.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECV_QTY" id="63F7A624-BF03-936C-58C2-26A4237889FA">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>RECV_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OPEN_QTY" id="16DB6E67-328A-38EA-EBFC-C1B66A426C35">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>OPEN_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_CURR_EST_DT_TXT" id="5E71D0B2-7C74-5BCB-75EE-BB311130AF68">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>REPLEN_CURR_EST_DT_TXT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PO_DT_TXT" id="5C9D8478-5A13-E128-D023-C5B4A11445B4">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IDL_PO_ORD_DTL</sourceObjSchema>
+<sourceObjName>PO_DT_TXT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

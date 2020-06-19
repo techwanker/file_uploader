@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="F747E707-4882-53BC-1DB4-2BF2439FF462" name="aerodemo" visible="true"/>
+   <object objectType="sub_view" objectID="1E178195-D241-5647-EBF1-3A7CB9C1D054" name="aerodemo - SubView_1" visible="false"/>
+   <object objectType="sub_view" objectID="48FF079E-D03D-EBBD-1EA6-6B71ECF8F9FA" name="aerodemo - SubView_2" visible="true"/>
+   <object objectType="sub_view" objectID="2522AC92-4103-7638-2826-76E102D023E9" name="aerodemo - SubView_3" visible="true"/>
+   <object objectType="sub_view" objectID="3AC4CF16-0EF7-DF28-1CF2-EA9B5A37DB20" name="aerodemo - SubView_4" visible="true"/>
+   <object objectType="sub_view" objectID="E5463088-3197-7349-0315-B45441E97D43" name="aerodemo - SubView_5" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

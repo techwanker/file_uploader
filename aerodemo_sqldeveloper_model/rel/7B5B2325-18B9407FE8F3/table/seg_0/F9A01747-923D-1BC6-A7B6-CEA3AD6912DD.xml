@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9A01747-923D-1BC6-A7B6-CEA3AD6912DD" schemaObject="2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57" name="IMG_IMAGE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IMG_IMAGE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IMG_IMAGE_NBR" id="36CF69F7-83B4-3344-D7BC-10F8C0A4AF24">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMG_IMAGE_PATH" id="3064F034-3971-0BE5-8292-06E918583B4E">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_PATH</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMG_IMAGE_FILE_NM" id="2589637F-252D-DBC1-1BA9-8B6078A9FE78">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_FILE_NM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128 BYTE</dataTypeSize>
+<ownDataTypeParameters>128 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGE_DESCR" id="C1CF2118-9A13-1A2B-90D9-A1DA3A010942">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMAGE_DESCR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40183842-8B83-FEE3-EBA4-6B77A717FFCE" schemaObject="2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57" name="IMG_IMAGE_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>SYS_C00125503</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36CF69F7-83B4-3344-D7BC-10F8C0A4AF24"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="65619CA5-D0D8-F584-6DF1-01D3823FD852" containerWithKeyObject="890DB6FD-138C-5723-5135-2771F729EAA8" localFKIndex="A6C217CE-62F8-4073-AD36-62F0949E419D" name="IC_ITEM_VND_COST_MATRIX_PO_VND_MAST_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_VND_COST_MATRIX_PO_VND_MAST_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>6EFE88D6-51C1-54EC-F516-5032BF3AF582</importedID>
+<referredTableLongName>AERODEMO.PO_VND_MAST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>51408036-9DAF-695C-C66D-99B2216D0588</referredTableID>
+<keyObject>D708B371-8D20-ED7C-A29E-40EF0F830242</keyObject>
+<referredKeyID>D708B371-8D20-ED7C-A29E-40EF0F830242</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ORG_NBR_VND</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

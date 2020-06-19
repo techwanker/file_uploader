@@ -1,0 +1,40 @@
+rootProject.name = 'javautil-pom'
+include ':javautil-addressvalidation'
+include ':javautil-apex'
+include ':javautil-commandline'
+include ':javautil-core'
+include ':javautil-databases'
+include ':javautil-dblogging'
+include ':javautil-dbunit'
+include ':javautil-dexterous'
+include ':javautil-diff-match'
+include ':javautil-hibernate'
+include ':javautil-hibernatesalesdata'
+include ':javautil-jdbc'
+include ':javautil-jfm'
+include ':javautil-mp3'
+include ':javautil-oracle'
+include ':javautil-poi'
+include ':javautil-proxy'
+include ':javautil-test'
+include ':javautil-web'
+
+project(':javautil-addressvalidation').projectDir = "$rootDir/../javautil-addressvalidation" as File
+project(':javautil-apex').projectDir = "$rootDir/../javautil-apex" as File
+project(':javautil-commandline').projectDir = "$rootDir/../javautil-commandline" as File
+project(':javautil-core').projectDir = "$rootDir/../javautil-core" as File
+project(':javautil-databases').projectDir = "$rootDir/../javautil-databases" as File
+project(':javautil-dblogging').projectDir = "$rootDir/../javautil-dblogging" as File
+project(':javautil-dbunit').projectDir = "$rootDir/../javautil-dbunit" as File
+project(':javautil-dexterous').projectDir = "$rootDir/../javautil-dexterous" as File
+project(':javautil-diff-match').projectDir = "$rootDir/../javautil-diff-match" as File
+project(':javautil-hibernate').projectDir = "$rootDir/../javautil-hibernate" as File
+project(':javautil-hibernatesalesdata').projectDir = "$rootDir/../javautil-hibernatesalesdata" as File
+project(':javautil-jdbc').projectDir = "$rootDir/../javautil-jdbc" as File
+project(':javautil-jfm').projectDir = "$rootDir/../javautil-jfm" as File
+project(':javautil-mp3').projectDir = "$rootDir/../javautil-mp3" as File
+project(':javautil-oracle').projectDir = "$rootDir/../javautil-oracle" as File
+project(':javautil-poi').projectDir = "$rootDir/../javautil-poi" as File
+project(':javautil-proxy').projectDir = "$rootDir/../javautil-proxy" as File
+project(':javautil-test').projectDir = "$rootDir/../javautil-test" as File
+project(':javautil-web').projectDir = "$rootDir/../javautil-web" as File

@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C985293-646A-4E5C-7FDA-93A14BA20F20" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="CAL_DT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CAL_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAL_DT" id="F17B1EAB-2208-5145-4A32-C9E279DDEEE3">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>CAL_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The relevent date.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALENDAR" id="0454258F-FC2E-EC39-B254-1B474F275A17">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>CALENDAR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The business calendar associated with this date.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3280DF8-8E0A-FE1D-B3C8-10BCD87EFF76" referredColumn="AF59CAD8-178B-6C4E-FEB4-563A5D312CD4"/>
+</associations>
+</Column>
+<Column name="CYCLE" id="ECE1E69D-28DD-3601-0E23-A811D3C8FA4A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>CYCLE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTVL" id="8E0AFF6B-8F33-DD80-AA8B-915C0B23A02B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>INTVL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INTVL_PCT" id="074B6CE1-2665-8D15-9108-54B00062E425">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>INTVL_PCT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,6,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WORK_DAY_FLG" id="520C486A-75C9-2D50-56B6-E288A2F68FDE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>WORK_DAY_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>W - Work Day&lt;br/&gt;N  - Non Work Day&lt;br/&gt;H  - Holiday (non work day that would normally be a work day based on the day of the week</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_START_DT" id="206D641B-11F1-E16C-6FAD-20E84EE74CC3">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>PRD_START_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAL_QTR" id="65F436B4-B102-5A4B-4332-EFF857763064">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>CAL_QTR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>The calendar quarter associated with this date.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WORK_DAY_NBR" id="9044CBFE-902B-065A-CE5F-8B86A2856FDB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>CAL_DT</sourceObjSchema>
+<sourceObjName>WORK_DAY_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<commentInRDBMS>A relative work day number within the calendar.  System generated for calculated elapsed work days between two dates, finding a date &apos;x&apos; work days in the future, etc.</commentInRDBMS>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EAF202FF-FF4E-3961-0725-08893BB973F3" name="CAL_DT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CAL_DT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:27 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0454258F-FC2E-EC39-B254-1B474F275A17"/>
+<colUsage columnID="F17B1EAB-2208-5145-4A32-C9E279DDEEE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7B0D072-7234-E301-DAC9-A016123671D9" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="CAL_DT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CAL_DT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0454258F-FC2E-EC39-B254-1B474F275A17"/>
+<colUsage columnID="F17B1EAB-2208-5145-4A32-C9E279DDEEE3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E8FDB86-E7C1-6AD8-8A21-F069317176BE" name="CD_CC_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0454258F-FC2E-EC39-B254-1B474F275A17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

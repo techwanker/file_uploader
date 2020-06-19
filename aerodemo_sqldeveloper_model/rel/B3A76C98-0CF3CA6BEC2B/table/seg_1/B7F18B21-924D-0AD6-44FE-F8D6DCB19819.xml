@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="B7F18B21-924D-0AD6-44FE-F8D6DCB19819" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_REQUISITION">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_REQUISITION</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITEM_NBR" id="EA3EBC51-62EC-1874-85CF-B4FBE750A0D7">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_REQUISITION</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NEED_BY_DT" id="D8B9B1D9-A6F2-F4E0-9BA6-645C696EC7BC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_REQUISITION</sourceObjSchema>
+<sourceObjName>NEED_BY_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NEED_QTY" id="5FD2F8D6-9AA2-B2BC-D2E0-E21BE14F748D">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_REQUISITION</sourceObjSchema>
+<sourceObjName>NEED_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>17</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,17,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FACILITY" id="328A5518-C2F6-8835-C0D3-7C488B9E46D9">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_REQUISITION</sourceObjSchema>
+<sourceObjName>FACILITY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 BYTE</dataTypeSize>
+<ownDataTypeParameters>16 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5E1E647-7DB1-4E7B-D55F-372F1FFD9B93" name="PO_REQUISITION_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_REQUISITION_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:29 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA3EBC51-62EC-1874-85CF-B4FBE750A0D7"/>
+<colUsage columnID="328A5518-C2F6-8835-C0D3-7C488B9E46D9"/>
+<colUsage columnID="D8B9B1D9-A6F2-F4E0-9BA6-645C696EC7BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01401439-ADC6-95AB-83E8-B6811E64AD7F" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_REQUISITION_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_REQUISITION_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA3EBC51-62EC-1874-85CF-B4FBE750A0D7"/>
+<colUsage columnID="328A5518-C2F6-8835-C0D3-7C488B9E46D9"/>
+<colUsage columnID="D8B9B1D9-A6F2-F4E0-9BA6-645C696EC7BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

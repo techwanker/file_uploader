@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E195C5E3-78C3-C883-CAC6-83B35689F6C3" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="FC_ITEM_MAST_DTL">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_DTL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FC_ITEM_MAST_NBR_SRC" id="F59C0E21-13F1-C772-DE35-0FAD9AAF2EBA">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ITEM_MAST_DTL</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_NBR_SRC</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FC_ITEM_MAST_NBR" id="8D5FF3F9-8C51-BF6C-BBAF-6D5F1ACEB086">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ITEM_MAST_DTL</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FCST_RATIO" id="3B5488B3-DB3B-731E-0919-586F8ECA1BA4">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ITEM_MAST_DTL</sourceObjSchema>
+<sourceObjName>FCST_RATIO</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,10,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE8C2C21-A732-299B-6667-08F1F172AA0B" name="FC_ITEM_MAST_DTL_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_DTL_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:28 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F59C0E21-13F1-C772-DE35-0FAD9AAF2EBA"/>
+<colUsage columnID="8D5FF3F9-8C51-BF6C-BBAF-6D5F1ACEB086"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="210B3229-A03B-E621-182A-3B36FC9479CC" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="FC_ITEM_MAST_DTL_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_DTL_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F59C0E21-13F1-C772-DE35-0FAD9AAF2EBA"/>
+<colUsage columnID="8D5FF3F9-8C51-BF6C-BBAF-6D5F1ACEB086"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

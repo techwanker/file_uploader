@@ -1,0 +1,6 @@
+for DIR in javautil-*
+do
+   pushd $DIR
+   maven eclipse:clean eclipse:eclipse
+   popd
+done

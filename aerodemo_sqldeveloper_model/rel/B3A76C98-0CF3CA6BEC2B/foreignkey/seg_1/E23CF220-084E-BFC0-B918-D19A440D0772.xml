@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="E23CF220-084E-BFC0-B918-D19A440D0772" containerWithKeyObject="0B602491-6313-2B70-E898-3499FAC5BB5D" localFKIndex="DE64F848-3507-3037-75BC-B53B2362CD41" name="WOHC_WOH_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WOHC_WOH_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.WO_HDR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>477AE106-4F98-CC3C-47A8-176C0292A3DE</referredTableID>
+<keyObject>1D46BA8E-B321-8EF6-001F-D05E58A10CC5</keyObject>
+<referredKeyID>1D46BA8E-B321-8EF6-001F-D05E58A10CC5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>WO_HDR_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

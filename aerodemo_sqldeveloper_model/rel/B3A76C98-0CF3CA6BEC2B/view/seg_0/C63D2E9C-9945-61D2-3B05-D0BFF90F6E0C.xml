@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="C63D2E9C-9945-61D2-3B05-D0BFF90F6E0C" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_SPLY_WO">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_SPLY_WO</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_RQST_SPLY_WO&lt;br/&gt;AS &lt;br/&gt;SELECT	item_nbr_rqst&lt;br/&gt;FROM	wo_hdr&lt;br/&gt;WHERE	rqst_qty - NVL(fill_qty,0) &gt; 0&lt;br/&gt;  AND	wo_stat_id = &apos;O&apos;</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR_RQST" id="585B9DCA-763F-57DC-1278-3E270B6FC04B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_SPLY_WO</sourceObjSchema>
+<sourceObjName>ITEM_NBR_RQST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR_RQST</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR_RQST</headerAlias>
+<reference>false</reference>
+<referencedColumn>B0097117-F8CE-7C5F-E23A-3F77B5B5266D</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B0097117-F8CE-7C5F-E23A-3F77B5B5266D">
+<columnName>ITEM_NBR_RQST</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="477AE106-4F98-CC3C-47A8-176C0292A3DE">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7A9771B8-5FD1-75B1-C9DC-3F99733B8F8A">
+<columnName>RQST_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F0BF6653-D33F-A62B-7676-66E3B53A3B4C">
+<columnName>FILL_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E2B7FEA6-2845-7293-1063-81C8B7EF8CB2">
+<columnName>WO_STAT_ID</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

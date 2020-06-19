@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA54B858-A971-7017-19AC-8D0797C1D3E4" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="FC_ATTR_VAL">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ATTR_VAL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FC_ATTR_NBR" id="8E4CEE25-CFD8-0F55-32AB-E2B306DEF6F2">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ATTR_VAL</sourceObjSchema>
+<sourceObjName>FC_ATTR_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0ACA9FF7-E329-F65D-FD22-FF57607F7AA5" referredColumn="3429714F-E14F-8E6F-4D38-2C3A56CB825B"/>
+</associations>
+</Column>
+<Column name="ATTR_VAL" id="32BF4DB6-622F-A86B-2389-783D1236C72A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ATTR_VAL</sourceObjSchema>
+<sourceObjName>ATTR_VAL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATTR_VAL_DESCR" id="D1A7C739-4BA5-BD15-A60F-CE2D10063089">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ATTR_VAL</sourceObjSchema>
+<sourceObjName>ATTR_VAL_DESCR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UT_USER_NBR" id="E8BAA6F3-BD09-9310-8B08-03F2D828D917">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ATTR_VAL</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="09123D12-F72E-8734-AAEB-7F275CEB9EAA">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>FC_ATTR_VAL</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C6BD134A-89DB-B140-5AAD-27E81DC5E407" name="FC_ATTR_VAL_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ATTR_VAL_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:27 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E4CEE25-CFD8-0F55-32AB-E2B306DEF6F2"/>
+<colUsage columnID="32BF4DB6-622F-A86B-2389-783D1236C72A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53D83A6C-8C97-2DB4-CFCA-4072A70844CE" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="FC_ATTR_VAL_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ATTR_VAL_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E4CEE25-CFD8-0F55-32AB-E2B306DEF6F2"/>
+<colUsage columnID="32BF4DB6-622F-A86B-2389-783D1236C72A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C0C96FF-CFA6-E37A-B8AE-33F247992254" name="FAV_FA_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E4CEE25-CFD8-0F55-32AB-E2B306DEF6F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

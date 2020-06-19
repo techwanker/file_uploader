@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="WH_FACILITY_TRANS_ONHAND_AU" directorySegmentName="seg_0" id="9CA65A37-606A-0CCB-E576-0E92E20A37F9">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WH_FACILITY_TRANS_ONHAND_AU</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>UPDATE</actions>
+<body>BEGIN&lt;br/&gt;	IF TRUNC(:NEW.rqst_dt) != TRUNC(:OLD.rqst_dt) THEN&lt;br/&gt;		UPDATE	aps_alloc_onhand_oo&lt;br/&gt;			SET	avail_dt	=	TRUNC(:NEW.rqst_dt)&lt;br/&gt;		WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;	--&lt;br/&gt;		UPDATE	aps_alloc_onhand_wo&lt;br/&gt;			SET	avail_dt	=	TRUNC(:NEW.rqst_dt)&lt;br/&gt;		WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;	--&lt;br/&gt;		UPDATE	aps_alloc_onhand_ss&lt;br/&gt;			SET	avail_dt	=	TRUNC(:NEW.rqst_dt)&lt;br/&gt;		WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;	--&lt;br/&gt;		UPDATE	aps_alloc_onhand_fc&lt;br/&gt;			SET	avail_dt	=	TRUNC(:NEW.rqst_dt)&lt;br/&gt;		WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;	--&lt;br/&gt;	END IF;&lt;br/&gt;END wh_facility_trans_onhand_au ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<columns>842F6D70-B597-04D5-6906-54D3835EBBAF</columns>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>2FABEA34-9292-38E5-4301-DF5787CB2159</table>
+</TriggerOraclev10g>

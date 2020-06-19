@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="046E783C-CBA6-0FA1-9F07-EFC6D1B565EE" containerWithKeyObject="8671EF37-73B4-38D2-85F5-4982DA0ED7F0" localFKIndex="144E170B-3D23-3810-16F2-77FA0ED5897A" name="PLD_ASSP_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PLD_ASSP_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.APS_SPLY_SUB_POOL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6100C09F-63EF-8EBB-58E9-BA77C6BC9A9B</referredTableID>
+<keyObject>3846C84C-85DF-9895-0960-7A81A930E7C9</keyObject>
+<referredKeyID>3846C84C-85DF-9895-0960-7A81A930E7C9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>APS_SPLY_SUB_POOL_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

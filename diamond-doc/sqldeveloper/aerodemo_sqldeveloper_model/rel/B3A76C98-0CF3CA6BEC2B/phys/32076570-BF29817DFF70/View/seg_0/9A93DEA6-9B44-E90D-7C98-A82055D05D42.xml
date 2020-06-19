@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableViewProxyOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableViewProxyOraclev10g" name="APS_DMD_FC" directorySegmentName="seg_0" id="9A93DEA6-9B44-E90D-7C98-A82055D05D42">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<schemaObject>807C085E-39F3-5B40-6ED5-D061A11064F8</schemaObject>
+</TableViewProxyOraclev10g>

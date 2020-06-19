@@ -1,0 +1,8 @@
+//import org.javautil.dataset.ColumnMetadata;
+
+
+//ColumnMetadata column(String columnName) {
+//	System.out.println("column be '" + columnName + "'");
+	//dexterous.state.getColumnMetadata(columnName);
+//}
+

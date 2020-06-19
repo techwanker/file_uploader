@@ -1,0 +1,533 @@
+head	1.1;
+access;
+symbols;
+locks
+	jjs:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2019.01.09.10.24.29;	author jjs;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@package org.javautil.sql;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+// (?!\\B'[^']*)(:\\w+)(?![^']*'\\B)A
+// WTFISTHIS
+public class SqlStatement {
+
+	private static final Logger logger = LoggerFactory.getLogger(SqlStatement.class);
+	private String name;
+
+	private String sql;
+
+	private String returning;
+
+	private String description;
+
+	private String narrative;
+
+	/**
+	 * With binds converted and returning clause added if appropriate per dialect
+	 */
+	private String dialectSql;
+
+	private String colonBindSql;
+
+	private String questionBindSql;
+	
+	private String preparedSql;
+
+	private PreparedStatement preparedStatement = null;
+	
+	private int updateCount;
+	
+	private boolean trace = false;
+
+	private Dialect dialect = Dialect.UNSPECIFIED;
+	private SqlStatementFormatterImpl  formatter;
+	private boolean traceExecute;
+	public SqlStatementFormatterImpl getFormatter() {
+		return formatter;
+	}
+
+	public void setFormatter(SqlStatementFormatterImpl formatter) {
+		this.formatter = formatter;
+	}
+
+	private static final String pythonRegex = "%\\(([^)]*)\\)s";
+	private static final String colonRegex = ":([a-zA-Z_0-9]*)";
+	private static final Pattern pythonBindPattern = Pattern.compile(pythonRegex);
+	private static final Pattern colonBindPattern = Pattern.compile(colonRegex);
+
+	public SqlStatement() {
+		super();
+	}
+
+	
+	public SqlStatement(String sql) {
+		super();
+		this.sql = sql;
+	}
+	
+	public SqlStatement(String name, String sql)  {
+		super();
+		this.name = name;
+		this.sql = sql;
+	}
+
+	public SqlStatement(Map<String,String> map) {
+		setName(map.get("name"));
+		setSql(map.get("sql"));
+		setNarrative(map.get("narrative"));
+		setReturning(map.get("returning"));
+		setDescription(map.get("description"));
+	
+	}
+	public SqlStatement(String name, String sql, String returning, String description, String narrative,
+			Dialect dialect) {
+		super();
+		this.name = name;
+		this.sql = sql;
+		this.returning = returning;
+		this.description = description;
+		this.narrative = narrative;
+		this.dialect = dialect;
+	}
+
+	public SqlStatement(String sql, Connection connection) {
+		this.sql = sql;
+	}
+
+	void prepareSql(Dialect dialect) {
+		
+		if (dialectSql == null) {
+			if (returning != null) {
+				switch (dialect) {
+				case POSTGRES:
+					dialectSql = sql + " " + returning;
+					//logger.info("dialect " + dialect + " dialectSql\n" + dialectSql);
+					break;
+				case SQLITE:
+					dialectSql = sql;
+					break;
+				case H2:
+					dialectSql = sql;
+					break;
+				default:
+					throw new IllegalStateException("must set dialect if returning");
+				}
+
+			} else {
+				dialectSql = sql;
+			}
+		}
+		colonBindSql = toColonBinds(dialectSql);
+		questionBindSql = toQuestionBinds(colonBindSql);
+		preparedSql = questionBindSql;
+		//logger.info("prepared\n " + sql + " with dialect " + dialect + "\n" + questionBindSql) ;
+
+	}
+
+	public PreparedStatement prepare(Connection conn, Dialect dialect) throws SQLException {
+		prepareSql(dialect);
+		if (! isPrepared()) {
+			if (trace) {
+				logger.info("Preparing:\n" + preparedSql + "\noriginal:\n" + sql);
+			}
+			preparedStatement = conn.prepareStatement(questionBindSql);
+		}
+		return preparedStatement;
+	}
+
+	public PreparedStatement bind(Connection conn, Dialect dialect, Binds binds) throws SQLException {
+		if (preparedStatement == null) {
+			prepare(conn, dialect);
+		}
+		return bind(binds);
+	}
+
+	public PreparedStatement bind(Binds binds) throws SQLException {
+		if (preparedStatement == null) {
+			throw new IllegalStateException("must invoke prepare(Connection,Dialect) first");
+		}
+		List<String> bindList = findBinds(colonBindSql, colonBindPattern);
+		int i = 1;
+		for (String bindName : bindList) {
+			try {
+				Object value = binds.get(bindName);
+				if (trace) {
+					logger.info("binding index " + i + " bindName: " + bindName + " value " + binds.get(bindName));
+				}
+				if (value == null) {
+					if (trace) {
+						logger.info("calling setNull for index " + i);
+					}
+					preparedStatement.setNull(i, java.sql.Types.VARCHAR); // TODO WTF
+				} else if (value instanceof java.util.Date) {
+					java.util.Date dtin = (java.util.Date) value;
+					java.sql.Date bindDate = new java.sql.Date(dtin.getTime());
+					preparedStatement.setDate(i, bindDate);
+				} else {
+					preparedStatement.setObject(i, binds.get(bindName));
+				}
+			} catch (SQLException e) {
+				String message = this.toString() +  "\n" + binds + "\nexception: \n" + e.getMessage();
+				throw new SQLException(message);
+			} catch (IllegalArgumentException e) {
+				String message = this.toString() + "\n" + binds +  "\nexception: \n" + e.getMessage();
+				throw new IllegalArgumentException(message,e);
+			}
+			i++;
+		}
+		return preparedStatement;
+	}
+	
+	public Long executeReturning(Connection connection, Dialect dialect, Binds binds) throws SQLException   {
+		//logger.info("executeReturning");
+		Long retval;
+		prepare(connection, dialect);
+		ResultSet rset;
+		//logger.info("dialect " + dialect);
+		try {
+		switch (dialect) {
+		case POSTGRES:
+			//logger.info("about to executeQuery");
+			rset = executeQuery(connection, dialect, binds);
+			//logger.info("executeQuery complete");
+			//rset = executeQuery(connection, dialect, binds);
+			rset.next();
+			retval = rset.getLong(1);
+			break;
+		case SQLITE:
+			execute(connection,dialect,binds);
+			rset = connection.createStatement().executeQuery("select last_insert_rowid");
+			rset.next();
+			retval = rset.getLong(1);
+			break;
+		case H2:
+			ResultSet rsetH2;
+			try {
+				execute(connection, dialect, binds);
+				rsetH2 = preparedStatement.getGeneratedKeys();
+				rsetH2.next();
+				retval = rsetH2.getLong(1);
+			} catch (SQLException e) {
+				logger.error(this.toString() + " " + binds + e.getMessage());
+				throw e;
+			}
+		
+			break;
+		default:
+			throw new UnsupportedOperationException("Unhandled dialect " + dialect);
+		}
+		} catch (SQLException sqe) {
+			throw new RuntimeException(sqe);
+		}
+		
+		return retval;
+	}
+
+	public boolean execute(Connection connection, Dialect dialect, Binds binds) throws SQLException {
+		if (! isPrepared()) {
+			prepare(connection, dialect);
+		}
+		return execute(binds);
+	}
+
+	public boolean execute(Binds binds) throws SQLException {
+		bind(binds);
+		boolean result;
+		
+		
+		if (traceExecute) {
+			logger.info("sql:\n" + sql + "\nbinds:\n" + binds);
+		}
+
+		try {
+			result = preparedStatement.execute();
+			updateCount = preparedStatement.getUpdateCount();
+		} catch (SQLException e) {
+			String message = sql + "\n" + binds + "\n" + e.getMessage();
+			throw new SQLException(message);
+		}
+		if (traceExecute) {
+			logger.info("sql:\n" + sql + "\nbinds:\n" + binds + "\nupdateCount: " + updateCount);
+		}
+		return result;
+	}
+
+
+	public ResultSet executeQuery(Connection conn, Dialect dialect, Binds binds) throws SQLException {
+		prepare(conn, dialect);
+		return executeQuery(binds);
+	}
+
+	public ResultSet executeQuery(Binds binds) throws SQLException {
+		bind(binds);
+		ResultSet result;
+
+		try {
+			result = preparedStatement.executeQuery();
+		} catch (SQLException e) {
+			String message = toString() + "\nbinds: " + binds + "\n" + e.getMessage();
+			logger.error(message);
+			throw new SQLException(message);
+		}
+		return result;
+	}
+
+	public static String noNamedBinds(String inSql, Binds binds) {
+		String outSql = inSql;
+		for (String k : binds.keySet()) {
+			outSql = outSql.replaceAll(':' + k, "?");
+		}
+		return outSql;
+
+	}
+
+	public List<List<Object>> executeQueryRows(Connection conn, Dialect dialect, Binds binds) throws SQLException {
+		prepare(conn, dialect);
+		return executeQueryRows(binds);
+	}
+
+	public List<List<Object>> executeQueryRows(Binds binds) throws SQLException {
+		bind(binds);
+		logger.debug("about to execute " + this.dialectSql);
+		ResultSet result = preparedStatement.executeQuery();
+		ResultSetMetaData meta = result.getMetaData();
+		ArrayList<List<Object>> rows = new ArrayList<List<Object>>();
+		int rowcount = 0;
+
+		while (result.next()) {
+			ArrayList<Object> row = new ArrayList<Object>(meta.getColumnCount());
+			for (int i = 1; i <= meta.getColumnCount(); i++) {
+				row.add(result.getObject(i));
+			}
+			rows.add(row);
+			rowcount++;
+		}
+		logger.debug("rowcount " + rowcount);
+		return rows;
+	}
+
+	public void close() throws SQLException {
+		if (preparedStatement != null) {
+			preparedStatement.close();
+		}
+	}
+
+	public static String toColonBinds(String sql) {
+		/**
+		 * Replaces %(BIND_NAME)s with :BIND_NAME :param sql: :return: The sql with all
+		 * of the binds in :bind format
+		 **/
+		List<String> binds = findBinds(sql, pythonBindPattern);
+		String newSql = sql;
+		for (String bind : binds) {
+			String pythonBind = "%(" + bind + ")s";
+			String colonBind = ":" + bind;
+			newSql = newSql.replace(pythonBind, colonBind); //
+		}
+		return newSql;
+	}
+
+	/**
+	 * Convert :BIND_NAME to ?
+	 * 
+	 * @@param sql
+	 * @@return
+	 */
+	public static String toQuestionBinds(String sql) {
+		/**
+		 * Replaces %(BIND_NAME)s with :BIND_NAME :param sql: :return: The sql with all
+		 * of the binds in :bind format
+		 **/
+		List<String> binds = findBinds(sql, colonBindPattern);
+		String newSql = sql;
+		for (String bind : binds) {
+			// String pythonBind = "%(" + bind + ")s";
+			String colonBind = ":" + bind;
+			newSql = newSql.replace(colonBind, "?"); //
+		}
+		return newSql;
+	}
+
+	public static List<String> findBinds(String sql, Pattern pattern) {
+		if (sql == null) {
+			throw new IllegalArgumentException("sql is null");
+		}
+		List<String> retval = new ArrayList<String>();
+
+		Matcher matcher = pattern.matcher(sql);
+		matcher.matches();
+		while (matcher.find()) {
+			String grp = matcher.group(1);
+			logger.debug("bind '" + grp + "'");
+			retval.add(grp);
+		}
+		logger.debug("found binds " + retval);
+
+		return retval;
+	}
+	
+
+
+	/**
+	 * @@return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @@param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @@return the sql
+	 */
+	public String getSql() {
+		return sql;
+	}
+
+	/**
+	 * @@param sql
+	 *            the sql to set
+	 */
+	public void setSql(String sql) {
+		if (sql == null) {
+			throw new IllegalArgumentException("sql may not be null");
+		}
+		this.sql = sql;
+	}
+
+	/**
+	 * @@return the returning
+	 */
+	public String getReturning() {
+		return returning;
+	}
+
+	/**
+	 * @@param returning
+	 *            the returning to set
+	 */
+	public void setReturning(String returning) {
+		this.returning = returning;
+	}
+
+	/**
+	 * @@return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @@param description
+	 *            the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	/**
+	 * @@return the narrative
+	 */
+	public String getNarrative() {
+		return narrative;
+	}
+
+	/**
+	 * @@param narrative
+	 *            the narrative to set
+	 */
+	public void setNarrative(String narrative) {
+		this.narrative = narrative;
+	}
+
+//	@@Override
+//	public String toString() {
+//		return String.format("SqlStatement [name=%s, sql=%s, returning=%s, description=%s, narrative=%s]", name, sql,
+//				returning, description, narrative);
+//	}
+
+	public Dialect getDialect() {
+		return dialect;
+	}
+
+	public void setDialect(Dialect dialect) {
+		this.dialect = dialect;
+	}
+
+	@@Override
+	public String toString() {
+		return String.format(
+				"SqlStatement [name=%s, sql=\n%s\n, returning=%s\n, description=%s, narrative=%s,"
+			//	+ " dialectSql=%s, colonBindSql=%s, "
+				+ "\nquestionBindSql=\n%s, \ndialect=%s]",
+				name, sql, returning, description, narrative, 
+			//	dialectSql, colonBindSql, 
+				questionBindSql, dialect);
+	}
+	
+    public String format() {
+    	String retval = null;
+    	if (formatter == null) {
+    		retval = toString();
+    	}
+    	else {
+    		retval = formatter.format(this);
+    	}
+    	return retval;
+    }
+
+	public int getUpdateCount() {
+		return updateCount;
+	}
+
+	public MappedResultSetIterator iterator(Connection connection,Dialect dialect,Binds binds) throws SQLException {
+	    prepare(connection,dialect);
+		ResultSet rset = executeQuery(connection,dialect,binds);
+	   return new MappedResultSetIterator(rset);
+	}
+	
+	public boolean isPrepared() {
+		return preparedStatement != null;
+	}
+
+	public void setTraceExecute(boolean traceExecute) {
+		this.traceExecute = traceExecute;
+		
+	}
+}@

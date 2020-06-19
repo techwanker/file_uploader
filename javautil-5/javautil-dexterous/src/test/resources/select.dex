@@ -1,0 +1,3 @@
+connect sales
+select * from salesperson;
+exit

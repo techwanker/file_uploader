@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="FC_ITEM_MAST_AI" directorySegmentName="seg_0" id="D719A8AD-E554-4598-9040-1B6CDE01BD17">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>FC_ITEM_MAST_AI</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>INSERT</actions>
+<body>BEGIN&lt;br/&gt; INSERT INTO aps_rqst_queue (item_nbr)&lt;br/&gt; VALUES (:NEW.item_nbr) ;&lt;br/&gt;END fc_item_mast_ai ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>57D9AEE2-88C3-E507-58CA-C71DA0657363</table>
+</TriggerOraclev10g>

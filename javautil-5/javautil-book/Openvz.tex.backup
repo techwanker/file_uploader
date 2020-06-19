@@ -1,0 +1,131 @@
+\chapter{OpenVz}
+\section{Installation}
+http://openvz.org/Main_Page
+\section{101}
+I have created container 101 for wikidb
+\begin{verbatim}
+ 
+
+
+venet0:0  Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
+          inet addr:192.168.1.80  P-t-P:192.168.1.80  Bcast:192.168.1.80  Mask:255.255.255.255
+          UP BROADCAST POINTOPOINT RUNNING NOARP  MTU:1500  Metric:1
+\end{verbatim}
+
+http://192.168.1.80
+
+http://192.168.1.80/wiki/
+
+http://www.yolinux.com/TUTORIALS/LinuxTutorialIptablesNetworkGateway.html
+
+iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+http://www.tldp.org/HOWTO/IPCHAINS-HOWTO-7.html
+
+[root@localhost home]# vzctl enter 101
+entered into CT 101
+[root@localhost /]# service mysqld start
+Starting MySQL:                                            [  OK  ]
+
+
+
+
+\section{Create a container}
+\begin{verbatim}
+ 
+
+\end{verbatim}
+
+
+\begin{verbatim}
+ROOT_MYSQL_PASSWORD='topSecret'     
+LOGFILE=`pwd`/install.log           
+echo_do() {                         
+        echo $* | tee -a $LOGFILE   
+        $* 2>&1 | tee -a $LOGFILE   
+}                                   
+
+test_echo() {
+        echo_do echo this is a test
+}                                  
+
+install_software() {
+        echo_do yum -y install php
+        echo_do yum -y install apache
+        echo_do yum -y install mysql 
+        echo_do yum -y install rcs   
+        echo_do yum -y install mysql-server 
+        echo_do yum -y install php-mysql    
+        echo_do yum -y install libapache2-mod-php5
+}                                                 
+
+get_media_wiki() {
+        APACHE_ROOT=/var/www/html 
+        MEDIA_WIKI=mediawiki-1.16.2
+        cd $APACHE_ROOT            
+
+        if [ $?  != 0 ] ; then
+                echo unable to change to $APACHE_ROOT
+                exit 1                               
+        fi                                           
+
+        if [ -d wiki ] ; then
+                echo wiki already exists in $APACHE_ROOT
+                exit 1                                  
+        fi                                              
+
+        if [ ! -f ${MEDIA_WIKI}.tar.gz ] ; then
+                echo_do wget http://download.wikimedia.org/mediawiki/1.16/${MEDIA_WIKI}.tar.gz
+        fi                                                                                    
+        echo_do tar xfz ${MEDIA_WIKI}.tar.gz                                                  
+        echo_do mv $MEDIA_WIKI wiki                                                           
+}                                                                                             
+
+configure_wiki() {
+        # This is nasty but temporary
+        echo_do chmod 777 /var/www/html/wiki/config
+}                                                  
+
+configure_mysql() {
+        echo_do service mysqld start
+        echo_do mysqladmin create wikidb
+        echo_do mysqladmin -u root password $ROOT_MYSQL_PASSWORD 
+}                                                                
+
+configure_apache() {
+        APACHE_CONF_DIR=/etc/httpd/conf
+        FILE=${APACHE_CONF_DIR}/httpd.conf
+        cd $APACHE_CONF_DIR               
+        if [ 0 != 0 ] ; then              
+                echo unable to change to  
+        fi                                
+        echo_do ci -l $FILE < /dev/null
+        sed -i $FILE -e "/^[ *#]DirectoryIndex/a/ index.php/"
+        LINENO=`grep -n LoadModule $FILE | tail -n 1 | cut -f 1 -d :`
+        echo LINENO $LINENO
+        COMMAND="$LINENO a LoadModule php5_module modules/libphp5.so"
+        echo COMMAND $COMMAND
+        sed -i -e "$COMMAND" $FILE
+        service httpd stop
+        service httpd start
+}
+
+run_conf() {
+        echo connect to http://thishost/wiki/index.php and fill in the form
+        echo after that succeeeds proceed to step two
+}
+test_echo
+install_software
+get_media_wiki
+configure_wiki
+configure_mysql
+configure_apache
+\end{verbatim}
+
+\section{Create an Operating System Template}
+http://openvz.org/Creating_a_CentOS_6_Template
+\section{Create a container}
+
+\section{Install Nexus}
+\subsection{Download}
+http://www.sonatype.org/nexus/go
+

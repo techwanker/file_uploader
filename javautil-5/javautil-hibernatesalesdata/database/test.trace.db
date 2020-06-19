@@ -1,0 +1,3 @@
+11-11 16:41:03 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "SALESPERSON" not found; SQL statement:
+select * from public.salesperson [42102-159]

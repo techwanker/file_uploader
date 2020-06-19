@@ -1,0 +1,1146 @@
+/common/tools/linux/32/javas/jdk1.6.0_26
+[INFO] Scanning for projects...
+[INFO] Reactor build order: 
+[INFO]   javautil
+[INFO]   javautil-core
+[INFO]   javautil-commandline
+[INFO]   javautil-jdbc
+[INFO]   javautil-hibernate
+[INFO]   javautil-oracle
+[INFO]   javautil-addressvalidation
+[INFO]   javautil-conditionidentification
+[INFO]   javautil-dblogging
+[INFO]   Unnamed - org.javautil:javautil-dbunit:jar:0.11.0
+[INFO]   javautil-diff-match
+[INFO]   javautil-hibernatesalesdata
+[INFO]   MP3 Utilities to extract information from mp3 and persist in CSV or RDBMS
+[INFO]   javautil-poi
+[INFO]   javautil-web
+[INFO]   javautil-proxy
+[INFO] Searching repository for plugin with prefix: 'dependency'.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-pom:pom:0.11.0
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-core
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-core:jar:0.11.0
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-commandline
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-commandline:jar:0.11.0
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-jdbc
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-jdbc:jar:0.11.0
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.2.2:test
+[INFO] |  \- commons-pool:commons-pool:jar:1.3:test
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:test (scope not updated to compile)
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-hibernate
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-hibernate:jar:0.11.0
+[INFO] +- com.h2database:h2:jar:1.1.111:test (scope not updated to compile)
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-oracle
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-oracle:jar:0.11.0
+[INFO] +- jaxen:jaxen:jar:1.1.1:compile
+[INFO] |  +- jdom:jdom:jar:1.0:compile
+[INFO] |  +- xml-apis:xml-apis:jar:1.3.02:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.6.2:compile
+[INFO] |  \- xom:xom:jar:1.0:compile
+[INFO] |     +- xerces:xmlParserAPIs:jar:2.6.2:compile
+[INFO] |     +- xalan:xalan:jar:2.6.0:compile
+[INFO] |     \- com.ibm.icu:icu4j:jar:2.6.1:compile
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:20030818.201141:compile
+[INFO] +- org.apache.openjpa:openjpa-all:jar:2.0.0-beta2:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     \- ant:ant-optional:jar:1.5.1:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-addressvalidation
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-addressvalidation:jar:0.11.0
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-hibernate:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-oracle:jar:0.11.0:compile
+[INFO] |  +- commons-dbcp:commons-dbcp:jar:20030818.201141:compile
+[INFO] |  \- org.apache.openjpa:openjpa-all:jar:2.0.0-beta2:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:test (scope not updated to compile)
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- xerces:xercesImpl:jar:2.9.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.3.04:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     \- ant:ant-optional:jar:1.5.1:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] +- jaxen:jaxen:jar:1.1.1:compile
+[INFO] |  +- jdom:jdom:jar:1.0:compile
+[INFO] |  \- xom:xom:jar:1.0:compile
+[INFO] |     +- xerces:xmlParserAPIs:jar:2.6.2:compile
+[INFO] |     +- xalan:xalan:jar:2.6.0:compile
+[INFO] |     \- com.ibm.icu:icu4j:jar:2.6.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-conditionidentification
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repo1.maven.org/maven2/org/springframework/spring/2.0-rc1/spring-2.0-rc1.pom
+[INFO] Unable to find resource 'org.springframework:spring:pom:2.0-rc1' in repository central (http://repo1.maven.org/maven2)
+[WARNING] Skipping jpp repository file:///usr/share/maven2/repository in vanilla mode
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-conditionidentification:war:0.11.0
+[INFO] +- org.javautil:javautil-hibernate:jar:1.0-SNAPSHOT:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring:jar:2.0-rc1:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-dblogging
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-dblogging:jar:0.11.0
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:test (scope not updated to compile)
+[INFO] +- org.javautil:javautil-hibernate:jar:0.11.0:compile
+[INFO] |  +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] |  \- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Unnamed - org.javautil:javautil-dbunit:jar:0.11.0
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-dbunit:jar:0.11.0
+[INFO] +- org.dbunit:dbunit:jar:2.4.3:compile
+[INFO] |  \- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.2.2:compile
+[INFO] |  \- commons-pool:commons-pool:jar:1.3:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] |  \- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:test (scope not updated to compile)
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-diff-match
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-diff-match:jar:0.11.0
+[INFO] +- name.fraser.neil:diff-match:jar:1.0:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-hibernatesalesdata
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-hibernatesalesdata:jar:0.11.0
+[INFO] +- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |  +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |  +- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- jdom:jdom:jar:b9:compile
+[INFO] |  +- commons-beanutils:commons-beanutils:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.0:compile
+[INFO] |  \- commons-collections:commons-collections:jar:2.0:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.2.2:compile
+[INFO] |  \- commons-pool:commons-pool:jar:1.3:compile
+[INFO] +- jaxen:jaxen:jar:1.1.1:compile
+[INFO] |  +- xerces:xercesImpl:jar:2.6.2:compile
+[INFO] |  \- xom:xom:jar:1.0:compile
+[INFO] |     +- xerces:xmlParserAPIs:jar:2.6.2:compile
+[INFO] |     +- xalan:xalan:jar:2.6.0:compile
+[INFO] |     \- com.ibm.icu:icu4j:jar:2.6.1:compile
+[INFO] +- junit:junit:jar:4.4:compile
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.javautil:javautil-oracle:jar:0.11.0:compile
+[INFO] |  \- org.apache.openjpa:openjpa-all:jar:2.0.0-beta2:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-hibernate:jar:0.11.0:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-orm:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:test (scope not updated to compile)
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.3:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building MP3 Utilities to extract information from mp3 and persist in CSV or RDBMS
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-mp3:jar:0.11.0
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.2.2:test
+[INFO] |  \- commons-pool:commons-pool:jar:1.3:test
+[INFO] +- net.jthink:jaudiotagger:jar:2.0.4-SNAPSHOT:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- org.javautil:javautil-diff-match:jar:0.11.0:compile
+[INFO] |  \- name.fraser.neil:diff-match:jar:1.0:compile
+[INFO] +- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] |  \- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.springframework:spring-orm:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-poi
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-poi:jar:0.11.0
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:test
+[INFO] |  \- org.javautil:javautil-commandline:jar:0.11.0:test
+[INFO] +- org.javautil:javautil-hibernatesalesdata:jar:0.11.0:test
+[INFO] |  +- jaxen:jaxen:jar:1.1.1:test
+[INFO] |  |  +- xerces:xercesImpl:jar:2.6.2:test
+[INFO] |  |  \- xom:xom:jar:1.0:test
+[INFO] |  |     +- xerces:xmlParserAPIs:jar:2.6.2:test
+[INFO] |  |     +- xalan:xalan:jar:2.6.0:test
+[INFO] |  |     \- com.ibm.icu:icu4j:jar:2.6.1:test
+[INFO] |  +- org.javautil:javautil-oracle:jar:0.11.0:test
+[INFO] |  |  \- org.apache.openjpa:openjpa-all:jar:2.0.0-beta2:test
+[INFO] |  +- org.javautil:javautil-hibernate:jar:0.11.0:test
+[INFO] |  \- org.springframework:spring-orm:jar:2.5.6:test
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.apache.poi:poi:jar:3.7:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.2.2:test
+[INFO] |  \- commons-pool:commons-pool:jar:1.3:test
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] \- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    \- javax.activation:activation:jar:1.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-web
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[WARNING] While downloading xerces:xerces:2.2.1
+  This artifact has been relocated to xerces:xercesImpl:2.2.1.
+
+
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-web:jar:0.11.0
+[INFO] +- xerces:xercesImpl:jar:2.2.1:provided
+[INFO] +- junit:junit:jar:4.4:test (scope not updated to compile)
+[INFO] +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO] |  \- org.beanshell:bsh:jar:2.0b4:compile
+[INFO] +- org.javautil:javautil-hibernatesalesdata:jar:0.11.0:test
+[INFO] |  +- commons-dbcp:commons-dbcp:jar:1.2.2:test
+[INFO] |  |  \- commons-pool:commons-pool:jar:1.3:test
+[INFO] |  +- jaxen:jaxen:jar:1.1.1:test
+[INFO] |  |  \- xom:xom:jar:1.0:test
+[INFO] |  |     +- xerces:xmlParserAPIs:jar:2.6.2:test
+[INFO] |  |     +- xalan:xalan:jar:2.6.0:test
+[INFO] |  |     \- com.ibm.icu:icu4j:jar:2.6.1:test
+[INFO] |  \- org.javautil:javautil-oracle:jar:0.11.0:test
+[INFO] |     \- org.apache.openjpa:openjpa-all:jar:2.0.0-beta2:test
+[INFO] +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO] |  \- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO] +- org.javautil:javautil-hibernate:jar:0.11.0:compile
+[INFO] +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- log4j:log4j:jar:1.2.14:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:provided (scope not updated to compile)
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO] |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO] |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO] +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-orm:jar:2.5.6:compile
+[INFO] |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO] |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO] +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO] |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO] |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO] |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO] +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO] |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO] |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO] |     +- xerces:xerces:jar:1.2.3:compile
+[INFO] |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO] |     \- jdom:jdom:jar:b9:compile
+[INFO] +- commons-io:commons-io:jar:1.4:compile
+[INFO] +- com.google.code.gson:gson:jar:1.3:compile
+[INFO] +- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO] |  \- javax.activation:activation:jar:1.1:compile
+[INFO] +- org.mortbay.jetty:jetty:jar:6.1.5:test
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.5:test
+[INFO] |  \- org.mortbay.jetty:servlet-api-2.5:jar:6.1.5:test
+[INFO] +- commons-lang:commons-lang:jar:2.4:compile
+[INFO] +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO] +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO] +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO] +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO] +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO] +- com.h2database:h2:jar:1.1.111:compile
+[INFO] +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO] +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO] +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO] +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO] +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO] \- org.apache.poi:poi:jar:3.7:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javautil-proxy
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[INFO] org.javautil:javautil-proxy:war:0.11.0
+[INFO] \- org.javautil:javautil-web:jar:0.11.0:compile
+[INFO]    +- org.javautil:javautil-core:jar:0.11.0:compile
+[INFO]    |  +- junit:junit:jar:4.4:compile
+[INFO]    |  +- org.beanshell:bsh:jar:2.0b4:compile
+[INFO]    |  \- javax.servlet:servlet-api:jar:2.5:compile
+[INFO]    +- org.javautil:javautil-jdbc:jar:0.11.0:compile
+[INFO]    |  \- org.javautil:javautil-commandline:jar:0.11.0:compile
+[INFO]    +- org.javautil:javautil-hibernate:jar:0.11.0:compile
+[INFO]    +- dom4j:dom4j:jar:1.6.1:compile
+[INFO]    |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO]    +- log4j:log4j:jar:1.2.14:compile
+[INFO]    +- org.hibernate:hibernate-ehcache:jar:3.3.1.GA:compile
+[INFO]    |  \- net.sf.ehcache:ehcache:jar:1.2.3:compile
+[INFO]    +- org.hibernate:hibernate-core:jar:3.3.1.GA:compile
+[INFO]    |  +- antlr:antlr:jar:2.7.6:compile
+[INFO]    |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO]    |  \- javax.transaction:jta:jar:1.1:compile
+[INFO]    +- hibernate:hibernate-tools:jar:3.2.3.GA:compile
+[INFO]    |  +- freemarker:freemarker:jar:2.3.8:compile
+[INFO]    |  \- org.hibernate:jtidy:jar:r8-20060801:compile
+[INFO]    +- org.springframework:spring-web:jar:2.5.6:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO]    |  \- org.springframework:spring-core:jar:2.5.6:compile
+[INFO]    +- org.springframework:spring-orm:jar:2.5.6:compile
+[INFO]    |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO]    |  \- org.springframework:spring-tx:jar:2.5.6:compile
+[INFO]    +- org.springframework:spring-webmvc:jar:2.5.6:compile
+[INFO]    |  \- org.springframework:spring-context-support:jar:2.5.6:compile
+[INFO]    +- org.springframework.security:spring-security-acl:jar:2.0.4:compile
+[INFO]    |  \- org.springframework.security:spring-security-core:jar:2.0.4:compile
+[INFO]    |     +- org.springframework:spring-aop:jar:2.0.8:compile
+[INFO]    |     \- org.springframework:spring-support:jar:2.0.8:runtime
+[INFO]    +- commons-configuration:commons-configuration:jar:1.4:compile
+[INFO]    |  +- commons-logging:commons-logging-api:jar:1.0.4:compile
+[INFO]    |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO]    |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO]    |  +- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO]    |  +- commons-codec:commons-codec:jar:1.3:compile
+[INFO]    |  \- commons-jxpath:commons-jxpath:jar:1.2:compile
+[INFO]    |     +- xerces:xerces:jar:1.2.3:compile
+[INFO]    |     +- ant:ant-optional:jar:1.5.1:compile
+[INFO]    |     \- jdom:jdom:jar:b9:compile
+[INFO]    +- commons-io:commons-io:jar:1.4:compile
+[INFO]    +- com.google.code.gson:gson:jar:1.3:compile
+[INFO]    +- javax.mail:mail:jar:sources:1.4.1:compile
+[INFO]    |  \- javax.activation:activation:jar:1.1:compile
+[INFO]    +- commons-lang:commons-lang:jar:2.4:compile
+[INFO]    +- jcmdline:jcmdline:jar:1.0.3:compile
+[INFO]    +- org.slf4j:slf4j-api:jar:1.5.6:compile
+[INFO]    +- org.slf4j:slf4j-simple:jar:1.5.6:compile
+[INFO]    +- org.springframework:spring-test:jar:2.5.6:compile
+[INFO]    +- org.springframework:spring-context:jar:2.5.6:compile
+[INFO]    +- org.springframework:spring-beans:jar:2.5.6:compile
+[INFO]    +- org.springframework:spring-jdbc:jar:2.5.6:compile
+[INFO]    +- javassist:javassist:jar:3.8.0.GA:compile
+[INFO]    +- com.h2database:h2:jar:1.1.111:compile
+[INFO]    +- com.mchange:c3p0:jar:0.9.1:compile
+[INFO]    +- com.oracle:oracle-jdbc6:jar:11.1:compile
+[INFO]    +- org.freemarker:freemarker:jar:2.3.15:compile
+[INFO]    +- org.apache.openejb:javaee-api:jar:5.0-1:compile
+[INFO]    +- org.apache.commons:commons-io:jar:1.3.2:compile
+[INFO]    \- org.apache.poi:poi:jar:3.7:compile
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] ------------------------------------------------------------------------
+[INFO] javautil .............................................. SUCCESS [5.774s]
+[INFO] javautil-core ......................................... SUCCESS [0.417s]
+[INFO] javautil-commandline .................................. SUCCESS [0.672s]
+[INFO] javautil-jdbc ......................................... SUCCESS [1.022s]
+[INFO] javautil-hibernate .................................... SUCCESS [1.102s]
+[INFO] javautil-oracle ....................................... SUCCESS [1.662s]
+[INFO] javautil-addressvalidation ............................ SUCCESS [1.899s]
+[INFO] javautil-conditionidentification ...................... SUCCESS [2.901s]
+[INFO] javautil-dblogging .................................... SUCCESS [0.855s]
+[INFO] Unnamed - org.javautil:javautil-dbunit:jar:0.11.0 ..... SUCCESS [0.443s]
+[INFO] javautil-diff-match ................................... SUCCESS [0.081s]
+[INFO] javautil-hibernatesalesdata ........................... SUCCESS [1.019s]
+[INFO] MP3 Utilities to extract information from mp3 and persist in CSV or RDBMS  SUCCESS [0.868s]
+[INFO] javautil-poi .......................................... SUCCESS [1.476s]
+[INFO] javautil-web .......................................... SUCCESS [1.735s]
+[INFO] javautil-proxy ........................................ SUCCESS [0.502s]
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 24 seconds
+[INFO] Finished at: Wed Aug 31 14:17:59 EST 2011
+[INFO] Final Memory: 26M/343M
+[INFO] ------------------------------------------------------------------------

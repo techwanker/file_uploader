@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="42604846-F45B-0E4D-8256-33334E089F0C" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="PO_LINE_CERT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>PO_LINE_CERT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW PO_LINE_CERT&lt;br/&gt;AS &lt;br/&gt;select plmc.po_line_hdr_nbr,&lt;br/&gt;        plmc.item_nbr&lt;br/&gt;from po_line_multiple_cert plmc,&lt;br/&gt;     po_line_hdr plh&lt;br/&gt;where plmc.po_line_Hdr_nbr = plh.po_line_hdr_nbr and&lt;br/&gt;      plh.line_stat_id = &apos;O&apos;</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PO_LINE_HDR_NBR" id="F3B8F26A-8D71-9DE6-6E86-CAAD178F7D6A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_CERT</sourceObjSchema>
+<sourceObjName>PO_LINE_HDR_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PO_LINE_HDR_NBR</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>PO_LINE_HDR_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumn>D74C361E-B693-10F5-3DE8-3D7E61662BA6</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR" id="6233C818-D59F-9CFB-C87A-47D8E548A43B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>PO_LINE_CERT</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumn>951CC435-4F02-3BC8-041B-3CBC7FB8DEF0</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D74C361E-B693-10F5-3DE8-3D7E61662BA6">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_MULTIPLE_CERT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6FFE3F71-63E5-FA89-4ED0-8C9382D7FCF9">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_MULTIPLE_CERT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6511CC97-FD3C-2C1F-B55A-5C6A318C86BD">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="951CC435-4F02-3BC8-041B-3CBC7FB8DEF0">
+<columnName>PO_LINE_HDR_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_MULTIPLE_CERT</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BF2E37A0-84C0-AF5F-B372-B7F58786A6CA">
+<columnName>PO_LINE_HDR_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="13C0B05F-7B7C-1A84-9B07-60730F70F624">
+<columnName>LINE_STAT_ID</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_LINE_HDR</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

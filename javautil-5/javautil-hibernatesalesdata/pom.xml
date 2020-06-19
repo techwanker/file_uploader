@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.javautil</groupId>
+	<artifactId>javautil-hibernatesalesdata</artifactId>
+	<version>VER-5.0.0</version>
+	<packaging>jar</packaging>
+	<name>javautil-hibernatesalesdata</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.javautil</groupId>
+		<artifactId>javautil-pom</artifactId>
+		<version>VER-5.0.0</version>
+		<relativePath>../javautil-pom</relativePath>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-jxpath</groupId>
+			<artifactId>commons-jxpath</artifactId>
+			<version>1.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>xerces</groupId>
+					<artifactId>xerces</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javautil</groupId>
+			<artifactId>javautil-core</artifactId>
+			<version>VER-5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javautil</groupId>
+			<artifactId>javautil-test</artifactId>
+			<version>VER-5.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.javautil</groupId>
+			<artifactId>javautil-oracle</artifactId>
+			<version>VER-5.0.0</version>
+		</dependency>
+   <dependency>
+   <groupId>org.javautil</groupId>
+   <artifactId>javautil-hibernate</artifactId>
+   <version>VER-5.0.0</version>
+  </dependency>
+		<dependency>
+			<groupId>org.javautil</groupId>
+			<artifactId>javautil-jdbc</artifactId>
+			<version>VER-5.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>2.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>2.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>2.5.6</version>
+			<!-- <scope>test</scope>  -->
+	                <!-- why are test classes in main? -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>2.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>2.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+	
+		<!-- hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${org.hibernate.ehcache.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>hibernate</groupId>
+			<artifactId>hibernate-tools</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${javassist.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javautil</groupId>
+			<artifactId>javautil-commandline</artifactId>
+			<version>VER-5.0.0</version>
+		</dependency>
+		<!-- end of hibernate -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${com.h2database.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+<build>
+  <plugins>
+
+   <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sql-maven-plugin</artifactId>
+    <version>1.5</version>
+
+    <dependencies>
+     <!-- specify the dependent JDBC driver here -->
+     <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>${com.h2database.version}</version>
+     </dependency>
+    </dependencies>
+
+    <!-- common configuration shared by all executions -->
+    <configuration>
+     <driver>org.h2.Driver</driver>
+     <!-- make it work both from javautil-pom and javautil-jdbc -->
+     <!-- TODO -->
+     <url>jdbc:h2:./../javautil-hibernatesalesdata/target/database/test</url>
+     <username>sample</username>
+     <password>data</password>
+
+    </configuration>
+    <executions>
+     <execution>
+      <id>create-schema</id>
+      <phase>process-resources</phase>
+      <goals>
+       <goal>execute</goal>
+      </goals>
+      <configuration>
+       <srcFiles>
+        <srcFile>../javautil-databases/src/main/ddl/h2/drop_tables.sql</srcFile>
+        <srcFile>../javautil-databases/src/main/ddl/h2/sales_schema.sql</srcFile>
+       </srcFiles>
+       <onError>continue</onError>
+      </configuration>
+      
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+  <pluginManagement>
+   <plugins>
+    <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+    <plugin>
+     <groupId>org.eclipse.m2e</groupId>
+     <artifactId>lifecycle-mapping</artifactId>
+     <version>1.0.0</version>
+     <configuration>
+      <lifecycleMappingMetadata>
+       <pluginExecutions>
+        <pluginExecution>
+         <pluginExecutionFilter>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sql-maven-plugin</artifactId>
+          <versionRange>[1.5,)</versionRange>
+          <goals>
+           <goal>execute</goal>
+          </goals>
+         </pluginExecutionFilter>
+         <action>
+          <ignore></ignore>
+         </action>
+        </pluginExecution>
+       </pluginExecutions>
+      </lifecycleMappingMetadata>
+     </configuration>
+    </plugin>
+   </plugins>
+  </pluginManagement>
+  </build>
+</project>

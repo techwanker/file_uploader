@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="DR$IC_ITEM_MAST_NDX_06TC" directorySegmentName="seg_0" id="7A290E97-B3EF-B344-5D62-75641D74FD57">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>DR$IC_ITEM_MAST_NDX_06TC</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body>declare   reindex boolean := FALSE;   updop   boolean := FALSE; begin   ctxsys.drvdml.c_updtab.delete;   ctxsys.drvdml.c_numtab.delete;   ctxsys.drvdml.c_vctab.delete;   ctxsys.drvdml.c_rowid := :new.rowid;   if (inserting or updating(&apos;ITEM_DESCR&apos;) or       :new.&quot;ITEM_DESCR&quot; &lt;&gt; :old.&quot;ITEM_DESCR&quot;) then     reindex := TRUE;     updop := (not inserting);     ctxsys.drvdml.c_text_vc2 := :new.&quot;ITEM_DESCR&quot;;   end if;   ctxsys.drvdml.ctxcat_dml(&apos;AERODEMO&apos;,&apos;IC_ITEM_MAST_NDX_06&apos;, reindex, updop); end;</body>
+<triggerTime>AFTER</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>FE5A5206-13AE-CB58-20FA-24998DA908CF</table>
+</TriggerOraclev10g>

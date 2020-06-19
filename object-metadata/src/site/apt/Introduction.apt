@@ -1,0 +1,25 @@
+Object Type Metadata
+
+  A project that does little more than accumulating information on objects stored in a database
+  That are represent as JSON objects, although no particular object types are supported at this time.
+
+* Description
+
+ This project is not aware of the source of the objects.  It is expected that objects will be discovered
+ by a class in another project and that the metadata repository will be called as follows
+ 
++-------------------
+ ObjectTypes types = new ObjectTypes();
+ while a new type is found do
+     types.process(rawObject)
+ done
++-------------------
+ 
+ After all objects have been analyzed, DDL may be created.
+ The tables are then created.
+ Table EJB3 Beans are created.
+ The beans are populated using the Spring bean setter using 
+ Rows are persisted or marshalled to csv or xml as injected by Spring persister.
+ 
+ 
+ 

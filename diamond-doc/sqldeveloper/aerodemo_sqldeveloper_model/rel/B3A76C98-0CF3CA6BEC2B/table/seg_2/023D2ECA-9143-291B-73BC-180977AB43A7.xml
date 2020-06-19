@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="023D2ECA-9143-291B-73BC-180977AB43A7" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="WO_DTL_CERT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WO_DTL_CERT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WO_DTL_NBR" id="5AC043F3-BA58-7F8F-7766-7ADA788F3EAC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WO_DTL_CERT</sourceObjSchema>
+<sourceObjName>WO_DTL_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F240D6BC-32D2-18DC-FA75-651F523CDB28" referredColumn="9ACD31CC-3BF0-DD66-C203-6E335470A9F9"/>
+</associations>
+</Column>
+<Column name="CERT_CD" id="B0ED5127-A200-48A6-D62F-F0345E2F4BEC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>WO_DTL_CERT</sourceObjSchema>
+<sourceObjName>CERT_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F22ABB7-A0FC-D627-861C-1102B0346C89" name="WO_DTL_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WO_DTL_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC043F3-BA58-7F8F-7766-7ADA788F3EAC"/>
+<colUsage columnID="B0ED5127-A200-48A6-D62F-F0345E2F4BEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79143D9F-B4AB-FB4B-1781-2F7EF30CCF15" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="WO_DTL_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WO_DTL_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC043F3-BA58-7F8F-7766-7ADA788F3EAC"/>
+<colUsage columnID="B0ED5127-A200-48A6-D62F-F0345E2F4BEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87A35448-4D3F-E1D1-36B0-5C653D0F62FB" name="WODC_WOD_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AC043F3-BA58-7F8F-7766-7ADA788F3EAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

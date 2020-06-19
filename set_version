@@ -1,0 +1,1 @@
+find . -name "pom.xml" -exec sed -e "s/VER-0.11.7/VER-5.0.0/" -i {}  \;

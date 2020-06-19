@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelationalSubView" name="Relational_1 - SubView_1" id="2B43B8B5-265E-F45E-DE95-D4310E073E26">
+<createdBy>jjs</createdBy>
+<modifiedBy>jjs</modifiedBy>
+<createdTime>2020-01-27 07:09:29 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<showSchemaName>false</showSchemaName>
+<displays>
+<Display class="oracle.dbtools.crest.swingui.relational.DPVRelationalSubView" name="Display_1" id="8BFC882C-D004-DAF5-1D6E-80BC6F2D208D">
+<createdBy>jjs</createdBy>
+<modifiedBy>jjs</modifiedBy>
+<createdTime>2020-01-27 07:10:26 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>true</display>
+<notation>1</notation>
+<showSchemaName>false</showSchemaName>
+</Display>
+</displays>
+</Diagram>

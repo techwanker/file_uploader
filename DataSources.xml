@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:datasources xmlns:ns2="http://datasources.javautil.org">
+	 <datasource>
+		<name>oracle</name>
+		<classname>
+			org.javautil.oracle.datasources.OracleDataSourceWrapper
+		</classname>
+		<property key="User">
+			<value>web_gus</value>
+		</property>
+		<property key="PortNumber">
+			<value>1521</value>
+		</property>
+		<property key="ServerName">
+			<value>localhost</value>
+		</property>
+		<property key="ServiceName">
+			<value>dev10</value>
+		</property>
+		<property key="password">
+			<value>tutorial</value>
+		</property>
+
+		<property key="AbandonedConnectionTimeout">
+			<value>3</value>
+		</property>
+	
+	</datasource>
+	 <datasource>
+		<name>xe</name>
+		<classname>
+			org.javautil.oracle.datasources.OracleDataSourceWrapper
+		</classname>
+		<property key="User">
+			<value>hr</value>
+		</property>
+		<property key="PortNumber">
+			<value>1526</value>
+		</property>
+		<property key="ServerName">
+			<value>localhost</value>
+		</property>
+		<property key="ServiceName">
+			<value>XE</value>
+		</property>
+		<property key="password">
+			<value>tutorial</value>
+		</property>
+
+		<property key="AbandonedConnectionTimeout">
+			<value>3</value>
+		</property>
+	
+	</datasource>
+	
+</ns2:datasources>

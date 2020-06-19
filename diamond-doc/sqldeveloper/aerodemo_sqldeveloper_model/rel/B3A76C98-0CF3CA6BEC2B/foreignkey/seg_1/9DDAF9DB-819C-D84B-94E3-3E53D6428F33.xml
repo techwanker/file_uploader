@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="9DDAF9DB-819C-D84B-94E3-3E53D6428F33" containerWithKeyObject="890DB6FD-138C-5723-5135-2771F729EAA8" localFKIndex="4EF88E3A-A2B6-69C1-8FE1-AC8E4428A7D3" name="IC_ITEM_VND_COST_MATRIX_CURRENCY_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_ITEM_VND_COST_MATRIX_CURRENCY_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>845A9B08-06C8-484D-4195-7D8310331C3B</importedID>
+<referredTableLongName>AERODEMO.CURRENCY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>16D890F1-0082-7DDA-9EBC-5AA949B41CDC</referredTableID>
+<keyObject>53EAF14D-CA97-731A-4FAC-63D0078DB6C9</keyObject>
+<referredKeyID>53EAF14D-CA97-731A-4FAC-63D0078DB6C9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CURR_CD</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

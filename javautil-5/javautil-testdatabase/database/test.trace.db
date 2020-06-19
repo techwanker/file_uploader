@@ -1,0 +1,6 @@
+2019-01-10 21:03:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SALE" not found; SQL statement:
+delete from PUBLIC.SALE [42102-193]
+2019-01-10 21:05:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SALE" not found; SQL statement:
+delete from PUBLIC.SALE [42102-193]

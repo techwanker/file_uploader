@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="WH_FACILITY_TRANS_ONHAND_BD" directorySegmentName="seg_0" id="B3CA2255-E773-5337-7922-90501ABE7F48">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>WH_FACILITY_TRANS_ONHAND_BD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>DELETE</actions>
+<body>BEGIN&lt;br/&gt;	DELETE FROM	aps_alloc_onhand_oo&lt;br/&gt;	WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;--&lt;br/&gt;	DELETE FROM	aps_alloc_onhand_wo&lt;br/&gt;	WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;--&lt;br/&gt;	DELETE FROM	aps_alloc_onhand_ss&lt;br/&gt;	WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;--&lt;br/&gt;	DELETE FROM	aps_alloc_onhand_fc&lt;br/&gt;	WHERE wh_facility_trans_onhand_nbr	=	:OLD.wh_facility_trans_onhand_nbr ;&lt;br/&gt;--&lt;br/&gt;END wh_facility_trans_onhand_bd ;&lt;br/&gt;</body>
+<triggerTime>BEFORE</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>2FABEA34-9292-38E5-4301-DF5787CB2159</table>
+</TriggerOraclev10g>

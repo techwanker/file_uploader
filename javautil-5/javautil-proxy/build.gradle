@@ -1,0 +1,7 @@
+
+apply plugin: 'war'
+
+description = 'javautil-proxy'
+dependencies {
+  compile project(':javautil-web')
+}

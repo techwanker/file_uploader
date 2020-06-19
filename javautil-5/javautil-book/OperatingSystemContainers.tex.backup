@@ -1,0 +1,10 @@
+\section{Operating System Containers}
+Containers are used to create a minimal environment to support a service.  The advantages of containers include
+\begin{itemize}
+  \item The ability to strip down to only those components necessary to support the service which reduces conflicts on dependencies,
+simplifies security by eliminating unnecessary security holes
+  \item Ease of deployment
+ \end{itemize}
+
+
+Openvz http://en.wikipedia.org/wiki/OpenVZ

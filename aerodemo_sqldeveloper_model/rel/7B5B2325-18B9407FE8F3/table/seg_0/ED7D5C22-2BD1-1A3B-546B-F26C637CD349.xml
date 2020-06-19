@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED7D5C22-2BD1-1A3B-546B-F26C637CD349" schemaObject="2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57" name="IMG_IMAGE_SET_HDR">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_SET_HDR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IMG_IMAGE_SET_HDR_NBR" id="B4308433-1D91-830E-BC0E-357DF6E96ACC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE_SET_HDR</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_SET_HDR_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMG_IMAGE_SET_DESCR" id="A83CC11A-152F-7E2F-59C7-2B42AEEA9CD4">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE_SET_HDR</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_SET_DESCR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SCAN_SET_FLG" id="BADE88E7-682C-749C-4599-54E5EEF6BEDC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE_SET_HDR</sourceObjSchema>
+<sourceObjName>SCAN_SET_FLG</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<constraintName>SYS_C00125506</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F9AE2F7-461A-471D-7F6C-FDB622480159" schemaObject="2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57" name="IMG_IMAGE_SET_HDR_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>SYS_C00125507</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4308433-1D91-830E-BC0E-357DF6E96ACC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

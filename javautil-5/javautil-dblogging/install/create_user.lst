@@ -1,0 +1,158 @@
+SQL> alter session set container = sales_reporting_pdb;
+
+Session altered.
+
+SQL> 
+SQL> grant connect to  &test_dblogger identified  by tutorial container=all;
+old   1: grant connect to  &test_dblogger identified  by tutorial container=all
+new   1: grant connect to  sr identified  by tutorial container=all
+grant connect to  sr identified  by tutorial container=all
+*
+ERROR at line 1:
+ORA-65065: A local user or role can only be altered within the current 
+container 
+
+
+SQL> grant create session to &test_dblogger;
+old   1: grant create session to &test_dblogger
+new   1: grant create session to sr
+
+Grant succeeded.
+
+SQL> grant create table to &test_dblogger;
+old   1: grant create table to &test_dblogger
+new   1: grant create table to sr
+
+Grant succeeded.
+
+SQL> grant create procedure to &test_dblogger;
+old   1: grant create procedure to &test_dblogger
+new   1: grant create procedure to sr
+
+Grant succeeded.
+
+SQL> grant create type to &test_dblogger;
+old   1: grant create type to &test_dblogger
+new   1: grant create type to sr
+
+Grant succeeded.
+
+SQL> grant create view to &test_dblogger;
+old   1: grant create view to &test_dblogger
+new   1: grant create view to sr
+
+Grant succeeded.
+
+SQL> -- grant create directory to &test_dblogger;
+SQL> grant create sequence to &test_dblogger;
+old   1: grant create sequence to &test_dblogger
+new   1: grant create sequence to sr
+
+Grant succeeded.
+
+SQL> alter user &test_dblogger default tablespace sales_reporting;
+old   1: alter user &test_dblogger default tablespace sales_reporting
+new   1: alter user sr default tablespace sales_reporting
+
+User altered.
+
+SQL> alter user &test_dblogger quota unlimited on sales_reporting;
+old   1: alter user &test_dblogger quota unlimited on sales_reporting
+new   1: alter user sr quota unlimited on sales_reporting
+
+User altered.
+
+SQL> --
+SQL> #grant execute on sys.utl_file to &test_dblogger with grant option;
+old   1: grant execute on sys.utl_file to &test_dblogger with grant option
+new   1: grant execute on sys.utl_file to sr with grant option
+
+Grant succeeded.
+
+SQL> #grant execute on sys.dbms_pipe to &test_dblogger with grant option;
+old   1: grant execute on sys.dbms_pipe to &test_dblogger with grant option
+new   1: grant execute on sys.dbms_pipe to sr with grant option
+
+Grant succeeded.
+
+SQL> #grant select on sys.v_$session to &test_dblogger with grant option;
+old   1: grant select on sys.v_$session to &test_dblogger with grant option
+new   1: grant select on sys.v_$session to sr with grant option
+
+Grant succeeded.
+
+SQL> #grant select on sys.v_$mystat to &test_dblogger with grant option;
+old   1: grant select on sys.v_$mystat to &test_dblogger with grant option
+new   1: grant select on sys.v_$mystat to sr with grant option
+
+Grant succeeded.
+
+SQL> #grant select on sys.v_$sesstat  to &test_dblogger with grant option;
+old   1: grant select on sys.v_$sesstat  to &test_dblogger with grant option
+new   1: grant select on sys.v_$sesstat  to sr with grant option
+
+Grant succeeded.
+
+SQL> #grant execute on sys.dbms_lock to &test_dblogger with grant option;
+old   1: grant execute on sys.dbms_lock to &test_dblogger with grant option
+new   1: grant execute on sys.dbms_lock to sr with grant option
+
+Grant succeeded.
+
+SQL> --
+SQL> #grant execute on sys.utl_http to &test_dblogger with grant option;
+old   1: grant execute on sys.utl_http to &test_dblogger with grant option
+new   1: grant execute on sys.utl_http to sr with grant option
+
+Grant succeeded.
+
+SQL> --
+SQL> 
+SQL> drop directory udump_dir;
+
+Directory dropped.
+
+SQL> create directory udump_dir as '/common/oracle/diag/rdbms/dev18b/dev18b/trace/';
+
+Directory created.
+
+SQL> create public synonym udump_dir for udump_dir;
+create public synonym udump_dir for udump_dir
+                      *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> grant read on directory udump_dir to &test_dblogger;
+old   1: grant read on directory udump_dir to &test_dblogger
+new   1: grant read on directory udump_dir to sr
+
+Grant succeeded.
+
+SQL> 
+SQL> drop directory job_msg_dir;
+
+Directory dropped.
+
+SQL> create directory job_msg_dir as '/common/scratch/job_msg_dir';
+
+Directory created.
+
+SQL> grant read, write on directory job_msg_dir to &test_dblogger;
+old   1: grant read, write on directory job_msg_dir to &test_dblogger
+new   1: grant read, write on directory job_msg_dir to sr
+
+Grant succeeded.
+
+SQL> create public synonym job_msg_dir for job_msg_dir;
+create public synonym job_msg_dir for job_msg_dir
+                      *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> drop public synonym job_msg_dir;
+
+Synonym dropped.
+
+SQL> exit

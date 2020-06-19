@@ -1,0 +1,19 @@
+\chapter{Linux}
+\section{Environment}
+configure your .bashrc file 
+
+\begin{verbatim}
+# .bashrc
+# User specific aliases and functions and environment variables
+#export JAVA_HOME=/common/tools/linux/32/jdk1.6.0_13
+export JAVA_HOME=/common/tools/linux/64/jdk1.6.0_13
+#export JAVA_HOME=/common/tools/linux/32/jre1.6.0_13
+PATH=$JAVA_HOME/bin:$PATH
+export MAVEN=/common/tools/java/apache-maven-2.1.0/bin
+PATH=$MAVEN:$PATH
+PATH=$PATH:~/bin
+. ~/bin/qcd.sh
+
+\end{verbatim}
+http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+\section{Editing}

@@ -1,0 +1,31 @@
+
+description = 'javautil-web'
+dependencies {
+  compile project(':javautil-core')
+  compile project(':javautil-jdbc')
+  compile project(':javautil-hibernate')
+    compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
+    compile group: 'org.hibernate', name: 'hibernate-ehcache', version:'3.3.1.GA'
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'3.3.1.GA'
+    compile group: 'hibernate', name: 'hibernate-tools', version:'3.2.3.GA'
+    compile group: 'org.springframework', name: 'spring-web', version:'2.5.6'
+    compile group: 'org.springframework', name: 'spring-orm', version:'2.5.6'
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'2.5.6'
+    compile group: 'org.springframework.security', name: 'spring-security-acl', version:'2.0.4'
+    compile group: 'commons-io', name: 'commons-io', version:'1.4'
+    compile group: 'com.google.code.gson', name: 'gson', version:'1.3'
+    compile group: 'javax.mail', name: 'mail', version:'1.4.1'
+  testCompile project(':javautil-hibernatesalesdata')
+  testCompile project(':javautil-test')
+    testCompile group: 'org.mortbay.jetty', name: 'jetty', version:'6.1.5'
+    compile(group: 'xerces', name: 'xerces', version:'2.2.1') {
+       /* This dependency was originally in the Maven provided scope, but the project was not of type war.
+       This behavior is not yet supported by Gradle, so this dependency has been converted to a compile dependency.
+       Please review and delete this closure when resolved. */
+    }
+    compile(group: 'javax.servlet', name: 'servlet-api', version:'2.5') {
+       /* This dependency was originally in the Maven provided scope, but the project was not of type war.
+       This behavior is not yet supported by Gradle, so this dependency has been converted to a compile dependency.
+       Please review and delete this closure when resolved. */
+    }
+}

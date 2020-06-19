@@ -1,0 +1,113 @@
+<h1 id="questions">Questions</h1>
+<ol>
+<li>How many buyers are there?</li>
+<li>How many purchase orders are created per year?</li>
+<li>How much time does it take to create a purchase order?</li>
+<li><p>Gather the information</p>
+<ul>
+<li>Onhand Inventory</li>
+<li>Sales History</li>
+<li>Sales Forecast</li>
+<li>Forecast Consumption</li>
+<li>Approved Manufacturers</li>
+<li>Vendor Quotes</li>
+<li>Existing Purchase Orders</li>
+</ul>
+<ol>
+<li>Vendor Quotes</li>
+</ol>
+<ul>
+<li>Get quotes for the parts</li>
+<li>Compute Optimal Replenishment Quantity (Not Economic Order Quantity)</li>
+<li>Create a requisition</li>
+</ul></li>
+<li>What are the requisition review requirements?
+<ul>
+<li>When is a requisition subject to review?</li>
+<li>What are the needs additional work conditions?
+<ul>
+<li>Need more vendor quotes</li>
+<li>Need work on equivalent parts</li>
+<li>Incorrect buy quantity</li>
+<li>Get existing inventory certified.</li>
+</ul></li>
+</ul></li>
+</ol>
+<h2 id="out-of-scope">Out of Scope</h2>
+<p>Lead times can vary drastically based on</p>
+<ul>
+<li>vendor</li>
+<li>material shortages</li>
+<li>new product introduction</li>
+<li>product recall MRO (Maintenance, Repair and Overhaul)Definition</li>
+</ul>
+<p>The elapsed time, usually measured in weeks between when a product is ordered and receivied.</p>
+<p>Usually not considered</p>
+<ul>
+<li>Recieving time</li>
+<li>Inspection Time</li>
+<li>Intra-facility transfer time</li>
+<li>These are consider <em>availability times</em></li>
+</ul>
+<p>Typically in DRP Planning</p>
+<ul>
+<li>There is only one lead time</li>
+<li>This lead time is fairly consistent</li>
+<li>Costs due not vary based on lead time.</li>
+</ul>
+<h2 id="in-aerospace">In aerospace</h2>
+<h2 id="source-of-lead-time">Source of Lead Time</h2>
+<h3 id="vendor-quotes">vendor quotes</h3>
+<p>Take the lead time from the maximum quote expiration date</p>
+<h3 id="summarized-lead-times-should-include">Summarized Lead Times should include</h3>
+<ul>
+<li>Vendor Code</li>
+<li>Vendor type (Manufacturer, Distibutor, intra-company</li>
+<li>Vendor quote beginning and ending effective date</li>
+<li>Date of request for quote</li>
+</ul>
+<h3 id="lead-time-details-should-include">Lead time details should include:</h3>
+<ul>
+<li>Historical lead times</li>
+</ul>
+<h3 id="lead-time-projections">Lead time projections</h3>
+<p>Factors that can effect lead time, Lead times can vary drastically based on</p>
+<ul>
+<li>vendor</li>
+<li>Some vendors will stock</li>
+<li>Some manufacturers will build to stock</li>
+<li>Some manufactureres will build only on demand, see Cost per Unit</li>
+<li>material shortages</li>
+<li>new product introduction</li>
+<li>product recall MRO (Maintenance, Repair and Overhaul)</li>
+</ul>
+<p>|</p>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>Look at the report section of the portal</li>
+<li>Review the information</li>
+<li>Fill out the checklist</li>
+<li>Create the requisition</li>
+</ol>
+<h3 id="requisition-checklist">Requisition Checklist</h3>
+<h2 id="sequence-diagram">Sequence Diagram</h2>
+<p><img src="./images/Requisitions.png" alt="image" /></p>
+<h3 id="intrinsic-information">Intrinsic Information</h3>
+<h3 id="extrinsic-information">Extrinsic Information</h3>
+<p>Gather all information, it should all be available in the portal</p>
+<h2 id="related-articles">Related articles</h2>
+<h1 id="service-level-agreements">Service Level Agreements</h1>
+<h1 id="definitions">Definitions</h1>
+<p>Definitions:</p>
+<pre><code>ABC_SLS_PCT_DLR 
+
+    Top 20 of previous 12 month contribution to sales dollars
+    Does not adequately support new product introduction
+
+ABC_CUST_QTE
+
+SVC_LVL
+
+    Contractual service levels
+
+ABC_SLS_PCT ABC Sales Percent</code></pre>

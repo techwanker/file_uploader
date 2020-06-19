@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="70F63A83-7E7D-7921-9657-51028D0A2E7F" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IMG_IMAGE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IMG_IMAGE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:11 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>AF204653-17FD-0237-3A66-59FC4C845EAF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IMG_IMAGE_NBR" id="C0A99C2C-EAF9-F44F-ED35-FE7DB756A775">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>0A4A3AAE-2072-4809-B0DB-9840E20DBA0E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMG_IMAGE_PATH" id="7CD29C22-75C0-24E9-640E-473B0F102399">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_PATH</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>02A52B38-752E-02F2-E924-CD7D0E1D3258</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMG_IMAGE_FILE_NM" id="5B861D33-01B6-B00D-58F7-A37C6E652257">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMG_IMAGE_FILE_NM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>3975877C-2622-9EE8-8A41-E60C02C01F65</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128 BYTE</dataTypeSize>
+<ownDataTypeParameters>128 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGE_DESCR" id="95917BCD-4271-C326-A7A4-D1A2DB3D6464">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IMG_IMAGE</sourceObjSchema>
+<sourceObjName>IMAGE_DESCR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>44EEF821-0E6C-8226-3990-8CCF9CF05130</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1CA6FB47-3014-0C56-203A-CF7850419A1B" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IMG_IMAGE_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>SYS_C00125503</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:19:12 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<importedID>6ADA58BC-D153-D872-E504-8200A2F67545</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0A99C2C-EAF9-F44F-ED35-FE7DB756A775"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="B0349DA5-5DD9-A53A-E293-01C8BCE88D36" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_PLAN_GRP_DMD">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_PLAN_GRP_DMD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_PLAN_GRP_DMD&lt;br/&gt;AS &lt;br/&gt;select&lt;br/&gt;    plan_grp_nbr,&lt;br/&gt;    count(*) item_Nbr_cnt,&lt;br/&gt;    item_nbr&lt;br/&gt;from&lt;br/&gt;    aps_plan_grp,&lt;br/&gt;    aps_dmd_oo&lt;br/&gt;where aps_dmd_oo.item_nbr_dmd = aps_plan_grp.item_Nbr&lt;br/&gt;group by item_nbr, plan_grp_nbr&lt;br/&gt;order by plan_grp_nbr, item_nbr</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PLAN_GRP_NBR" id="165884BA-80DA-2625-95BA-B1B5DEA5751A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_PLAN_GRP_DMD</sourceObjSchema>
+<sourceObjName>PLAN_GRP_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PLAN_GRP_NBR</alias>
+<dataType>NUMBER (4)</dataType>
+<headerAlias>PLAN_GRP_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>AE285F99-A5B2-7C5D-E19A-72D7C1A6B773</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR_CNT" id="78266B02-03CA-798D-6CF7-8CA6826BCECC">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_PLAN_GRP_DMD</sourceObjSchema>
+<sourceObjName>ITEM_NBR_CNT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR_CNT</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR_CNT</headerAlias>
+<reference>false</reference>
+<referencedColumn>B969E53D-B488-4BFE-E23E-E4BD74955B6D</referencedColumn>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR" id="E063D55A-DF83-07E4-6471-CFF3D3E5F197">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_PLAN_GRP_DMD</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumn>94F81DDD-B9E7-BD74-257A-872239E8670C</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D5BA67BE-C059-EF67-793D-89C31BEEDF70">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>APS_PLAN_GRP</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FC216EF1-0931-5B11-481F-7C407285451F">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>APS_DMD_OO</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AE285F99-A5B2-7C5D-E19A-72D7C1A6B773">
+<columnName>ITEM_NBR_DMD</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_DMD_OO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B969E53D-B488-4BFE-E23E-E4BD74955B6D">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_PLAN_GRP</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="94F81DDD-B9E7-BD74-257A-872239E8670C">
+<columnName>PLAN_GRP_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_PLAN_GRP</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

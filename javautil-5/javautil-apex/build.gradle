@@ -1,0 +1,6 @@
+
+description = ''
+dependencies {
+  compile project(':javautil-commandline')
+    compile group: 'com.oracle', name: 'oracle-jdbc6', version:'11.2.0.4'
+}

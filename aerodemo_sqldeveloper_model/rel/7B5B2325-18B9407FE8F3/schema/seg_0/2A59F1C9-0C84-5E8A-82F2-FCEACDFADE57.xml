@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="AERODEMO" directorySegmentName="seg_0" id="2A59F1C9-0C84-5E8A-82F2-FCEACDFADE57">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-27 07:08:01 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+</SchemaObject>

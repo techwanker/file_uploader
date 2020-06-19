@@ -1,0 +1,144 @@
+head	1.1;
+access;
+symbols;
+locks
+	jjs:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2020.01.28.22.39.18;	author jjs;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@# Introduction
+
+  * The right parts
+  * Bought at the right price
+  * Optimal Service Levels
+  * Operational Efficiency
+  * Data
+
+## Data
+
+* Items
+ 
+    * Equivalents
+    * Approved Manufacturer
+    * Certifications
+    * Quality Assurance
+    * Value Add
+
+## Customer Quotes
+
+## Vendor Quotes
+
+# Objectives
+
+## What are the primary objectives you wish to achieve?
+
+* Purchasing and planning personnel efficiency.
+ 
+    * Lower Cost of goods
+    * Reduced inventory
+    * Optimal Stocking Levels by part
+
+* Kitting
+  
+    * Increased sales through more efficient planning for JIT and SLA contracts
+    * Kit production and planning fees
+    * Additional revenue from supplying kitting part
+ 
+# Scenarios
+
+## Multi-Certification
+
+Upon determination that an equivalent part is already in stock an attempt should be
+made to get the item cross certified.
+
+I will provide hundreds of thousands of equivalent parts; 
+It is the responsibility of Align to obtain Certificates of Compliance.
+I would expect that you will have thousands if not tens of thousands of lots eligible for multiple-certification.
+
+## Actions
+   
+Create a spreadsheet with the purchase order number, mfr_lot_nbr, receiver number or
+a vendor specific format and request Certifications
+
+### Request Status
+
+   A - Advisory
+   R - Request
+
+### Response 
+
+The manufacturer will respond with:
+  
+* Stamped CofC for all lots
+* Stamped CofC per manufacturer lot
+* Electronic non image CofC 
+* Commitment to provide on demand
+* Invalid equivalent
+* Not possible
+               
+#### Imaging
+
+Mfr CofC can be stored in Diamond APS digitally..
+
+If your policy is to have the paper onhand we can create a document number
+and you just scan them and file under the system specified document number
+which is sequential.  This allows a hundred certs per physical file folder
+so they can be pulled, copied and printed on demand.
+
+#### Permissioned Block Chain
+
+Certificates can be maintained on a permissioned block chain, this can
+provide proof of custody, but exposes sourcing information to all participants,
+
+## Inter Facility Transfer
+
+## Simulations
+
+If there is inventory available in an alternate facility say, supply with
+no demand in LA but there is demand in Paris, It may be desireable to ship 
+the inventory to stock in Paris.
+
+
+Factors to be considered include:
+
+* Cost of item vs Cost of Acquiring
+* Duty Cost
+* Shipping Cost
+* Lead Time for shipping vs Lead Time to buy
+         
+What is the relationship between European and US operations?   
+Would transfers be at actual book value ?
+If the inter-company book value signficantly higher or lower than purchase cost
+Say Paris says, "not my fault you overpaid for inventory you cannot use."
+
+## Buy Quantity
+
+Factors to be taken into consideration when computing buy quantities and schedule:
+
+* Unsatisfied firm demand
+* Unsatisfied Safety Stock
+* Unsatisfied forecast / AMC
+* Forecast Simulation standard deviation
+* Service Levels
+* Carrying cost
+* Unit Cost for a given quantity
+* Float Time (Days to pay, multiple delivery schedule without penalty, consignment after initial)
+    
+    Isolated by scenario (Approved Mfr etc)
+
+@

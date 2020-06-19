@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:datasources xmlns:ns2="http://schema.custdata.com">
+
+	<!-- 
+		This is an example of how to connect to an in memory
+		only H2 database.
+	-->
+	<datasource>
+		<name>H2Memory</name>
+		<classname>
+			com.dbexperts.datasources.H2MemoryDataSource
+		</classname>
+	</datasource>
+
+	<!-- 
+		Example of how to use a Generic Data Source
+	-->
+	<datasource>
+		<name>datasource name</name>
+		<classname>
+			com.dbexperts.datasources.GenericDatasource
+		</classname>
+		<property key="driver">
+			<value>oracle.jdbc.OracleDriver</value>
+		</property>
+		<property key="user">
+			<value>userName</value>
+		</property>
+		<property key="password">
+			<value>ab34iciw</value>
+		</property>
+		<property key="url">
+			<value>jdbc:oracle:thin:@host:port:schema</value>
+		</property>
+	</datasource>
+
+      <datasource>
+		<name>generic_princeton</name>
+		<classname>
+			com.dbexperts.datasources.GenericDatasource
+		</classname>
+		<property key="driver">
+			<value>oracle.jdbc.OracleDriver</value>
+		</property>
+		<property key="user">
+			<value>web_princeton</value>
+		</property>
+		<property key="password">
+			<value>focus10</value>
+		</property>
+		<property key="url">
+			<value>jdbc:oracle:thin:@db2:1521:focus10</value>
+		</property>
+	</datasource>
+	
+	<datasource>
+		<name>web_princeton</name>
+		<classname>
+			com.custdata.datasources.datasources.FilterBeanPooledDataSource
+		</classname>
+		<property key="driver">
+			<value>oracle.jdbc.OracleDriver</value>
+		</property>
+		<property key="user">
+			<value>web_princeton</value>
+		</property>
+		<property key="password">
+			<value>
+				focus10
+			</value>
+		</property>
+		<property key="url">
+			<value>jdbc:oracle:thin:@db2:1521:focus10</value>
+		</property>
+
+		<!-- A couple of nice default values. -->
+		<systemProperty key="c3p0.minPoolSize" value="3" />
+		<systemProperty key="c3p0.maxPoolSize" value="20" />
+
+		<!-- 
+			If connection usage spikes, this will reduce the number
+			of connections to the minimum after the set amount of seconds.			
+		-->
+		<systemProperty key="c3p0.maxIdleTimeExcessConnections"
+			value="3600" />
+
+		<!--  If a connection hasn't been returned within 8 hours, close it. -->
+		<systemProperty key="c3p0.unreturnedConnectionTimeout"
+			value="28800" />
+		<!--  
+			If  a connection hasn't been returned within 8 hours, the above
+			setting will close it, and this setting instructs C3P0 to
+			emit a stack trace for when the connection was retrieved.
+		-->
+		<systemProperty key="c3p0.debugUnreturnedConnectionStackTraces"
+			value="true" />
+	</datasource>
+
+	<datasource>
+		<name>web_user</name>
+		<classname>
+			com.dbexperts.datasources.C3P0_PooledGenericDatasource
+		</classname>
+		<property key="driver">
+			<value>oracle.jdbc.OracleDriver</value>
+		</property>
+		<property key="user">
+			<value>web_user</value>
+		</property>
+		<property key="password">
+			<encryptedValue>
+				10000080e6628dbcce1caea9b05a20bda00aa98
+			</encryptedValue>
+		</property>
+		<property key="url">
+			<value>jdbc:oracle:thin:@db2:1521:focus10</value>
+		</property>
+
+		<!-- A couple of nice default values. -->
+		<systemProperty key="c3p0.minPoolSize" value="3" />
+		<systemProperty key="c3p0.maxPoolSize" value="20" />
+
+		<!-- 
+			If connection usage spikes, this will reduce the number
+			of connections to the minimum after the set amount of seconds.			
+		-->
+		<systemProperty key="c3p0.maxIdleTimeExcessConnections"
+			value="3600" />
+
+		<!--  If a connection hasn't been returned within 8 hours, close it. -->
+		<systemProperty key="c3p0.unreturnedConnectionTimeout"
+			value="28800" />
+		<!--  
+			If  a connection hasn't been returned within 8 hours, the above
+			setting will close it, and this setting instructs C3P0 to
+			emit a stack trace for when the connection was retrieved.
+		-->
+		<systemProperty key="c3p0.debugUnreturnedConnectionStackTraces"
+			value="true" />
+	</datasource>
+</ns2:datasources>

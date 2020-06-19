@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="9199E2D1-F3A6-39C8-5E75-F8A4303BE4D0" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="VQ_QTE_MULTIPLE_CERT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>VQ_QTE_MULTIPLE_CERT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VQ_QTE_DTL_NBR" id="65BA582C-0B73-5ECC-242F-D227F28ADF4F">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>VQ_QTE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>VQ_QTE_DTL_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02847F39-F505-8A4A-0AF3-242DFACE24C4" referredColumn="EDB65206-2AE0-3063-63FC-687804FB0B52"/>
+</associations>
+</Column>
+<Column name="ITEM_NBR" id="65F92763-018E-0756-9D04-153905FD9188">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>VQ_QTE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2FB648F3-EFDC-44D7-7AD7-2B39A77DF47E" referredColumn="861936C9-7214-4ACB-53B4-BBA07C43C816"/>
+</associations>
+</Column>
+<Column name="UT_USER_NBR" id="08E752C8-718C-5CFC-C356-9EE336DA7809">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>VQ_QTE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="0685584A-4884-D5CF-9349-04BB74F7D663">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>VQ_QTE_MULTIPLE_CERT</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="612B3ED8-36BA-0E71-D3EC-452BA2A611F0" name="VQ_QTE_MULTIPLE_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>VQ_QTE_MULTIPLE_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65BA582C-0B73-5ECC-242F-D227F28ADF4F"/>
+<colUsage columnID="65F92763-018E-0756-9D04-153905FD9188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF23C7E9-54EA-0DA5-C4B6-CA52AE230C78" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="VQ_QTE_MULTIPLE_CERT_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>VQ_QTE_MULTIPLE_CERT_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65BA582C-0B73-5ECC-242F-D227F28ADF4F"/>
+<colUsage columnID="65F92763-018E-0756-9D04-153905FD9188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3AF1C5C7-22AC-D495-8D84-D3DC08D9C5BF" name="VQMC_IIM_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65F92763-018E-0756-9D04-153905FD9188"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1A357D1-D688-8FF1-F276-DF99972EE99E" name="VQMC_VQD_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65BA582C-0B73-5ECC-242F-D227F28ADF4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

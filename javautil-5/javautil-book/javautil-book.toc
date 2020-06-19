@@ -1,0 +1,8 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}javautil-core}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}javautil-hibernate}{5}{section.1.2}
+\contentsline {chapter}{\numberline {2}Prerequisites}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Eclipse}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Maven}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Java}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Git}{7}{section.2.4}

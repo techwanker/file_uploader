@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B806FF78-E416-A94F-9FC4-21A247E1B1F9" containerWithKeyObject="AEF0E46C-DD1E-6453-16FA-9915228F695D" localFKIndex="47D5C191-F6C0-339A-1B04-C41A156EDBFE" name="IIL_IB_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IIL_IB_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.IC_BIN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8271EEA1-3032-5FBB-00A4-F33D27C26020</referredTableID>
+<keyObject>1C6F6C13-FE79-928C-451E-0BB9B0B1F48C</keyObject>
+<referredKeyID>1C6F6C13-FE79-928C-451E-0BB9B0B1F48C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>BIN_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,560 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="D6FB4104-50D2-2D77-C23F-3D1B79F4A986" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_AVAIL">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_AVAIL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_AVAIL&lt;br/&gt;AS &lt;br/&gt;SELECT sply_identifier,&lt;br/&gt;      &apos;O&apos;,&lt;br/&gt;      lot_nbr,&lt;br/&gt;      item_nbr,&lt;br/&gt;      facility,&lt;br/&gt;      aps_sply_sub_pool_nbr,&lt;br/&gt;      org_nbr_mfr,&lt;br/&gt;      org_nbr_vnd,&lt;br/&gt;      avail_dt,&lt;br/&gt;      gross_avail_qty,&lt;br/&gt;      lot_um,&lt;br/&gt;      rev_lvl,&lt;br/&gt;      pk_supply,&lt;br/&gt;      lot_cost,&lt;br/&gt;      cntry_cd_origin,&lt;br/&gt;      mfr_date,&lt;br/&gt;      expire_dt,&lt;br/&gt;      rcpt_dt,&lt;br/&gt;      avail_dt,&lt;br/&gt;      TO_NUMBER(NULL)     wo_item_nbr,&lt;br/&gt;      avail_dt_id&lt;br/&gt;    FROM&lt;br/&gt;      aps_avail_onhand&lt;br/&gt;    UNION ALL&lt;br/&gt;    SELECT tar.sply_identifier,&lt;br/&gt;      &apos;R&apos;,&lt;br/&gt;      TO_NUMBER(NULL),&lt;br/&gt;      tar.item_nbr,&lt;br/&gt;      tar.facility,&lt;br/&gt;      tar.aps_sply_sub_pool_nbr,&lt;br/&gt;      tar.org_nbr_mfr,&lt;br/&gt;      tar.org_nbr_vnd,&lt;br/&gt;      tar.avail_dt,&lt;br/&gt;      tar.gross_avail_qty,&lt;br/&gt;      tar.replen_um,&lt;br/&gt;      tar.rev_lvl,&lt;br/&gt;      tar.po_line_dtl_nbr,&lt;br/&gt;      tar.unit_cost_stk_um,&lt;br/&gt;      tar.cntry_cd_origin,&lt;br/&gt;      tar.lot_manufacture_after_dt,&lt;br/&gt;      tar.lot_not_expire_before_dt,&lt;br/&gt;      TO_DATE(NULL),&lt;br/&gt;      tar.aps_avail_dt,&lt;br/&gt;      TO_NUMBER(NULL)      wo_item_nbr,&lt;br/&gt;      NULL					avail_dt_id&lt;br/&gt;    FROM&lt;br/&gt;      aps_avail_replen  tar&lt;br/&gt;    UNION ALL&lt;br/&gt;    SELECT /*+ use_nl(iii woh) index (woh) */&lt;br/&gt;      TO_CHAR(woh.wo_hdr_nbr)     sply_identifier,&lt;br/&gt;      &apos;W&apos;,&lt;br/&gt;      TO_NUMBER(NULL),&lt;br/&gt;      woh.item_nbr_rqst,&lt;br/&gt;      woh.facility,&lt;br/&gt;      woh.aps_sply_sub_pool_nbr,&lt;br/&gt;      TO_NUMBER(NULL),&lt;br/&gt;      TO_NUMBER(NULL),&lt;br/&gt;      woh.need_by_dt       avail_dt,&lt;br/&gt;      woh.rqst_qty - NVL(woh.fill_qty,0)  gross_avail_qty,&lt;br/&gt;      woh.wo_um,&lt;br/&gt;      TO_CHAR(NULL)       rev_lvl,&lt;br/&gt;      woh.wo_hdr_nbr,&lt;br/&gt;      TO_NUMBER(NULL),&lt;br/&gt;      TO_CHAR(NULL),&lt;br/&gt;      TO_DATE(NULL),&lt;br/&gt;      TO_DATE(NULL),&lt;br/&gt;      TO_DATE(NULL),&lt;br/&gt;      woh.need_by_dt,&lt;br/&gt;      woh.item_nbr_rqst      wo_item_nbr,&lt;br/&gt;      NULL					avail_dt_id&lt;br/&gt;    FROM&lt;br/&gt;      wo_hdr   woh&lt;br/&gt;    WHERE&lt;br/&gt;      woh.wo_stat_id  = &apos;O&apos;</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SPLY_IDENTIFIER" id="6A03A5AA-FAB4-209F-AED3-8B99FDC2C7BB">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>SPLY_IDENTIFIER</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>SPLY_IDENTIFIER</alias>
+<dataType>DATE</dataType>
+<headerAlias>SPLY_IDENTIFIER</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>7A19A42F-1AFB-32C3-E354-8ABE84A6C957</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="AVAIL_TYPE_CD" id="D775109B-264A-E6E3-136A-AD693C355A3B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>AVAIL_TYPE_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>AVAIL_TYPE_CD</alias>
+<dataType>VARCHAR2 (3 BYTE)</dataType>
+<headerAlias>AVAIL_TYPE_CD</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>BA1AB5C2-369F-65C7-DD46-9AED0D01DA2F</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOT_NBR" id="6E34BB98-A19E-F317-7A96-9A5B0F6FC11C">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>LOT_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LOT_NBR</alias>
+<dataType>NUMBER (12,5)</dataType>
+<headerAlias>LOT_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>8B04917A-024D-9933-FFBA-B24AE6E226C0</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR" id="E0E7C163-38EC-8811-2AF7-A7B74A65B785">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR</alias>
+<dataType>NUMBER (13,6)</dataType>
+<headerAlias>ITEM_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>A3114918-8065-FBD2-EA38-B8AB90C9F30A</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FACILITY" id="75F0EB22-7F81-5141-717C-B2B54D2A5E3A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>FACILITY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>FACILITY</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>FACILITY</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>28EF4E59-000B-E6A7-4D63-B5C6E03280C5</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="APS_SPLY_SUB_POOL_NBR" id="71813302-B29A-C7D3-4A22-09AF3EB345F8">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>APS_SPLY_SUB_POOL_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>APS_SPLY_SUB_POOL_NBR</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>APS_SPLY_SUB_POOL_NBR</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>4CFFA99D-8757-4DDB-9803-2E5676467448</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ORG_NBR_MFR" id="B14B1A02-EFCC-2927-644E-453F9B505E43">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>ORG_NBR_MFR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ORG_NBR_MFR</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ORG_NBR_MFR</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>3CFAA313-5473-BE13-2687-8C0785D411EF</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ORG_NBR_VND" id="DE842EB5-6325-1DBB-B4FD-1B35B3E60C8E">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>ORG_NBR_VND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ORG_NBR_VND</alias>
+<dataType>VARCHAR2 (16 BYTE)</dataType>
+<headerAlias>ORG_NBR_VND</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>226AA0B4-AF4A-E9D9-B136-E4B64E0449A0</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="AVAIL_DT" id="0C11A257-B7C1-CE79-1D1C-838881353822">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>AVAIL_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>AVAIL_DT</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>AVAIL_DT</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>F9F6E0C6-CA1B-D6BC-82C6-464ECAE84222</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="GROSS_AVAIL_QTY" id="12BB713B-820F-25A1-570A-CF67768A6E39">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>GROSS_AVAIL_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>GROSS_AVAIL_QTY</alias>
+<dataType>VARCHAR2 (3 BYTE)</dataType>
+<headerAlias>GROSS_AVAIL_QTY</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>CF208701-D342-679E-FC51-9C9C209AA9AE</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOT_UM" id="A4495AF8-3E4B-87B2-DE3A-3280D45277F8">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>LOT_UM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LOT_UM</alias>
+<dataType>DATE</dataType>
+<headerAlias>LOT_UM</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>5C28E9D9-A530-7828-B79D-9F51E82D810E</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="REV_LVL" id="20DFF548-C9F7-B505-C4B1-E86E10373616">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>REV_LVL</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>REV_LVL</alias>
+<dataType>DATE</dataType>
+<headerAlias>REV_LVL</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>4BCDFCB0-D677-D963-57A8-7F8FFA7E807D</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="PK_SUPPLY" id="73913A46-65C0-AAF3-8491-090EF77356B1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>PK_SUPPLY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>PK_SUPPLY</alias>
+<dataType>DATE</dataType>
+<headerAlias>PK_SUPPLY</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>29D36134-2C00-0427-BABC-45BB5BCB599B</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="LOT_COST" id="24969BEF-D28F-FE7F-76F5-03A007A5A222">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>LOT_COST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>LOT_COST</alias>
+<dataType>VARCHAR2 (1 BYTE)</dataType>
+<headerAlias>LOT_COST</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>F53C563F-A78A-2CDF-D0C0-B57A88C6CA3C</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="CNTRY_CD_ORIGIN" id="5AB53DEE-1AA6-4854-EA7F-7DCD626F5236">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>CNTRY_CD_ORIGIN</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>CNTRY_CD_ORIGIN</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>CNTRY_CD_ORIGIN</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>3BA54F0F-5F88-8920-B103-7D9FEB9346CC</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="MFR_DATE" id="8D075316-CE2F-8530-2AC8-7E5C7DB9ED48">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>MFR_DATE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>MFR_DATE</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>MFR_DATE</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>57A8FF9E-23B8-E279-EDEB-E5DAF6A2A5F0</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="EXPIRE_DT" id="858FF09C-8039-BBB6-5DA3-D88C2E949DF0">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>EXPIRE_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>EXPIRE_DT</alias>
+<dataType>VARCHAR2 (5 BYTE)</dataType>
+<headerAlias>EXPIRE_DT</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>C5504A28-999D-DDA4-0972-44812335F57F</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="RCPT_DT" id="A25DA74D-CD0F-98A2-47BC-A3C92F262BA1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>RCPT_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>RCPT_DT</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>RCPT_DT</headerAlias>
+<reference>false</reference>
+<referencedColumnViewID>2AFA303A-BE9D-AC2C-8279-606978C577CF</referencedColumnViewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="APS_AVAIL_DT" id="1319F3A0-7A64-DDF4-1EF2-4299D9E3145F">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>APS_AVAIL_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>APS_AVAIL_DT</alias>
+<dataType>DATE</dataType>
+<headerAlias>APS_AVAIL_DT</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="WO_ITEM_NBR" id="8121F646-4393-7F36-D762-3B9F1DD569B9">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>WO_ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>WO_ITEM_NBR</alias>
+<dataType>NUMBER</dataType>
+<headerAlias>WO_ITEM_NBR</headerAlias>
+<reference>false</reference>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="AVAIL_DT_ID" id="B45549F0-0C80-D096-E10D-612C2013EB9C">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_AVAIL</sourceObjSchema>
+<sourceObjName>AVAIL_DT_ID</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:22 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>AVAIL_DT_ID</alias>
+<dataType>VARCHAR2 (1 BYTE)</dataType>
+<headerAlias>AVAIL_DT_ID</headerAlias>
+<reference>false</reference>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7A19A42F-1AFB-32C3-E354-8ABE84A6C957">
+<columnName>SPLY_IDENTIFIER</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BA1AB5C2-369F-65C7-DD46-9AED0D01DA2F">
+<columnName>LOT_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8B04917A-024D-9933-FFBA-B24AE6E226C0">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A3114918-8065-FBD2-EA38-B8AB90C9F30A">
+<columnName>FACILITY</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="28EF4E59-000B-E6A7-4D63-B5C6E03280C5">
+<columnName>APS_SPLY_SUB_POOL_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4CFFA99D-8757-4DDB-9803-2E5676467448">
+<columnName>ORG_NBR_MFR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3CFAA313-5473-BE13-2687-8C0785D411EF">
+<columnName>ORG_NBR_VND</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="226AA0B4-AF4A-E9D9-B136-E4B64E0449A0">
+<columnName>GROSS_AVAIL_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F9F6E0C6-CA1B-D6BC-82C6-464ECAE84222">
+<columnName>LOT_UM</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CF208701-D342-679E-FC51-9C9C209AA9AE">
+<columnName>REV_LVL</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5C28E9D9-A530-7828-B79D-9F51E82D810E">
+<columnName>PK_SUPPLY</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4BCDFCB0-D677-D963-57A8-7F8FFA7E807D">
+<columnName>LOT_COST</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="29D36134-2C00-0427-BABC-45BB5BCB599B">
+<columnName>CNTRY_CD_ORIGIN</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F53C563F-A78A-2CDF-D0C0-B57A88C6CA3C">
+<columnName>MFR_DATE</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3BA54F0F-5F88-8920-B103-7D9FEB9346CC">
+<columnName>EXPIRE_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="57A8FF9E-23B8-E279-EDEB-E5DAF6A2A5F0">
+<columnName>RCPT_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C5504A28-999D-DDA4-0972-44812335F57F">
+<columnName>AVAIL_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2AFA303A-BE9D-AC2C-8279-606978C577CF">
+<columnName>AVAIL_DT_ID</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F04C98FC-4448-C023-2A59-4ECAC163B67E">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_ONHAND</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="406E9F2A-17D5-30C3-1CE6-059222C7415E">
+<columnName>SPLY_IDENTIFIER</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6813D804-BA3A-8331-FD41-687022D3017E">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F5B91E8D-5F2B-6B54-745A-F1960FD212C5">
+<columnName>FACILITY</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="6A2A2DD5-E7DB-08CB-EB7E-18A85E1ADB15">
+<columnName>APS_SPLY_SUB_POOL_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C70F8AC3-7449-418E-9945-40B4820BDFF0">
+<columnName>ORG_NBR_MFR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A4EFB51C-1CC2-19B1-0584-D599F344D6EC">
+<columnName>ORG_NBR_VND</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="835B9189-D988-F8AC-D323-DDC219C90AFB">
+<columnName>AVAIL_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="EDD5C9AD-D1F4-E4F5-8391-C3831F522B9E">
+<columnName>GROSS_AVAIL_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A98147CF-A1F7-C94D-076F-456645CC64B2">
+<columnName>REPLEN_UM</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="948A79D6-CB76-8EC9-E9AD-A21EBEE55D75">
+<columnName>REV_LVL</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="78527B6A-DFD3-683E-9181-E16FDE7C765A">
+<columnName>PO_LINE_DTL_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4C9FCA42-3F80-973E-5BB1-F2751C2B3D89">
+<columnName>UNIT_COST_STK_UM</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2E9D665B-9DFB-9868-A48B-656A37A06402">
+<columnName>CNTRY_CD_ORIGIN</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FF01294E-4AC7-6FA5-7543-B01E25E80327">
+<columnName>LOT_MANUFACTURE_AFTER_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0497F991-A3F1-D7BE-791C-CBC98CD3288C">
+<columnName>LOT_NOT_EXPIRE_BEFORE_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="BDB06B78-DA0F-DF24-C883-87A82FC64CBE">
+<columnName>APS_AVAIL_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="78F51797-270A-6C43-9A71-C28720E784FC">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>APS_AVAIL_REPLEN</tableName>
+<view>true</view>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="8DB87238-F6A1-6B95-0D1D-4B67632BEEF2">
+<columnName>FACILITY</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4C7294A8-AD5F-B623-96AC-6B236D61B6EE">
+<columnName>APS_SPLY_SUB_POOL_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7A9771B8-5FD1-75B1-C9DC-3F99733B8F8A">
+<columnName>RQST_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F0BF6653-D33F-A62B-7676-66E3B53A3B4C">
+<columnName>FILL_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AA9DA6C5-977C-91A9-58F5-7CDCA3AC5D8C">
+<columnName>WO_UM</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="125AE05D-7AD3-143A-78F1-9FAFD03394AA">
+<columnName>WO_HDR_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2C9FAC13-93BF-F2A1-1B2E-BAFEE5593777">
+<columnName>NEED_BY_DT</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B0097117-F8CE-7C5F-E23A-3F77B5B5266D">
+<columnName>ITEM_NBR_RQST</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="477AE106-4F98-CC3C-47A8-176C0292A3DE">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E2B7FEA6-2845-7293-1063-81C8B7EF8CB2">
+<columnName>WO_STAT_ID</columnName>
+<schema>AERODEMO</schema>
+<tableName>WO_HDR</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

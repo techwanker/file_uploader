@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_1" id="02847F39-F505-8A4A-0AF3-242DFACE24C4" containerWithKeyObject="9199E2D1-F3A6-39C8-5E75-F8A4303BE4D0" localFKIndex="A1A357D1-D688-8FF1-F276-DF99972EE99E" name="VQMC_VQD_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>VQMC_VQD_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.VQ_QTE_DTL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FA402AEF-23C0-F91F-0D1F-BE4B523B6497</referredTableID>
+<keyObject>FBD120D4-EFD6-A976-5E57-0D3E949389A0</keyObject>
+<referredKeyID>FBD120D4-EFD6-A976-5E57-0D3E949389A0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>VQ_QTE_DTL_NBR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

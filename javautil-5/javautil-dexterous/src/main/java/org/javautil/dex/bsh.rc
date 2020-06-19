@@ -1,0 +1,15 @@
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import com.javautil.dex.Cursor;
+
+void go() {
+	dexterous.go();
+}
+
+private void useCursor(Cursor c) {
+	dexterous.setSqlText(c.getSqlText());
+}
+
+void spool(String fileName) {
+	dexterous.spool(fileName);
+}

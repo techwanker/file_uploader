@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="74C6081C-210D-98CF-22E9-B0FF28E9A337" mainViewID="89DEFDEB-411F-0397-66FD-29C9FE43141D">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 13:48:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

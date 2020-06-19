@@ -1,0 +1,11 @@
+<script>
+<bsh>
+setOutputFormat("xls");
+setPageFormat("horizontal");
+
+</bsh>
+<sql name="wtf">
+
+
+</sql>
+</script>

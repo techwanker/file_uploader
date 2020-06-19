@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="4449FF2C-A9D1-A44A-03D9-030D29FE073F" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_LOT_MAST_CERT">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_LOT_MAST_CERT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOT_NBR" id="30157D8F-6A00-9115-50B9-FCA63B9D5EDD">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>LOT_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1269DA4-D39B-F462-E0E7-1B5E9A30107F" referredColumn="2F2BA321-62E7-81B7-B3A5-36055362FE87"/>
+</associations>
+</Column>
+<Column name="CERT_CD" id="ADA2F3FF-E0B4-FBEC-A1CC-26D6D28EA4D2">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>CERT_CD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5772292A-A6B1-467A-6800-CDE23E08A96E" referredColumn="FA698929-187C-7A16-0EF3-90D1DC2D81CA"/>
+</associations>
+</Column>
+<Column name="CERT_RCPT_DT" id="E3EA4633-778C-EEB6-CFE5-D8000452D943">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>CERT_RCPT_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UT_USER_NBR" id="529726D0-8A50-F418-4092-4D07D042C92B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>UT_USER_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_MOD_DT" id="3C241CD6-046A-3F0D-3670-0B76329E1B86">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>LAST_MOD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CERT_STAT_ID" id="6C1442C8-FA5E-5EE3-8625-B657B9C9DC91">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_LOT_MAST_CERT</sourceObjSchema>
+<sourceObjName>CERT_STAT_ID</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3740566F-B533-66D0-123E-5168D2FC8871" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="SYS_IOT_TOP_54494">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>SYS_IOT_TOP_54494</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30157D8F-6A00-9115-50B9-FCA63B9D5EDD"/>
+<colUsage columnID="ADA2F3FF-E0B4-FBEC-A1CC-26D6D28EA4D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CB9EC24-C4C0-05CF-D477-9E4E7C0DF60B" name="ILMC_ILM_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30157D8F-6A00-9115-50B9-FCA63B9D5EDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F96552E2-C9D0-406E-799A-FB223BA2973C" name="IC_LOT_MAST_CERT_IC_CERT_CD_FK">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 18:13:11 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADA2F3FF-E0B4-FBEC-A1CC-26D6D28EA4D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

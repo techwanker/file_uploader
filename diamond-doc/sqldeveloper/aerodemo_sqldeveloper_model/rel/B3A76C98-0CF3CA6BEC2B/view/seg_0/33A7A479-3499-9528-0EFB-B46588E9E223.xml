@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="33A7A479-3499-9528-0EFB-B46588E9E223" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_SPLY_OH">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_SPLY_OH</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_RQST_SPLY_OH&lt;br/&gt;AS &lt;br/&gt;SELECT	item_nbr&lt;br/&gt;FROM	ic_item_loc,&lt;br/&gt;		ic_lot_mast&lt;br/&gt;WHERE	ic_item_loc.lot_nbr = ic_lot_mast.lot_nbr</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR_RQST" id="832E2BF2-5F3E-3E45-B3C0-5D52173E78B2">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_SPLY_OH</sourceObjSchema>
+<sourceObjName>ITEM_NBR_RQST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR_RQST</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR_RQST</headerAlias>
+<reference>false</reference>
+<referencedColumn>18A16455-41E9-5D48-B3EE-4A35F42B1E9D</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="18A16455-41E9-5D48-B3EE-4A35F42B1E9D">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>IC_LOT_MAST</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="AEF0E46C-DD1E-6453-16FA-9915228F695D">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>IC_ITEM_LOC</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="9347B11F-9EBD-A68A-6B46-8F9A312EC3BA">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>IC_LOT_MAST</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="74054DBA-A57F-6F62-6C8A-011DEFB29290">
+<columnName>LOT_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>IC_ITEM_LOC</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2F2BA321-62E7-81B7-B3A5-36055362FE87">
+<columnName>LOT_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>IC_LOT_MAST</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

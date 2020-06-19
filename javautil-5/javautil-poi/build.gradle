@@ -1,0 +1,10 @@
+
+description = 'javautil-poi'
+dependencies {
+  compile project(':javautil-core')
+    compile group: 'org.apache.poi', name: 'poi', version:'3.7'
+    compile group: 'commons-collections', name: 'commons-collections', version:'3.2.1'
+  testCompile project(':javautil-jdbc')
+  testCompile project(':javautil-hibernatesalesdata')
+    testCompile group: 'commons-dbcp', name: 'commons-dbcp', version:'1.2.2'
+}

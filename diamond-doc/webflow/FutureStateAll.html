@@ -1,0 +1,340 @@
+<h1 id="planning-requirements">Planning Requirements</h1>
+<h2 id="objectives">Objectives</h2>
+<ol>
+<li>Maximum buyer productivity</li>
+<li>Eliminate unnecessary purchases</li>
+<li>Develop a standardized methodology for buyers that is deterministic, with the same input two buyers should come to the same conclusions.</li>
+<li>Buyers should be able to test the results of a simulation by, for example adding a secondary manufacturer CofC to a lot and replan the part and get the answer back within a second with a new single screen.</li>
+<li>All scenarios should be stored with the results.</li>
+<li>Upon acceptance of a scenario the simulation changes should be reported so that the source systems can be update.</li>
+<li>Status of simulation changes # Requested # Not possible - stops further recommendations to take this action # Active - Once a download from the source system reflects this change</li>
+<li>A report of requested modification not yet completed on source systems</li>
+</ol>
+<h2 id="purchasing-operational-efficiency">Purchasing Operational Efficiency</h2>
+<h3 id="purchasing-review-board">Purchasing Review Board</h3>
+<p>Requisitions may be reviewd by the purchasing review board * Approval * Disapproval<br /> * Record disapproval reason for requisitions Purchasing review board can select (or create and select) a reason such as<br /> * Review equivalent parts * Is onhand under another part * insufficient quotations (other vendors may have lower costs)</p>
+<h3 id="speed-up-quotations">Speed up quotations</h3>
+<ul>
+<li>Automatically email vendors request for quotations</li>
+<li>Automated quote response have the vendors provide a CSV, JSON or XML file with the quote to be</li>
+<li>automatically uploaded to the system.</li>
+</ul>
+<p>For example a vendor could create a spreadsheet with the following columns</p>
+<ul>
+<li>item_cd</li>
+<li>quantity</li>
+<li>manufacturer</li>
+<li>price</li>
+<li>available date</li>
+</ul>
+<p>by emailing to quotes@yourco.com these quotes can be automatically loaded into the system without changes to the legacy system,</p>
+<h3 id="buyer-information">Buyer information</h3>
+<p>The buyer should have single screen that shows:</p>
+<ol>
+<li>Supplies</li>
+<li>On hand</li>
+<li>Open Purchase Orders</li>
+<li>Open Work Orders</li>
+<li>Demand</li>
+<li>Forecasted
+<ol>
+<li>Raw</li>
+<li>Consumed</li>
+<li>Unconsumed</li>
+</ol></li>
+<li>Safety Stock</li>
+<li>Reserved Inventory</li>
+<li>Quarantined</li>
+<li>Restricted access (JIT programs, Committed Service Level Agreement Plans)</li>
+<li>All part numbers in the planning group<br /></li>
+<li>Every part and all equivalents, transitively, that is the equivalents to those equivalents until exhausted.</li>
+<li>Customer specific substitutions</li>
+<li>Approved manufacturer matrix Customers down the left, manufacturers across the top</li>
+<li>Requisitions</li>
+<li>Supplier on-time historical metrics</li>
+<li>Supply ineligibility drill-down</li>
+<li>Vendor Quotes</li>
+<li>Time phased inventory position, Pipeline (Global, by Facility, by planner)</li>
+<li>On hand inventory in aggregate with the ability to open details with a single click</li>
+<li>Sales history for the last three years in multiple dimensions</li>
+<li>Time Dimensions include annual, quarterly and monthly</li>
+<li>Ability to see by customer</li>
+<li>Existing purchase orders</li>
+<li>Existing facility transfers in process</li>
+<li>Detailed reason why supplies are not eligible for a demand that is allocated late or short</li>
+<li>A matrix of approved manufactures and customers</li>
+<li>See the part and all transitive equivalent parts</li>
+<li>Late or short demands</li>
+</ol>
+<p>In Diamond this is all done locally in the web browser with no network requests so it is virtually instaneous.</p>
+<h3 id="recommendations">Recommendations</h3>
+<ol>
+<li>Purchase orders that can be cancelled</li>
+<li>Get a manufacturer Certificate of Compliance for existing inventory to satisfy a requisition with existing inventory</li>
+<li>Supply prioritization Use buyback inventory before using our inventory for appropriate customers</li>
+<li>Allocation based pricing</li>
+<li>Items with a shelf life have oldest allocated first</li>
+<li>Less valuable items are allocated first</li>
+<li>Based on Certifications (dual certed parts have more value)</li>
+<li>Facility Transfer</li>
+<li>Supply Pool Transfer</li>
+<li>Expedite or de-expedite a purchase order</li>
+</ol>
+<h3 id="alerts">Alerts</h3>
+<ul>
+<li>Obsolete Inventory</li>
+<li>Expiring Inventory</li>
+<li>Purchase Exceeding x% of previous maximum unit price</li>
+<li>Purchase Exceeding x% of previous minimum unit price</li>
+<li>Purchase of specified dollars not yet approved</li>
+</ul>
+<h2 id="extensibility">Extensibility</h2>
+<p>Any component must be easily plugged in with an alternative implementation that is compliant with the corresponding interface,</p>
+<ul>
+<li>Demand Priority</li>
+<li>Eligibility Requirements</li>
+<li>Supply Prioritization
+<ul>
+<li>Lot value determination</li>
+</ul></li>
+<li>Recommendation Handlers for propagating accepted recommendations to source system</li>
+</ul>
+<h1 id="implementation">Implementation</h1>
+<ul>
+<li>Extract necessary data from legacy systems</li>
+<li>Load into Advanced Planning</li>
+<li>Augment with necessary but unavailable information</li>
+<li>Run a full plan</li>
+<li>Review recommendations
+<ul>
+<li>Accept recommendation (must define Action Handlers) Reject recommendation (select reason to be persisted across full reloads)</li>
+</ul></li>
+</ul>
+<h2 id="questions">Questions</h2>
+<ol>
+<li>Inventory Restriction</li>
+<li>How do you restrict availability of inventory for special purposes such as
+<ul>
+<li>JIT contracts</li>
+<li>Committed Service Level Agreements</li>
+<li>Kitting and Assembly</li>
+</ul></li>
+<li>Do you have automated approved manufacturer eligibility?</li>
+<li>Do you have prioritization for lots with expiry dates?</li>
+<li>How do you calculate the residual cost of goods for broker buys for the</li>
+<li>Are you exclusively FIFO or do you consider lots that have lower cost that satisfies the demand (taking into consideration multiple certifications, incremental cost of Quality Assurance testing and destructive tests?), etc.? quantity that exceeds the customer demand?</li>
+<li>Quality Assurance Do you have a quality assurance program that supports skip lot testing and pre-approved lots ( lots that have already passed the QA requirements for a customer should receive higher priority for that customer and lower priority for others)<br /></li>
+<li>What supply eligibility rules do you have?</li>
+<li>How do you pin an allocation to a demand ?</li>
+<li>Does your system recommend when alternate availability is preferable to a pinned allocation?</li>
+</ol>
+<h1 id="sap-on-the-web">SAP on the web</h1>
+<ul>
+<li><p>https://www.brightworkresearch.com/sap/2017/11/best-understand-saps-negative-innovation/</p></li>
+<li><p>https://boards.straightdope.com/sdmb/archive/index.php/t-509111.html</p></li>
+<li>https://www.linkedin.com/pulse/who-knew-sap-could-so-complicated-heather-peyton/</li>
+<li><p>&quot;We are nowhere near best-in-class, but we are making progress,&quot; says Steve Rogers, UK managing director of SAP to an audience of his customers at the German applications firm's annual user gathering at the end of last year. It's not the kind of comment that you expect from a senior executive at a leading software firm.</p></li>
+<li><p>https://www.thirdstage-consulting.com/lessons-from-an-sap-failure-at-lidl/</p></li>
+<li><p>https://www.360cloudsolutions.com/top-six-erp-implementation-failures/</p></li>
+<li><p>https://www.brightworkresearch.com/saphana/2017/06/22/hana-big-data-equals-big-failure/</p></li>
+</ul>
+<p>There is a huge amount that can be done but a specification has not been articulated.</p>
+<p>Concepts must be articulated.</p>
+<h2 id="simple-example">Simple Example</h2>
+<p>During one of my calls with Peter he told me that he was reviewing purchase orders a simple line such as &quot;Buyers don''t buy the correct quantities to get a good price&quot; was extended to:</p>
+<h3 id="compute-optimal-purchase-quantity">Compute Optimal Purchase Quantity</h3>
+<p>Compute a projected per unit cost by solving the equation</p>
+<p>unit_cost = (setup_cost / qty) + incremental cost</p>
+<p>For two different known qty and prices (vendor quotes) using linear algebra</p>
+<h3 id="graph-this-relationsihip">Graph this relationsihip</h3>
+<p>Find the &quot;price knee&quot; the first derivative of the function, the slope of the tangent starts to level off (it asymptotically approaches 0, meaning the limit is the unit cost doesn''t decrease at all. Depending on setup cost, incremental cost and annual consumption a three year supply may be ten percent more than a one year supply, it may also be three times the acquisition cost and additional carrying costs must be considered.</p>
+<p>Vendor quotes should include this range of quantities, purchasing quantities should be in this range, buys can be made and even scheduled so that lower per unit costs can be realized.</p>
+<h2 id="purchasing-procedures">Purchasing Procedures</h2>
+<p>When a part needs to be replenished</p>
+<ol>
+<li>Vendor quotes for the price range should be required.</li>
+<li>Purchase amounts over a defined limit should be reviewed and approved.</li>
+<li>Requisitions should be created in the new purchase decision application and once approved, be created as purchase orders in the execution system (Dymax and SAP).</li>
+<li>Checks for any constraints including approved manufacturers should be simulated</li>
+<li>Existing inventory carried under equivalent part numbers should be considered.</li>
+</ol>
+<p>The opportunities for process improvement are best addressed by evaluating your current processes and the issues your experts realize and developing a system to address those issues.</p>
+<h2 id="constraints">Constraints</h2>
+<p>Your new process should:</p>
+<ol>
+<li>Be external to SAP and Dymax, requiring no modifications to either system. This eliminates risk and complexity.</li>
+<li>Should include data from both operations for inventory, purchases and demands</li>
+<li>Incorporate new procedures and policies to reflect best practices</li>
+<li>Reduce the effort of sales staff and purchasing staff to perform their functions</li>
+<li>Define metrics to evaluate performance and progress</li>
+<li>Have an alert system of reports of issues that need to be addressed.</li>
+<li>Require no hardware or other infrastructure or the installation of any software on any Align computer.</li>
+</ol>
+<h1 id="questions-1">Questions</h1>
+<p>What is the current cost of</p>
+<ol>
+<li>Not buying the correct quantities</li>
+<li>Not taking into consideration multiple certifications</li>
+<li>Buying inventory in one operation that is excess inventory in the other operation</li>
+<li>Time wasted gathering information to create a purchase order</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>Align has the expertise in house to participate in the design of a business process and software to optimize the purchasing and sales operations, there is no need to wait for an IT person who has much less experience than your director of purchasing and other operations personnel.</p>
+<p>A one hour phone call every two weeks is not going to ever get you a design.</p>
+<p>I have no doubt that several times every day a sub-optimal purchase results in a expense greater than the cost of developing a design.</p>
+<p>A design is best done by whiteboard meetings, starting with a blank whiteboard. Even with 25 years experience in Aerospace, it would be presumptious, and flat out wrong for me to give a powerpoint presentation and say &quot;This is the universal answer to all problems, it will fit your situation&quot;; this is the approach of someone hawking software.</p>
+<h1 id="planning-requirements-1">Planning Requirements</h1>
+<h2 id="objectives-1">Objectives</h2>
+<ol>
+<li>Maximum buyer productivity</li>
+<li>Eliminate unnecessary purchases</li>
+<li>Develop a standardized methodology for buyers that is deterministic, with the same input two buyers should come to the same conclusions.</li>
+<li>Buyers should be able to test the results of a simulation by, for example adding a secondary manufacturer CofC to a lot and replan the part and get the answer back within a second with a new single screen.</li>
+<li>All scenarios should be stored with the results.</li>
+<li>Upon acceptance of a scenario the simulation changes should be reported so that the source systems can be update.</li>
+<li>Status of simulation changes # Requested # Not possible - stops further recommendations to take this action # Active - Once a download from the source system reflects this change</li>
+<li>A report of requested modification not yet completed on source systems</li>
+</ol>
+<h2 id="purchasing-operational-efficiency-1">Purchasing Operational Efficiency</h2>
+<h3 id="purchasing-review-board-1">Purchasing Review Board</h3>
+<p>Requisitions may be reviewd by the purchasing review board * Approval * Disapproval<br /> * Record disapproval reason for requisitions Purchasing review board can select (or create and select) a reason such as<br /> * Review equivalent parts * Is onhand under another part * insufficient quotations (other vendors may have lower costs)</p>
+<h3 id="speed-up-quotations-1">Speed up quotations</h3>
+<ul>
+<li>Automatically email vendors request for quotations</li>
+<li>Automated quote response have the vendors provide a CSV, JSON or XML file with the quote to be</li>
+<li>automatically uploaded to the system.</li>
+</ul>
+<p>For example a vendor could create a spreadsheet with the following columns</p>
+<ul>
+<li>item_cd</li>
+<li>quantity</li>
+<li>manufacturer</li>
+<li>price</li>
+<li>available date</li>
+</ul>
+<p>by emailing to quotes@yourco.com these quotes can be automatically loaded into the system without changes to the legacy system,</p>
+<h3 id="buyer-information-1">Buyer information</h3>
+<p>The buyer should have single screen that shows:</p>
+<ol>
+<li><p>Supplies</p></li>
+<li><p>On hand</p></li>
+<li><p>Open Purchase Orders</p></li>
+<li><p>Open Work Orders</p></li>
+<li><p>Demand</p></li>
+<li><p>Forecasted</p>
+<ol>
+<li><p>Raw</p></li>
+<li><p>Consumed</p></li>
+<li><p>Unconsumed</p></li>
+</ol></li>
+<li><p>Safety Stock</p></li>
+<li><p>Work Orders</p></li>
+<li><p>Reserved Inventory</p></li>
+<li><p>Quarantined</p></li>
+<li><p>Restricted access (JIT programs, Committed Service Level Agreement Plans)</p></li>
+<li><p>All part numbers in the planning group</p></li>
+<li><p>Every part and all equivalents, transitively, that is the equivalents to those equivalents until exhausted.</p></li>
+<li><p>Customer specific substitutions</p></li>
+<li><p>Approved manufacturer matrix Customers down the left, manufacturers across the top</p></li>
+<li><p>Requisitions</p></li>
+<li><p>Supplier on-time historical metrics</p></li>
+<li><p>Supply ineligibility drill-down</p></li>
+<li><p>Vendor Quotes</p></li>
+<li><p>Time phased inventory position, Pipeline (Global, by Facility, by planner)</p></li>
+<li><p>On hand inventory in aggregate with the ability to open details with a single click</p></li>
+<li><p>Sales history for the last three years in multiple dimensions</p></li>
+<li><p>Time Dimensions include annual, quarterly and monthly</p></li>
+<li><p>Ability to see by customer</p></li>
+<li><p>Existing purchase orders</p></li>
+<li><p>Existing facility transfers in process</p></li>
+<li><p>Detailed reason why supplies are not eligible for a demand that is allocated late or short</p></li>
+<li><p>A matrix of approved manufactures and customers</p></li>
+<li><p>See the part and all transitive equivalent parts</p></li>
+<li><p>Late or short demands</p></li>
+</ol>
+<p>In Diamond this is all done locally in the web browser with no network requests so it is virtually instaneous.</p>
+<h3 id="recommendations-1">Recommendations</h3>
+<ol>
+<li>Purchase orders that can be cancelled</li>
+<li>Get a manufacturer Certificate of Compliance for existing inventory to satisfy a requisition with existing inventory</li>
+<li>Supply prioritization Use buyback inventory before using our inventory for appropriate customers</li>
+<li>Allocation based pricing</li>
+<li>Items with a shelf life have oldest allocated first</li>
+<li>Less valuable items are allocated first</li>
+<li>Based on Certifications (dual certed parts have more value)</li>
+<li>Facility Transfer</li>
+<li>Supply Pool Transfer</li>
+<li>Expedite or de-expedite a purchase order</li>
+</ol>
+<h3 id="alerts-1">Alerts</h3>
+<ul>
+<li>Obsolete Inventory</li>
+<li>Expiring Inventory</li>
+<li>Purchase Exceeding x% of previous maximum unit price</li>
+<li>Purchase Exceeding x% of previous minimum unit price</li>
+<li>Purchase of specified dollars not yet approved</li>
+</ul>
+<h2 id="extensibility-1">Extensibility</h2>
+<p>Any component must be easily plugged in with an alternative implementation that is compliant with the corresponding interface,</p>
+<ul>
+<li>Demand Priority</li>
+<li>Eligibility Requirements</li>
+<li>Supply Prioritization
+<ul>
+<li>Lot value determination</li>
+</ul></li>
+<li>Recommendation Handlers for propagating accepted recommendations to source system</li>
+</ul>
+<h1 id="implementation-1">Implementation</h1>
+<ul>
+<li>Extract necessary data from legacy systems</li>
+<li>Load into Advanced Planning</li>
+<li>Augment with necessary but unavailable information</li>
+<li>Run a full plan</li>
+<li>Review recommendations
+<ul>
+<li>Accept recommendation (must define Action Handlers) Reject recommendation (select reason to be persisted across full reloads)</li>
+</ul></li>
+</ul>
+<h1 id="modifications">Modifications</h1>
+<ul>
+<li>All code is in Java supported by Spring with Hibernate for Object Relation Management, these are widely adoped open source solutions</li>
+<li>Presentation uses the Model, View Controller approach and the model may be exposed as a JavaBean or XML if one prefers to use XSL.</li>
+<li>Diamond dependencies are all vastly popular open source but it extremely unlikely anyone will have any need to modify anyy of the open source code</li>
+<li>I have trained non-programmers to modify Diamond in less than a month.</li>
+</ul>
+<h2 id="questions-2">Questions</h2>
+<ol>
+<li>Inventory Restriction</li>
+<li>How do you restrict availability of inventory for special purposes such as
+<ul>
+<li>JIT contracts</li>
+<li>Committed Service Level Agreements</li>
+<li>Kitting and Assembly</li>
+</ul></li>
+<li>Do you have automated approved manufacturer eligibility?</li>
+<li>Do you have prioritization for lots with expiry dates?</li>
+<li>How do you calculate the residual cost of goods for broker buys for the</li>
+<li>Are you exclusively FIFO or do you consider lots that have lower cost that satisfies the demand (taking into consideration multiple certifications, incremental cost of Quality Assurance testing and destructive tests?), etc.? quantity that exceeds the customer demand?</li>
+<li>Quality Assurance Do you have a quality assurance program that supports skip lot testing and pre-approved lots ( lots that have already passed the QA requirements for a customer should receive higher priority for that customer and lower priority for others)<br /></li>
+<li>What supply eligibility rules do you have?</li>
+<li>How do you pin an allocation to a demand ?</li>
+<li>Does your system recommend when alternate availability is preferable to a pinned allocation?</li>
+</ol>
+<h1 id="difference-from-sap">Difference from SAP</h1>
+<ol>
+<li>Diamond client interface is natively HTML5 and all functionality is available in a simple browser, whereas SAP has a cludgy interface, the native interface is client-server, a technology that is embarassingly old fashioned and the implementation is poor, at best https://help.sap.com/doc/saphelp_nw70ehp1/7.01.16/en-US/4d/aeae42cd7fb611e10000000a155106/content.htm?no_cache=true</li>
+<li>There are no exposed transaction codes in Diamond, everything is menu driven, reducing training time and simplifying operation efficiency.</li>
+<li>SAP has a proprietary database, HANA</li>
+<li>Diamond is not complicated it uses International Standards for everything, and the most widely adopted technologies, there is no dependency on anything proprietary unless the oracle database is used.</li>
+</ol>
+<h1 id="sap-on-the-web-1">SAP on the web</h1>
+<ul>
+<li><p>https://www.brightworkresearch.com/sap/2017/11/best-understand-saps-negative-innovation/</p></li>
+<li><p>https://boards.straightdope.com/sdmb/archive/index.php/t-509111.html</p></li>
+<li>https://www.linkedin.com/pulse/who-knew-sap-could-so-complicated-heather-peyton/</li>
+<li><p>&quot;We are nowhere near best-in-class, but we are making progress,&quot; says Steve Rogers, UK managing director of SAP to an audience of his customers at the German applications firm's annual user gathering at the end of last year. It's not the kind of comment that you expect from a senior executive at a leading software firm.</p></li>
+<li><p>https://www.thirdstage-consulting.com/lessons-from-an-sap-failure-at-lidl/</p></li>
+<li><p>https://www.360cloudsolutions.com/top-six-erp-implementation-failures/</p></li>
+<li><p>https://www.brightworkresearch.com/saphana/2017/06/22/hana-big-data-equals-big-failure/</p></li>
+</ul>

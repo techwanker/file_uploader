@@ -1,0 +1,9 @@
+# poor mans archetype
+PROJECT=$1
+mkdir $PROJECT
+mkdir -p $PROJECT/src/main/java
+mkdir -p $PROJECT/src/main/resources
+mkdir -p $PROJECT/src/test/java
+mkdir -p $PROJECT/src/test/resources
+cp javautil-core/pom.xml $PROJECT
+vi $PROJECT/pom.xml

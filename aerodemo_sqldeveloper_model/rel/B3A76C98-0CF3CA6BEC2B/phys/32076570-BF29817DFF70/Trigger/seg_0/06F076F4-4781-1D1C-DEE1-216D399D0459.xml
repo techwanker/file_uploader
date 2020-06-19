@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="CAL_DT_AIUD" directorySegmentName="seg_0" id="06F076F4-4781-1D1C-DEE1-216D399D0459">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CAL_DT_AIUD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body>BEGIN&lt;br/&gt;	UPDATE	ut_cache&lt;br/&gt;		SET	cache_change_nbr	=	cache_change_nbr + 1&lt;br/&gt;	WHERE object_name = &apos;BusinessCalendar&apos; ;&lt;br/&gt;END	cal_dt_aiud ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<scope>FOR EACH STATEMENT</scope>
+<table>2C985293-646A-4E5C-7FDA-93A14BA20F20</table>
+</TriggerOraclev10g>

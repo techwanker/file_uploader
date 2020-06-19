@@ -1,0 +1,51 @@
+head	1.1;
+access;
+symbols;
+locks
+	jjs:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2020.01.27.07.39.53;	author jjs;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="aerodemo_sqldeveloper_model" id="54F128B6-3C61-7859-8F4E-330E1B292DF7" version="3.5">
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 13:48:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>54F128B6-3C61-7859-8F4E-330E1B292DF7</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="3EDF18AE-099F-499D-898A-AFC533809535">
+<designStoragePath>/</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B5282329-160F-C82E-5FFC-1330C7297A1F">
+<designStoragePath>/</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="9D9622B9-5398-A5F1-18B1-012C82856233">
+<designStoragePath>/</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="66FAC0AD-970A-4463-F67E-1833EB84CEBD">
+<designStoragePath>/</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BE18FF85-C70E-8D4A-649F-5CC5889E1216">
+<designStoragePath>/common/home/jjs/java-projects</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B72408EB-CACF-7938-30DF-6CEDB4E8B4EC">
+<designStoragePath>/common/home/jjs/java-projects</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>@

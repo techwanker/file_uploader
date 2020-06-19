@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="CDE9453F-D210-F547-8737-D6E24222436E" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_RQST_SPLY_PO">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_RQST_SPLY_PO</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL>CREATE OR REPLACE VIEW APS_RQST_SPLY_PO&lt;br/&gt;AS &lt;br/&gt;SELECT	item_nbr&lt;br/&gt;FROM	po_ord_dtl&lt;br/&gt;WHERE	sched_qty -  NVL(recv_qty,0) &gt; 0&lt;br/&gt;  AND	line_stat_id = &apos;O&apos;&lt;br/&gt;  AND	sched_cancel_cd IS NULL</userDefinedSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ITEM_NBR_RQST" id="5C00A830-D748-BA84-DE03-F005B47ACDE6">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_RQST_SPLY_PO</sourceObjSchema>
+<sourceObjName>ITEM_NBR_RQST</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:23 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ITEM_NBR_RQST</alias>
+<dataType>NUMBER (9)</dataType>
+<headerAlias>ITEM_NBR_RQST</headerAlias>
+<reference>false</reference>
+<referencedColumn>DE3D9EA7-621C-153F-A583-90D6D8C30FAD</referencedColumn>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DE3D9EA7-621C-153F-A583-90D6D8C30FAD">
+<columnName>ITEM_NBR</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="0CCB1B53-EDB7-C69E-82B5-9D2D0AC9CBBB">
+<container>true</container>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="70E4DD59-CE8D-370B-9C26-9A5DA028BEF2">
+<columnName>SCHED_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D5866C4A-B8F8-BD11-AF34-A5267A82FDA3">
+<columnName>RECV_QTY</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="1564ED8B-91C7-A73A-A257-7B6957F091EC">
+<columnName>LINE_STAT_ID</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3E599318-5D54-010A-C42C-905148E0CFD0">
+<columnName>SCHED_CANCEL_CD</columnName>
+<schema>AERODEMO</schema>
+<tableName>PO_ORD_DTL</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

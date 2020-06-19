@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D2C7710-B2AB-91DE-C9EA-B7BB533EC047" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_IDEAL_GLOBAL_REPLEN">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_IDEAL_GLOBAL_REPLEN</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITEM_NBR" id="85989F6E-EC07-4E4F-59AB-0B32B7E24152">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_IDEAL_GLOBAL_REPLEN</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_DT" id="4FB1E0A0-EBF8-4422-E66E-6577B7AB23BE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_IDEAL_GLOBAL_REPLEN</sourceObjSchema>
+<sourceObjName>REPLEN_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPLEN_QTY" id="FBC61622-9A5F-CD02-F4D1-53B4422669E3">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>APS_IDEAL_GLOBAL_REPLEN</sourceObjSchema>
+<sourceObjName>REPLEN_QTY</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>17</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,17,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="09669F91-4138-F759-D858-6ED9C4D509A6" name="APS_IDEAL_GLOBAL_REPLEN_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_IDEAL_GLOBAL_REPLEN_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:27 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85989F6E-EC07-4E4F-59AB-0B32B7E24152"/>
+<colUsage columnID="4FB1E0A0-EBF8-4422-E66E-6577B7AB23BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F94709D3-1DA4-FA22-D131-069A04D44731" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="APS_IDEAL_GLOBAL_REPLEN_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>APS_IDEAL_GLOBAL_REPLEN_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85989F6E-EC07-4E4F-59AB-0B32B7E24152"/>
+<colUsage columnID="4FB1E0A0-EBF8-4422-E66E-6577B7AB23BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

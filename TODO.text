@@ -1,0 +1,39 @@
+org.javautil.sql.SqlRunnerTest requires oracle xe up and running
+https://www.mkyong.com/maven/how-to-skip-maven-unit-test/  profiles for test
+
+
+*****
+get all ants to work 
+	condition identification
+
+common database for tests only Oracle XE and hibernate
+
+common connection pool - eliminate org.apache.commons.dbcp.BasicDataSource
+
+
+configure repository information in home dir
+
+integration testing
+
+shared beans
+
+
+get usps acct code out of application-context in
+
+
+test global temporary tables in h2 to see if data can be seen between connections
+how to generate temporary tables and generate hbm.xml 
+
+show how to reverse engineer oracle need default schema
+
+create 
+
+http://mojo.codehaus.org/sql-maven-plugin/ execute sql to create database
+
+DONE
+	why does javautil-web need to be built in its dir but not javautil-condition-identification
+	create javautil-test and get test superclasses out of javautil-core/src/main/java
+
+unimportant change
+
+Evaluate thread logging from javautil-2018/javautil-core:

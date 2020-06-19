@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3280DF8-8E0A-FE1D-B3C8-10BCD87EFF76" containerWithKeyObject="2C985293-646A-4E5C-7FDA-93A14BA20F20" localFKIndex="0E8FDB86-E7C1-6AD8-8A21-F069317176BE" name="CD_CC_FK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>CD_CC_FK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<referredTableLongName>AERODEMO.CAL_CALENDAR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>59D8EC2F-A897-724C-7A81-C3F58F4B7E59</referredTableID>
+<keyObject>579F470E-49C5-D418-CF32-8245C8662E61</keyObject>
+<referredKeyID>579F470E-49C5-D418-CF32-8245C8662E61</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CALENDAR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

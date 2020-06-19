@@ -1,0 +1,226 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="12F04B93-6A24-F37D-8AA2-039F51AA5C61" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:24 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IC_VND_ONHAND_NBR" id="4DCD9887-E324-5927-C922-627AD96A152B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_NBR" id="E3C82BB5-A833-4165-6024-57E9D0C8647B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>ITEM_NBR</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_CD_VND" id="A527B940-74C3-1ADC-AC6B-92948565CB00">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>ITEM_CD_VND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORG_NBR_VND" id="F00ADC4E-402F-4E41-02DC-4FB27230FF17">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>ORG_NBR_VND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOAD_DT" id="8DA9717E-F60E-969D-8DA7-681F8119082A">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>LOAD_DT</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QTY_ON_HAND" id="3DBEB174-A3EF-EC64-EC40-9495C6B3A1A1">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>QTY_ON_HAND</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,13,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STK_UM" id="6C7EFE44-0490-547E-BE79-53001872FBBE">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>STK_UM</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIT_PRICE" id="D2BB9E28-8E92-78CE-1F56-653EDEBD31B5">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>IC_VND_ONHAND</sourceObjSchema>
+<sourceObjName>UNIT_PRICE</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:25 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>17</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,17,6</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8034888D-E00B-5FE4-41A0-E7B28522361E" name="IC_VND_ONHAND_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:28 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DCD9887-E324-5927-C922-627AD96A152B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="999278DF-877D-1581-6C20-DBCC829AEA23" name="IC_VND_ONHAND_UK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_UK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:28 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A527B940-74C3-1ADC-AC6B-92948565CB00"/>
+<colUsage columnID="F00ADC4E-402F-4E41-02DC-4FB27230FF17"/>
+<colUsage columnID="8DA9717E-F60E-969D-8DA7-681F8119082A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B7DE38B-9006-CD77-C60E-B9A6BDB751DB" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND_NDX_01">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_NDX_01</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A527B940-74C3-1ADC-AC6B-92948565CB00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E41B12A-82C3-70AC-339F-D871A6D7DC80" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND_NDX_02">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_NDX_02</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F00ADC4E-402F-4E41-02DC-4FB27230FF17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="90C4BE2E-3555-8207-F3FC-FD9B415C3F82" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND_NDX_03">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_NDX_03</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexExpression>TRANSLATE(UPPER(&quot;ITEM_CD_VND&quot;),&apos;~!@#$%^&amp;*()_+|\=-+/?&gt;&lt;., &apos;&apos;&apos;,&apos; &apos;)</indexExpression>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="2C6A989E-7116-43B1-EBCD-4E01A35065E8" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND_PK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_PK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DCD9887-E324-5927-C922-627AD96A152B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75769F94-AFE5-1F08-049A-2F0A7D28BD15" schemaObject="807C085E-39F3-5B40-6ED5-D061A11064F8" name="IC_VND_ONHAND_UK">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>IC_VND_ONHAND_UK</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:26 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A527B940-74C3-1ADC-AC6B-92948565CB00"/>
+<colUsage columnID="F00ADC4E-402F-4E41-02DC-4FB27230FF17"/>
+<colUsage columnID="8DA9717E-F60E-969D-8DA7-681F8119082A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

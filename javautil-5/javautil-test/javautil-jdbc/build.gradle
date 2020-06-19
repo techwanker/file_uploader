@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'org.javautil'
+version = '0.11.0'
+
+description = """javautil-jdbc"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+
+
+repositories {
+     maven { url "file://Users/jjs/.m2/repository" }        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.javautil', name: 'javautil-core', version:'0.11.0'
+    compile group: 'org.javautil', name: 'javautil-databases', version:'0.11.0'
+    compile group: 'org.javautil', name: 'javautil-commandline', version:'0.11.0'
+    compile group: 'org.springframework', name: 'spring-jdbc', version:'2.5.6'
+    compile group: 'com.h2database', name: 'h2', version:'1.3.168'
+    compile group: 'commons-configuration', name: 'commons-configuration', version:'1.7'
+    compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
+    compile group: 'com.mchange', name: 'c3p0', version:'0.9.1'
+    compile group: 'org.freemarker', name: 'freemarker', version:'2.3.15'
+    compile group: 'org.apache.openejb', name: 'javaee-api', version:'5.0-1'
+    compile group: 'log4j', name: 'log4j', version:'1.2.14'
+    testCompile group: 'junit', name: 'junit', version:'4.4'
+    testCompile group: 'commons-dbcp', name: 'commons-dbcp', version:'1.2.2'
+    compile group: 'xerces', name: 'xercesImpl', version:'2.6.2'
+    compile(group: 'xerces', name: 'xmlParserAPIs', version:'2.6.2') {
+       /* This dependency was originally in the Maven provided scope, but the project was not of type war.
+       This behavior is not yet supported by Gradle, so this dependency has been converted to a compile dependency.
+       Please review and delete this closure when resolved. */
+    }
+}

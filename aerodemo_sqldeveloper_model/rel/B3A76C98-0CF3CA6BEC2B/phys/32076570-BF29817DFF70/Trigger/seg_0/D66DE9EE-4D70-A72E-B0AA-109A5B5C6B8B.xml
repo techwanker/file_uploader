@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="OE_ORD_DTL_CERT_AIUD" directorySegmentName="seg_0" id="D66DE9EE-4D70-A72E-B0AA-109A5B5C6B8B">
+<sourceConnName>aerodemo</sourceConnName>
+<sourceObjSchema>AERODEMO</sourceObjSchema>
+<sourceObjName>OE_ORD_DTL_CERT_AIUD</sourceObjName>
+<createdBy>jjs</createdBy>
+<createdTime>2020-01-25 14:09:30 UTC</createdTime>
+<ownerDesignName>aerodemo_sqldeveloper_model</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body>DECLARE&lt;br/&gt; CURSOR ood_cur(p_ood_nbr  oe_ord_dtl.oe_ord_dtl_nbr%TYPE) IS&lt;br/&gt; SELECT ood.item_nbr_ord&lt;br/&gt; FROM oe_ord_dtl  ood&lt;br/&gt; WHERE ood.oe_ord_dtl_nbr = p_ood_nbr&lt;br/&gt;   AND NOT EXISTS (&lt;br/&gt;   SELECT &apos;x&apos;&lt;br/&gt;   FROM aps_rqst_queue arq&lt;br/&gt;   WHERE arq.item_nbr = ood.item_nbr_ord );&lt;br/&gt;--&lt;br/&gt; my_item_nbr    ic_item_mast.item_nbr%TYPE ;&lt;br/&gt;--&lt;br/&gt; need_aps_rqst  BOOLEAN := FALSE ;&lt;br/&gt;BEGIN&lt;br/&gt; IF INSERTING THEN&lt;br/&gt;  OPEN  ood_cur(:NEW.oe_ord_dtl_nbr);&lt;br/&gt;  FETCH ood_cur INTO my_item_nbr ;&lt;br/&gt;  IF ood_cur%FOUND THEN&lt;br/&gt;   need_aps_rqst := TRUE ;&lt;br/&gt;  END IF;&lt;br/&gt;  CLOSE ood_cur ;&lt;br/&gt; ELSIF UPDATING OR DELETING THEN&lt;br/&gt;  OPEN  ood_cur(:OLD.oe_ord_dtl_nbr);&lt;br/&gt;  FETCH ood_cur INTO my_item_nbr ;&lt;br/&gt;  IF ood_cur%FOUND THEN&lt;br/&gt;   need_aps_rqst := TRUE ;&lt;br/&gt;  END IF;&lt;br/&gt;  CLOSE ood_cur ;&lt;br/&gt; END IF ;&lt;br/&gt;--&lt;br/&gt; IF need_aps_rqst THEN&lt;br/&gt;  INSERT INTO aps_rqst_queue (&lt;br/&gt;   item_nbr, item_prty, rqst_src)&lt;br/&gt;  SELECT my_item_nbr, 0, &apos;OE_ORD_DTL_CERT_AIUD&apos;&lt;br/&gt;  FROM dual&lt;br/&gt;  WHERE NOT EXISTS (&lt;br/&gt;    SELECT &apos;x&apos;&lt;br/&gt;    FROM aps_rqst_queue a2&lt;br/&gt;    WHERE a2.item_nbr  = my_item_nbr ) ;&lt;br/&gt; END IF ;&lt;br/&gt;EXCEPTION&lt;br/&gt; WHEN OTHERS THEN&lt;br/&gt;  NULL ;&lt;br/&gt;END oe_ord_dtl_cert_aiud ;&lt;br/&gt;</body>
+<triggerTime>AFTER</triggerTime>
+<owner>A6ACB9D1-28D8-BBB8-8924-F55AF133A3B8</owner>
+<table>6C663697-19FE-D77E-5516-35250BFEA83B</table>
+</TriggerOraclev10g>

@@ -1,0 +1,15 @@
+/**
+	Connect to the JNDI sales DataSource
+	
+	The name of the connection is Connection.sales
+*/
+connect("sales");
+
+/**
+	The name of the connection is "Connection.sailor"
+*/
+connect("sales/areup@sales","sailor");
+
+"wtf" = 
+select 'x' from dual
+</cursor>
