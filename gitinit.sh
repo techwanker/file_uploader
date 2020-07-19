@@ -1,17 +1,13 @@
 set -x
 PWD=`pwd`
-current_dir=`basename $PWD 
+current_dir=`basename $PWD`
 echo current_dir $current_dir
 project=$current_dir
 echo project $project
-
-
-exit
 if [ ! $project = $current_dir ] ; then
    echo project $project is not current_dir $current_dir  >&2
-fi `
+fi 
 
-exit;
 
  
 #git init
@@ -19,7 +15,7 @@ cp ~/templates/.gitignore .gitignore
 git config --global user.email "tech.wanker@gmail.com"
 git remote add origin ssh://git@github.com/techwanker/$project
 git remote set-url origin ssh://git@github.com/techwanker/$project
-get config --get remote.origin.url
+git config --get remote.origin.url
 git remote -v
 git add -A .
 git commit
