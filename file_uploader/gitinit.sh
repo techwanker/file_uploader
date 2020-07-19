@@ -11,6 +11,7 @@ cp ~/templates/.gitignore .gitignore
 git config --global user.email "tech.wanker@gmail.com"
 git remote add origin ssh://git@github.com/techwanker/$project
 git remote set-url origin ssh://git@github.com/techwanker/$project
+get config --get remote.origin.url
 git remote -v
 git add -A .
 git commit
