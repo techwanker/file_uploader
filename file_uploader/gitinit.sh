@@ -2,6 +2,7 @@ set -x
 current_dir=basename `pwd`
 echo current_dir $current_dir
 project=$current_dir
+echo project $project
 if [ ! $project = $current_dir ] ; then
    echo project $project is not current_dir $current_dir  >&2
 fi 
