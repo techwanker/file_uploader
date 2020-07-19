@@ -1,13 +1,11 @@
 set -x
-PWD=`pwd`
-current_dir=`basename $PWD 
+current_dir=`basename `pwd``
 echo current_dir $current_dir
 project=$current_dir
 echo project $project
-exit
 if [ ! $project = $current_dir ] ; then
    echo project $project is not current_dir $current_dir  >&2
-fi `
+fi 
  
 #git init
 cp ~/templates/.gitignore .gitignore
