@@ -1,15 +1,13 @@
-<html xmlns:th="https://www.thymeleaf.org">
-<head>
-<style>
+@charset "ISO-8859-1";
+
 .form-style-9{
-	max-width: 250px;
+	max-width: 200px;
 	background: #FAFAFA;
 	padding: 30px;
 	margin: 50px auto;
 	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
 	border-radius: 10px;
 	border: 6px solid #5cb85c;
-	font: 10px Arial, Helvetica, sans-serif;
 }
 .form-style-9 ul{
 	padding:0;
@@ -27,13 +25,13 @@
 	-moz-box-sizing: border-box; 
 	padding: 8px;
 	outline: none;
-	border: 1px solid #5cb85c; 
+	border: 1px solid #5cb85c;
 	-webkit-transition: all 0.30s ease-in-out;
 	-moz-transition: all 0.30s ease-in-out;
 	-ms-transition: all 0.30s ease-in-out;
 	-o-transition: all 0.30s ease-in-out;
 
-}.form-style-9 .field-style:focus{
+}.form-style-9   .field-style:focus{
 	box-shadow: 0 0 5px #5cb85c;
 	border:1px solid #5cb85c;
 }
@@ -73,35 +71,3 @@
 	background: linear-gradient(to bottom, #39d039 5%, #3f893f 100%);
 	background-color: #5cb85c;
 }
-
-td {padding: 5px 5px;}
-</style>
-</head>
-<body>
-
-	<div th:if="${message}">
-		<h2 th:text="${message}"/>
-	</div>
-
-	<div class=form-style-9>
-		<form method="POST" enctype="multipart/form-data" action="/">
-			<table>
-				<tr>
-				<td>File to upload:</td></tr>
-				<tr><td><input type="file" name="file" /></td>
-				</tr>
-				<tr><td><input type="submit" value="Upload" /></td></tr>
-			</table>
-			</form>
-	</div>
-
-	<div>
-		<ul>
-			<li th:each="file : ${files}">
-				<a th:href="${file}" th:text="${file}" />
-			</li>
-		</ul>
-	</div>
-
-</body>
-</html>
