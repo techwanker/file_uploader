@@ -1,13 +1,10 @@
 <html xmlns:th="https://www.thymeleaf.org">
-<head>
-<link th:href="@{/css/allcss.css}" rel="stylesheet" />
-</head>
+<head><link th:href="@{/css/allcss.css}" rel="stylesheet" /></head>
 
 <body>
 	<div th:if="${message}">
 		<h2 th:text="${message}"/>
 	</div>
-
 	<div>
 		<form method="POST" enctype="multipart/form-data" action="/" class=form-style-9>
 			<table>
@@ -20,8 +17,6 @@
 				</tr>
 			</table>
 		</form>
-	</div>
-
-	
+	</div>	
 </body>
 </html>
