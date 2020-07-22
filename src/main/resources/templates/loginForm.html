@@ -1,24 +1,22 @@
 <html xmlns:th="https://www.thymeleaf.org">
-<body>
+<head><link th:href="@{/css/allcss.css}" rel="stylesheet" /></head>
 
+<body>
 	<div th:if="${message}">
 		<h2 th:text="${message}"/>
 	</div>
-
 	<div>
-		<form method="POST" action="/validate">
+		<form method="POST" enctype="multipart/form-data" action="/" class=form-style-9>
 			<table>
 				<tr>
-					<td>Username:</td><td><input type="text" name="username" /></td></tr>
+					<td><input type="text" name="username" class="field-style field-split align-left" placeholder="Username" /></td>
 				<tr>
+					<td><input type="password" name="password" class="field-style field-split align-left" placeholder="Password" /></td>
 				<tr>
-					<td>Password:</td><td><input type="passord" name="password" /></td></tr>
-				<tr>
-				<td></td><td><input type="submit" value="Upload" /></td></tr>
+				<td><input type="submit" value="Login" /></td>
+				</tr>
 			</table>
 		</form>
-	</div>
-
-	
+	</div>	
 </body>
 </html>
