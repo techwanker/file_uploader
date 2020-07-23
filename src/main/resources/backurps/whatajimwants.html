@@ -1,0 +1,1073 @@
+<style>
+.codey { background-color:#CCCCCC; }
+.level-2 {
+    padding-left: 5em;
+}
+
+.level-3 {
+    padding-left: 7em;
+}
+.level-4 {
+    padding-left: 8em;
+    background: #333333;
+    color: white;
+}
+</style>
+<p><a name="TOC"></p>
+<p><strong>Create a Project With</strong><br />
+</a> - <a href="#SpringSecurity">Spring Security</a><br />
+- <a href="#RestServices">REST Services</a><br />
+<strong>Want Access To</strong><br />
+- <a href="#SessionFactory">Session Factory</a><br />
+- <a href="#DataSource">Data Source</a><br />
+- <a href="#DataServices">Data Services</a><br />
+<strong>Application.Properties</strong><br />
+- <a href="#ChangeDB">Change Database Information</a><br />
+- <a href="#AppPropName">Rename File</a><br />
+- <a href="#AppURL">Change URL</a><br />
+- <a href="#AppPW">Change Password</a></p>
+<h1 id="what-needs-to-be-done">WHAT NEEDS TO BE DONE</h1>
+<h2 id="create-a-project-with">Create A Project With</h2>
+<section class="level-2">
+<p><a name="SpringSecurity"></p>
+<h3 id="spring-security">Spring Security</h3>
+<p></a></p>
+<section class="level-2">
+<h4 id="starting-with-spring-initializr">Starting with Spring Initializr</h4>
+<p>For all Spring applications, you should start with the <a href="https://start.spring.io/">Spring Initializr</a>. The Initializr offers a fast way to pull in all the dependencies you need for an application and does a lot of the setup for you. This example needs the Spring Web and Thymeleaf dependencies. The following image shows the Initializr set up for this sample project:</p>
+<p>The following listing shows the <span class="codey">pom.xml</span> file that is created when you choose Maven:</p>
+<section class="level-4">
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.2.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;securing-web&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;securing-web&lt;/name&gt;
+    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;</code></pre>
+</section>
+<p>The following listing shows the <span class="codey">build.gradle</span> file that is created when you choose Gradle:</p>
+<section class="level-4">
+<pre><code>plugins {
+    id &#39;org.springframework.boot&#39; version &#39;2.2.2.RELEASE&#39;
+    id &#39;io.spring.dependency-management&#39; version &#39;1.0.8.RELEASE&#39;
+    id &#39;java&#39;
+}
+
+group = &#39;com.example&#39;
+version = &#39;0.0.1-SNAPSHOT&#39;
+sourceCompatibility = &#39;1.8&#39;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation &#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;
+    implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+    testImplementation(&#39;org.springframework.boot:spring-boot-starter-test&#39;) {
+        exclude group: &#39;org.junit.vintage&#39;, module: &#39;junit-vintage-engine&#39;
+    }
+}
+
+test {
+    useJUnitPlatform()
+}</code></pre>
+</section>
+<h3 id="set-up-spring-security">Set up Spring Security</h3>
+<p>Suppose that you want to prevent unauthorized users from viewing the greeting page at /hello. As it is now, if visitors click the link on the home page, they see the greeting with no barriers to stop them. You need to add a barrier that forces the visitor to sign in before they can see that page.</p>
+<p>You do that by configuring Spring Security in the application. If Spring Security is on the classpath, Spring Boot <a href="https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#boot-features-security">automatically secures all HTTP endpoints</a> with &quot;basic&quot; authentication. However, you can further customize the security settings. The first thing you need to do is add Spring Security to the classpath.</p>
+<p>With Gradle, you need to add two lines (one for the application and one for testing) in the <span class="codey">dependencies</span> closure in <span class="codey">build.gradle</span>, as the following listing shows:</p>
+<section class="level-4">
+<pre><code>implementation &#39;org.springframework.boot:spring-boot-starter-security&#39;
+implementation &#39;org.springframework.security:spring-security-test&#39;</code></pre>
+</section>
+The following listing shows the finished <span class="codey">build.gradle</span> file:<br />
+
+<section class="level-4">
+<pre><code>plugins {
+    id &#39;org.springframework.boot&#39; version &#39;2.2.2.RELEASE&#39;
+    id &#39;io.spring.dependency-management&#39; version &#39;1.0.8.RELEASE&#39;
+    id &#39;java&#39;
+}
+
+group = &#39;com.example&#39;
+version = &#39;0.0.1-SNAPSHOT&#39;
+sourceCompatibility = &#39;1.8&#39;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation &#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;
+    implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+    implementation &#39;org.springframework.boot:spring-boot-starter-security&#39;
+    implementation &#39;org.springframework.security:spring-security-test&#39;
+    testImplementation(&#39;org.springframework.boot:spring-boot-starter-test&#39;) {
+        exclude group: &#39;org.junit.vintage&#39;, module: &#39;junit-vintage-engine&#39;
+    }
+}
+
+test {
+    useJUnitPlatform()
+}</code></pre>
+</section>
+<p>With Maven, you need to add two extra entries (one for the application and one for testing) to the <span class="codey"><dependencies></span> element in <span class="codey">pom.xml</span>, as the following listing shows:</p>
+<section class="level-4">
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</section>
+<p>The following listing shows the finished <span class="codey">pom.xml</span> file:</p>
+<section class="level-4">
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.2.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;securing-web&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;securing-web&lt;/name&gt;
+    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-security-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;</code></pre>
+</section>
+<p>The following security configuration (from <span class="codey">src/main/java/com/example/securingweb/WebSecurityConfig.java</span>) ensures that only authenticated users can see the secret greeting:</p>
+<section class="level-4">
+<pre><code>package com.example.securingweb;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .authorizeRequests()
+                .antMatchers(&quot;/&quot;, &quot;/home&quot;).permitAll()
+                .anyRequest().authenticated()
+                .and()
+            .formLogin()
+                .loginPage(&quot;/login&quot;)
+                .permitAll()
+                .and()
+            .logout()
+                .permitAll();
+    }
+
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        UserDetails user =
+             User.withDefaultPasswordEncoder()
+                .username(&quot;user&quot;)
+                .password(&quot;password&quot;)
+                .roles(&quot;USER&quot;)
+                .build();
+
+        return new InMemoryUserDetailsManager(user);
+    }
+}</code></pre>
+</section>
+<p>We display the username by using Spring Security's integration with <span class="codey">HttpServletRequest#getRemoteUser()</span>. The &quot;Sign Out&quot; form submits a POST to <span class="codey">/logout</span>. Upon successfully logging out, it redirects the user to <span class="codey">/login?logout</span>.</p>
+<h3 id="run-the-application">Run the Application</h3>
+<p>The Spring Initializr creates an application class for you. In this case, you need not modify the class. The following listing (from <span class="codey">src/main/java/com/example/securingweb/SecuringWebApplication.java</span>) shows the application class:</p>
+<section class="level-4">
+<pre><code>package com.example.securingweb;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SecuringWebApplication {
+
+    public static void main(String[] args) throws Throwable {
+        SpringApplication.run(SecuringWebApplication.class, args);
+    }
+
+}</code></pre>
+</section>
+<h4 id="build-an-executable-jar">Build an executable JAR</h4>
+<p>You can run the application from the command line with Gradle or Maven. You can also build a single executable JAR file that contains all the necessary dependencies, classes, and resources and run that. Building an executable jar so makes it easy to ship, version, and deploy the service as an application throughout the development lifecycle, across different environments, and so forth.</p>
+<p>If you use Gradle, you can run the application by using <span class="codey">./gradlew bootRun</span>. Alternatively, you can build the JAR file by using <span class="codey">./gradlew</span> build and then run the JAR file, as follows:</p>
+<section class="level-4">
+<pre><code>java -jar build/libs/gs-securing-web-0.1.0.jar</code></pre>
+</section>
+<p>If you use Maven, you can run the application by using <span class="codey">./mvnw spring-boot:run</span>. Alternatively, you can build the JAR file with <span class="codey">./mvnw clean</span> package and then run the JAR file, as follows:</p>
+<section class="level-4">
+<pre><code>java -jar target/gs-securing-web-0.1.0.jar</code></pre>
+</section>
+<p>Once the application starts up, point your browser to <span class="codey">http://localhost:8080</span>. You should see the home page..</p>
+<p>When you click on the link, it attempts to take you to the greeting page at <span class="codey">/hello</span>. However, because that page is secured and you have not yet logged in, it takes you to the login page, as the following image shows:</p>
+<p>At the login page, sign in as the test user by entering <span class="codey">user</span> and <span class="codey">password</span> for the username and password fields, respectively. Once you submit the login form, you are authenticated and then taken to the greeting page, as the following image shows:</p>
+<p>If you click on the <strong>Sign Out</strong> button, your authentication is revoked, and you are returned to the login page with a message indicating that you are logged out.</p>
+<strong><a href="https://spring.io/guides/gs/securing-web/">Source to this madness</a></strong>
+</section>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+</ul>
+<p><a href="#TOC">TOC</a></p>
+</section>
+<section class="level-2">
+<p><a name="RestServices"></p>
+<h3 id="rest-services">REST Services</h3>
+</a>
+<section class="level-2">
+<h4 id="understanding-rest-in-spring">Understanding REST in Spring</h4>
+<p>The Spring framework supports two ways of creating RESTful services:</p>
+<ul>
+<li>using MVC with <span class="codey">ModelAndView</span></li>
+<li>using HTTP message converters</li>
+</ul>
+<p>The <span class="codey">ModelAndView</span> approach is older and much better documented, but also more verbose and configuration heavy. It tries to shoehorn the REST paradigm into the old model, which is not without problems. The Spring team understood this and provided first-class REST support starting with Spring 3.0.</p>
+<p><strong>The new approach, based on <span class="codey">HttpMessageConverter</span> and annotations, is much more lightweight and easy to implement</strong>. Configuration is minimal, and it provides sensible defaults for what you would expect from a RESTful service.</p>
+<h4 id="the-java-configuration">The Java Configuration</h4>
+<section class="level-4">
+<pre><code>@Configuration
+@EnableWebMvc
+public class WebConfig{
+   //
+}</code></pre>
+</section>
+<p>The new <span class="codey"><span class="citation">@EnableWebMvc</span></span> annotation does some useful things - specifically, in the case of REST, it detects the existence of Jackson and JAXB 2 on the classpath and automatically creates and registers default JSON and XML converters. The functionality of the annotation is equivalent to the XML version:</p>
+<p><span class="codey"><mvc:annotation-driven /></span></p>
+<p>This is a shortcut, and though it may be useful in many situations, it's not perfect. When more complex configuration is needed, remove the annotation and extend <span class="codey">WebMvcConfigurationSupport</span> directly.</p>
+<h6 id="using-spring-boot">Using Spring Boot</h6>
+<p>If we're using the <span class="codey"><span class="citation">@SpringBootApplication</span></span> annotation and the <span class="codey">spring-webmvc</span> library is on the classpath, then the <span class="codey"><span class="citation">@EnableWebMvc</span></span> annotation is added automatically with a default autoconfiguration.</p>
+<p>We can still add MVC functionality to this configuration by implementing the <span class="codey">WebMvcConfigurer</span> interface on a <span class="codey"><span class="citation">@Configuration</span></span> annotated class. We can also use a <span class="codey">WebMvcRegistrationsAdapter</span> instance to provide our own <span class="codey">RequestMappingHandlerMapping</span>, <span class="codey">RequestMappingHandlerAdapter</span>, or <span class="codey">ExceptionHandlerExceptionResolver</span> implementations.</p>
+<p>Finally, if we want to discard Spring Boot's MVC features and declare a custom configuration, we can do so by using the <span class="codey"><span class="citation">@EnableWebMvc</span></span> annotation.</p>
+<h4 id="testing-the-spring-context">Testing the Spring Context</h4>
+<p>Starting with Spring 3.1, we get first-class testing support for <span class="codey"><span class="citation">@Configuration</span></span> classes:</p>
+<section class="level-4">
+<pre><code>@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration( 
+  classes = {WebConfig.class, PersistenceConfig.class},
+  loader = AnnotationConfigContextLoader.class)
+public class SpringContextIntegrationTest {
+ 
+   @Test
+   public void contextLoads(){
+      // When
+   }
+}</code></pre>
+</section>
+<p>We're specifying the Java configuration classes with the <span class="codey"><span class="citation">@ContextConfiguration</span></span> annotation. The new <span class="codey">AnnotationConfigContextLoader</span> loads the bean definitions from the <span class="codey"><span class="citation">@Configuration</span></span> classes.</p>
+<p>Notice that the <span class="codey">WebConfig</span> configuration class was not included in the test because it needs to run in a Servlet context, which is not provided.</p>
+<h5 id="using-spring-boot-1">Using Spring Boot</h5>
+<p>Spring Boot provides several annotations to set up the Spring <span class="codey">ApplicationContext</span> for our tests in a more intuitive way.</p>
+<p>We can load only a particular slice of the application configuration, or we can simulate the whole context startup process.</p>
+<p>For instance, we can use the <span class="codey"><span class="citation">@SpringBootTest</span></span> annotation if we want the entire context to be created without starting the server.</p>
+<p>With that in place, we can then add the <span class="codey"><span class="citation">@AutoConfigureMockMvc</span></span> to inject a <span class="codey">MockMvc</span> instance and send HTTP requests:</p>
+<section class="level-4">
+<pre><code>@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class FooControllerAppIntegrationTest {
+ 
+    @Autowired
+    private MockMvc mockMvc;
+ 
+    @Test
+    public void whenTestApp_thenEmptyResponse() throws Exception {
+        this.mockMvc.perform(get(&quot;/foos&quot;)
+            .andExpect(status().isOk())
+            .andExpect(...);
+    }
+ 
+}</code></pre>
+</section>
+<p>You may have noticed I'm using a straightforward, Guava style <span class="codey">RestPreconditions</span> utility:</p>
+<section class="level-4">
+<pre><code>    public class RestPreconditions {
+    public static &lt;T&gt; T checkFound(T resource) {
+        if (resource == null) {
+            throw new MyResourceNotFoundException();
+        }
+        return resource;
+    }
+}</code></pre>
+</section>
+<p><strong>The Controller implementation is non-public - this is because it doesn't need to be.</strong></p>
+<p>Usually, the controller is the last in the chain of dependencies. It receives HTTP requests from the Spring front controller (the <span class="codey">DispatcherServlet</span>) and simply delegates them forward to a service layer. If there's no use case where the controller has to be injected or manipulated through a direct reference, then I prefer not to declare it as public.</p>
+<p>The request mappings are straightforward. <strong>As with any controller, the actual <span class="codey">value</span> of the mapping, as well as the HTTP method, determine the target method for the request</strong>. <span class="codey"><span class="citation">@RequestBody</span></span> will bind the parameters of the method to the body of the HTTP request, whereas <span class="codey"><span class="citation">@ResponseBody</span></span> does the same for the response and return type.</p>
+<p>The <span class="citation">@RestController</span> is a shorthand to include both the <span class="citation">@ResponseBody</span> and the <span class="citation">@Controller</span> annotations in our class.</p>
+<p>They also ensure that the resource will be marshalled and unmarshalled using the correct HTTP converter. Content negotiation will take place to choose which one of the active converters will be used, based mostly on the <span class="codey">Accept</span> header, although other HTTP headers may be used to determine the representation as well.</p>
+<h4 id="mapping-the-http-response-codes">Mapping the HTTP Response Codes</h4>
+<p>The status codes of the HTTP response are one of the most important parts of the REST service, and the subject can quickly become very complicated. Getting these right can be what makes or breaks the service.</p>
+<h5 id="unmapped-requests">Unmapped Requests</h5>
+<p>If Spring MVC receives a request which doesn't have a mapping, it considers the request not to be allowed and returns a 405 METHOD NOT ALLOWED back to the client.</p>
+<p>It's also a good practice to include the <span class="codey">Allow</span> HTTP header when returning a <span class="codey">405</span> to the client, to specify which operations are allowed. This is the standard behavior of Spring MVC and doesn't require any additional configuration.</p>
+<h5 id="valid-mapped-requests">Valid Mapped Requests</h5>
+<p>For any request that does have a mapping, Spring MVC considers the request valid and responds with 200 OK if no other status code is specified otherwise.</p>
+<p>It's because of this that the controller declares different <span class="codey"><span class="citation">@ResponseStatus</span></span> for the <span class="codey">create, update</span> and <span class="codey">delete</span> actions but not for <span class="codey">get</span>, which should indeed return the default 200 OK.</p>
+<h5 id="client-error">Client Error</h5>
+<p><span class="codey">In the case of a client error, custom exceptions are defined and mapped to the appropriate error codes.</span></p>
+<p>Simply throwing these exceptions from any of the layers of the web tier will ensure Spring maps the corresponding status code on the HTTP response:</p>
+<section class="level-4">
+<pre><code>    @ResponseStatus(HttpStatus.BAD_REQUEST)
+public class BadRequestException extends RuntimeException {
+   //
+}
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException {
+   //
+}</code></pre>
+</section>
+<p>These exceptions are part of the REST API and, as such, should only be used in the appropriate layers corresponding to REST; if for instance, a DAO/DAL layer exists, it should not use the exceptions directly.</p>
+<p>Note also that these are not checked exceptions but runtime exceptions - in line with Spring practices and idioms.</p>
+<h5 id="using-exceptionhandler">Using <span class="codey"><span class="citation">@ExceptionHandler</span></span></h5>
+<p>Another option to map custom exceptions on specific status codes is to use the <span class="codey"><span class="citation">@ExceptionHandler</span></span> annotation in the controller. The problem with that approach is that the annotation only applies to the controller in which it's defined. This means that we need to declares in each controller individually.</p>
+<p>Of course, there are more ways to handle errors in both Spring and Spring Boot that offer more flexibility.</p>
+<h4 id="additional-maven-dependencies">Additional Maven Dependencies</h4>
+<p>In addition to the <span class="codey">spring-webmvc</span> dependency required for the standard web application, we'll need to set up content marshalling and unmarshalling for the REST API:</p>
+<section class="level-4">
+<pre><code>&lt;dependencies&gt;
+   &lt;dependency&gt;
+      &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+      &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+      &lt;version&gt;2.9.8&lt;/version&gt;
+   &lt;/dependency&gt;
+   &lt;dependency&gt;
+      &lt;groupId&gt;javax.xml.bind&lt;/groupId&gt;
+      &lt;artifactId&gt;jaxb-api&lt;/artifactId&gt;
+      &lt;version&gt;2.3.1&lt;/version&gt;
+      &lt;scope&gt;runtime&lt;/scope&gt;
+   &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</section>
+<p>These are the libraries used to convert the representation of the REST resource to either JSON or XML.</p>
+<h5 id="using-spring-boot-2">Using Spring Boot</h5>
+<p>If we want to retrieve JSON-formatted resources, Spring Boot provides support for different libraries, namely Jackson, Gson and JSON-B.</p>
+<p>Auto-configuration is carried out by just including any of the mapping libraries in the classpath.</p>
+<p>Usually, if we're developing a web application, <strong>we'll just add the <span class="codey">spring-boot-starter-web</span> dependency and rely on it to include all the necessary artifacts to our project</strong>:</p>
+<section class="level-4">
+<pre><code>    &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;version&gt;2.1.2.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</section>
+<p>Spring Boot uses Jackson by default.</p>
+<p>If we want to serialize our resources in an XML format, we'll have to add the Jackson XML extension (<span class="codey">jackson-dataformat-xml</span>) to our dependencies, or fallback to the JAXB implementation (provided by default in the JDK) by using the <span class="codey"><span class="citation">@XmlRootElement</span></span> annotation on our resource.</p>
+</section>
+</section>
+<section class="level-2">
+<h3 id="file-uploading-service">File Uploading Service</h3>
+<section class="level-2">
+<p>The following listing shows the <span class="codey">pom.xml</span> file that is created when you choose Maven:</p>
+<section class="level-4">
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.0.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;uploading-files&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;uploading-files&lt;/name&gt;
+    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;</code></pre>
+</section>
+<p>The following listing shows the <span class="codey">build.gradle</span> file that is created when you choose Gradle:</p>
+<section class="level-4">
+<pre><code>plugins {
+    id &#39;org.springframework.boot&#39; version &#39;2.2.0.RELEASE&#39;
+    id &#39;io.spring.dependency-management&#39; version &#39;1.0.8.RELEASE&#39;
+    id &#39;java&#39;
+}
+
+group = &#39;com.example&#39;
+version = &#39;0.0.1-SNAPSHOT&#39;
+sourceCompatibility = &#39;1.8&#39;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation &#39;org.springframework.boot:spring-boot-starter-thymeleaf&#39;
+    implementation &#39;org.springframework.boot:spring-boot-starter-web&#39;
+    testImplementation(&#39;org.springframework.boot:spring-boot-starter-test&#39;) {
+        exclude group: &#39;org.junit.vintage&#39;, module: &#39;junit-vintage-engine&#39;
+    }
+}
+
+test {
+    useJUnitPlatform()
+}</code></pre>
+</section>
+<h4 id="create-an-application-class">Create an Application Class</h4>
+<p>To start a Spring Boot MVC application, you first need a starter. In this sample, <span class="codey">spring-boot-starter-thymeleaf</span> and <span class="codey">spring-boot-starter-web</span> are already added as dependencies. To upload files with Servlet containers, you need to register a <span class="codey">MultipartConfigElement</span> class (which would be <span class="codey"><multipart-config></span> in web.xml). Thanks to Spring Boot, everything is auto-configured for you!</p>
+<p>All you need to get started with this application is the following <span class="codey">UploadingFilesApplication</span> class (from <span class="codey">src/main/java/com/example/uploadingfiles/UploadingFilesApplication.java</span>):</p>
+<section class="level-4">
+<pre><code>package com.example.uploadingfiles;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UploadingFilesApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(UploadingFilesApplication.class, args);
+    }
+
+}</code></pre>
+</section>
+<p>As part of auto-configuring Spring MVC, Spring Boot will create a <span class="codey">MultipartConfigElement</span> bean and make itself ready for file uploads.</p>
+<h4 id="create-a-file-upload-controller">Create a File Upload Controller</h4>
+<p>The initial application already contains a few classes to deal with storing and loading the uploaded files on disk. They are all located in the <span class="codey">com.example.uploadingfiles.storage</span> package. You will use those in your new <span class="codey">FileUploadController</span>. The following listing (from <span class="codey">src/main/java/com/example/uploadingfiles/FileUploadController.java</span>) shows the file upload controller:</p>
+<section class="level-4">
+<pre><code>package com.example.uploadingfiles;
+
+import java.io.IOException;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.example.uploadingfiles.storage.StorageFileNotFoundException;
+import com.example.uploadingfiles.storage.StorageService;
+
+@Controller
+public class FileUploadController {
+
+    private final StorageService storageService;
+
+    @Autowired
+    public FileUploadController(StorageService storageService) {
+        this.storageService = storageService;
+    }
+
+    @GetMapping(&quot;/&quot;)
+    public String listUploadedFiles(Model model) throws IOException {
+
+        model.addAttribute(&quot;files&quot;, storageService.loadAll().map(
+                path -&gt; MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
+                        &quot;serveFile&quot;, path.getFileName().toString()).build().toUri().toString())
+                .collect(Collectors.toList()));
+
+        return &quot;uploadForm&quot;;
+    }
+
+    @GetMapping(&quot;/files/{filename:.+}&quot;)
+    @ResponseBody
+    public ResponseEntity&lt;Resource&gt; serveFile(@PathVariable String filename) {
+
+        Resource file = storageService.loadAsResource(filename);
+        return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
+                &quot;attachment; filename=\&quot;&quot; + file.getFilename() + &quot;\&quot;&quot;).body(file);
+    }
+
+    @PostMapping(&quot;/&quot;)
+    public String handleFileUpload(@RequestParam(&quot;file&quot;) MultipartFile file,
+            RedirectAttributes redirectAttributes) {
+
+        storageService.store(file);
+        redirectAttributes.addFlashAttribute(&quot;message&quot;,
+                &quot;You successfully uploaded &quot; + file.getOriginalFilename() + &quot;!&quot;);
+
+        return &quot;redirect:/&quot;;
+    }
+
+    @ExceptionHandler(StorageFileNotFoundException.class)
+    public ResponseEntity&lt;?&gt; handleStorageFileNotFound(StorageFileNotFoundException exc) {
+        return ResponseEntity.notFound().build();
+    }
+
+}</code></pre>
+</section>
+<p>The <span class="codey">FileUploadController</span> class is annotated with <span class="codey"><span class="citation">@Controller</span></span> so that Spring MVC can pick it up and look for routes. Each method is tagged with <span class="codey"><span class="citation">@GetMapping</span></span> or <span class="codey"><span class="citation">@PostMapping</span></span> to tie the path and the HTTP action to a particular controller action.</p>
+<p>In this case:</p>
+<ul>
+<li><span class="codey">GET /</span>: Looks up the current list of uploaded files from the <span class="codey">StorageService</span> and loads it into a Thymeleaf template. It calculates a link to the actual resource by using <span class="codey">MvcUriComponentsBuilder</span>.</li>
+<li><span class="codey">GET /files/{filename}</span>: Loads the resource (if it exists) and sends it to the browser to download by using a <span class="codey">Content-Disposition</span> response header.</li>
+<li><span class="codey">POST /</span>: Handles a multi-part message <span class="codey">file</span> and gives it to the <span class="codey">StorageService</span> for saving.</li>
+</ul>
+<p>You will need to provide a <span class="codey">StorageService</span> so that the controller can interact with a storage layer (such as a file system). The following listing (from <span class="codey">src/main/java/com/example/uploadingfiles/storage/StorageService.java</span>) shows that interface:</p>
+<section class="level-4">
+<pre><code>package com.example.uploadingfiles.storage;
+
+import org.springframework.core.io.Resource;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
+public interface StorageService {
+
+    void init();
+
+    void store(MultipartFile file);
+
+    Stream&lt;Path&gt; loadAll();
+
+    Path load(String filename);
+
+    Resource loadAsResource(String filename);
+
+    void deleteAll();
+
+}</code></pre>
+</section>
+<h4 id="creating-an-html-template">Creating an HTML Template</h4>
+<p>The following Thymeleaf template (from <span class="codey">src/main/resources/templates/uploadForm.html</span>) shows an example of how to upload files and show what has been uploaded:</p>
+<section class="level-4">
+<pre><code>&lt;html xmlns:th=&quot;https://www.thymeleaf.org&quot;&gt;
+&lt;body&gt;
+
+    &lt;div th:if=&quot;${message}&quot;&gt;
+        &lt;h2 th:text=&quot;${message}&quot;/&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;form method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot; action=&quot;/&quot;&gt;
+            &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;File to upload:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;submit&quot; value=&quot;Upload&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li th:each=&quot;file : ${files}&quot;&gt;
+                &lt;a th:href=&quot;${file}&quot; th:text=&quot;${file}&quot; /&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+<p>This template has three parts: - An optional message at the top where Spring MVC writes a flash-scoped message. - A form that lets the user upload files. - A list of files supplied from the backend.</p>
+<h4 id="tuning-file-upload-limits">Tuning File Upload Limits</h4>
+<p>When configuring file uploads, it is often useful to set limits on the size of files. Imagine trying to handle a 5GB file upload! With Spring Boot, we can tune its auto-configured <span class="codey">MultipartConfigElement</span> with some property settings.</p>
+<p>Add the following properties to your existing properties settings (in <span class="codey">src/main/resources/application.properties</span>):</p>
+<section class="level-4">
+<pre><code>spring.servlet.multipart.max-file-size=128KB
+spring.servlet.multipart.max-request-size=128KB</code></pre>
+</section>
+<p>The multipart settings are constrained as follows: - <span class="codey">spring.http.multipart.max-file-size</span> is set to 128KB, meaning total file size cannot exceed 128KB. - <span class="codey">spring.http.multipart.max-request-size</span> is set to 128KB, meaning total request size for a <span class="codey">multipart/form-data</span> cannot exceed 128KB.</p>
+<h4 id="run-the-application-1">Run the Application</h4>
+<p>You want a target folder to which to upload files, so you need to enhance the basic <span class="codey">UploadingFilesApplication</span> class that Spring Initializr created and add a Boot <span class="codey">CommandLineRunner</span> to delete and re-create that folder at startup. The following listing (from <span class="codey">src/main/java/com/example/uploadingfiles/UploadingFilesApplication.java</span>) shows how to do so:</p>
+<section class="level-4">
+<pre><code>package com.example.uploadingfiles;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+
+import com.example.uploadingfiles.storage.StorageProperties;
+import com.example.uploadingfiles.storage.StorageService;
+
+@SpringBootApplication
+@EnableConfigurationProperties(StorageProperties.class)
+public class UploadingFilesApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(UploadingFilesApplication.class, args);
+    }
+
+    @Bean
+    CommandLineRunner init(StorageService storageService) {
+        return (args) -&gt; {
+            storageService.deleteAll();
+            storageService.init();
+        };
+    }
+}</code></pre>
+</section>
+<p><span class="codey"><span class="citation">@SpringBootApplication</span></span> is a convenience annotation that adds all of the following: - <span class="codey"><span class="citation">@Configuration</span></span>: Tags the class as a source of bean definitions for the application context. - <span class="codey"><span class="citation">@EnableAutoConfiguration</span></span>: Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings. For example, if <span class="codey">spring-webmvc</span> is on the classpath, this annotation flags the application as a web application and activates key behaviors, such as setting up a <span class="codey">DispatcherServlet</span>. - <span class="codey"><span class="citation">@ComponentScan</span></span>: Tells Spring to look for other components, configurations, and services in the <span class="codey">com/example</span> package, letting it find the controllers.</p>
+<p>The <span class="codey">main()</span> method uses Spring Boot's <span class="codey">SpringApplication.run()</span> method to launch an application. Did you notice that there was not a single line of XML? There is no <span class="codey">web.xml</span> file, either. This web application is 100% pure Java and you did not have to deal with configuring any plumbing or infrastructure.</p>
+<h4 id="build-an-executable-jar-1">Build an executable JAR</h4>
+<p>You can run the application from the command line with Gradle or Maven. You can also build a single executable JAR file that contains all the necessary dependencies, classes, and resources and run that. Building an executable jar makes it easy to ship, version, and deploy the service as an application throughout the development lifecycle, across different environments, and so forth.</p>
+<p>If you use Gradle, you can run the application by using <span class="codey">./gradlew bootRun</span>. Alternatively, you can build the JAR file by using <span class="codey">./gradlew build</span> and then run the JAR file, as follows:</p>
+<section class="level-4">
+<pre><code>java -jar build/libs/gs-uploading-files-0.1.0.jar</code></pre>
+</section>
+<p>If you use Maven, you can run the application by using <span class="codey">./mvnw spring-boot:run</span>. Alternatively, you can build the JAR file with <span class="codey">./mvnw clean package</span> and then run the JAR file, as follows:</p>
+<section class="level-4">
+<pre><code>java -jar target/gs-uploading-files-0.1.0.jar</code></pre>
+</section>
+<p>That runs the server-side piece that receives file uploads. Logging output is displayed. The service should be up and running within a few seconds.</p>
+<p>With the server running, you need to open a browser and visit <span class="codey">http://localhost:8080/</span> to see the upload form. Pick a (small) file and press <strong>Upload</strong>. You should see the success page from the controller. If you choose a file that is too large, you will get an ugly error page.</p>
+<p>You should then see a line resembling the following in your browser window:</p>
+<p>&quot;You successfully uploaded <name of your file>!&quot;</p>
+<h4 id="testing-your-application">Testing Your Application</h4>
+<p>There are multiple ways to test this particular feature in our application. The following listing (from <span class="codey">src/test/java/com/example/uploadingfiles/FileUploadTests.java</span>) shows one example that uses <span class="codey">MockMvc</span> so that it does not require starting the servlet container:</p>
+<section class="level-4">
+<pre><code>package com.example.uploadingfiles;
+
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.mockito.BDDMockito.given;
+import static org.mockito.BDDMockito.then;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.fileUpload;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import com.example.uploadingfiles.storage.StorageFileNotFoundException;
+import com.example.uploadingfiles.storage.StorageService;
+
+@AutoConfigureMockMvc
+@SpringBootTest
+public class FileUploadTests {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @MockBean
+    private StorageService storageService;
+
+    @Test
+    public void shouldListAllFiles() throws Exception {
+        given(this.storageService.loadAll())
+                .willReturn(Stream.of(Paths.get(&quot;first.txt&quot;), Paths.get(&quot;second.txt&quot;)));
+
+        this.mvc.perform(get(&quot;/&quot;)).andExpect(status().isOk())
+                .andExpect(model().attribute(&quot;files&quot;,
+                        Matchers.contains(&quot;http://localhost/files/first.txt&quot;,
+                                &quot;http://localhost/files/second.txt&quot;)));
+    }
+
+    @Test
+    public void shouldSaveUploadedFile() throws Exception {
+        MockMultipartFile multipartFile = new MockMultipartFile(&quot;file&quot;, &quot;test.txt&quot;,
+                &quot;text/plain&quot;, &quot;Spring Framework&quot;.getBytes());
+        this.mvc.perform(multipart(&quot;/&quot;).file(multipartFile))
+                .andExpect(status().isFound())
+                .andExpect(header().string(&quot;Location&quot;, &quot;/&quot;));
+
+        then(this.storageService).should().store(multipartFile);
+    }
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    @Test
+    public void should404WhenMissingFile() throws Exception {
+        given(this.storageService.loadAsResource(&quot;test.txt&quot;))
+                .willThrow(StorageFileNotFoundException.class);
+
+        this.mvc.perform(get(&quot;/files/test.txt&quot;)).andExpect(status().isNotFound());
+    }
+
+}</code></pre>
+</section>
+<p>In those tests, you use various mocks to set up the interactions with your controller and the <span class="codey">StorageService</span> but also with the Servlet container itself by using <span class="codey">MockMultipartFile</span>.</p>
+<p>For an example of an integration test, see the <span class="codey">FileUploadIntegrationTests</span> class (which is in <span class="codey">src/test/java/com/example/uploadingfiles)</span>.</p>
+<p><a href="#TOC">TOC</a></p>
+</section>
+</section>
+<h2 id="want-access-to">Want Access To</h2>
+<section class="level-2">
+<p><a name="SessionFactory"></p>
+<h3 id="session-factory">Session Factory</h3>
+</a>
+</section>
+<section class="level-3">
+<p>For using Hibernate 5 with Spring, little has changed since Hibernate 4: we have to use <em>LocalSessionFactoryBean</em> from the package <em>org.springframework.orm.hibernate5</em> instead of <em>org.springframework.orm.hibernate4.</em></p>
+<p>Like with Hibernate 4 before, we have to define beans for <em>LocalSessionFactoryBean</em>, DataSource, and <em>PlatformTransactionManager</em>, as well as some Hibernate-specific properties.</p>
+<p>Let's create our <em>HibernateConfig</em> class to <strong>configure Hibernate 5 with Spring</strong>:</p>
+<section class="level-4">
+<pre><code>@Configuration
+@EnableTransactionManagement
+public class HibernateConf {
+ 
+    @Bean
+    public LocalSessionFactoryBean sessionFactory() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan(
+          {&quot;com.baeldung.hibernate.bootstrap.model&quot; });
+        sessionFactory.setHibernateProperties(hibernateProperties());
+ 
+        return sessionFactory;
+    }
+ 
+    @Bean
+    public DataSource dataSource() {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDriverClassName(&quot;org.h2.Driver&quot;);
+        dataSource.setUrl(&quot;jdbc:h2:mem:db;DB_CLOSE_DELAY=-1&quot;);
+        dataSource.setUsername(&quot;sa&quot;);
+        dataSource.setPassword(&quot;sa&quot;);
+ 
+        return dataSource;
+    }
+ 
+    @Bean
+    public PlatformTransactionManager hibernateTransactionManager() {
+        HibernateTransactionManager transactionManager
+          = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(sessionFactory().getObject());
+        return transactionManager;
+    }
+ 
+    private final Properties hibernateProperties() {
+        Properties hibernateProperties = new Properties();
+        hibernateProperties.setProperty(
+          &quot;hibernate.hbm2ddl.auto&quot;, &quot;create-drop&quot;);
+        hibernateProperties.setProperty(
+          &quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.H2Dialect&quot;);
+ 
+        return hibernateProperties;
+    }
+}</code></pre>
+</section>
+<p><a href="#TOC">TOC</a></p>
+</section>
+</section>
+<section class="level-2">
+<p><a name="DataSource"></p>
+<h3 id="data-source">Data Source</h3>
+</a>
+</section>
+<section class="level-3">
+<p>Now, if we stick with Spring Boot's automatic <em>DataSource</em> configuration and run our project in its current state, it will just work as expected.</p>
+<p><strong>Spring Boot will do all the heavy infrastructure plumbing for us</strong>. This includes creating an H2 <em>DataSource</em> implementation, which will be automatically handled by HikariCP, Apache Tomcat, or Commons DBCP, and setting up an in-memory database instance.</p>
+<p>Additionally, we won't even need to create an <em>application.properties</em> file, as Spring Boot will provide some default database settings as well.</p>
+<p>As we mentioned before, at times we'll need a higher level of customization, hence we'll have to configure programmatically our own <em>DataSource</em> implementation.</p>
+<p><strong>The simplest way to accomplish this is by defining a DataSource factory method, and placing it within a class annotated with the <em><span class="citation">@Configuration</span></em> annotation:</strong></p>
+<section class="level-4">
+<pre><code>@Configuration
+public class DataSourceConfig {
+    
+    @Bean
+    public DataSource getDataSource() {
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.driverClassName(&quot;org.h2.Driver&quot;);
+        dataSourceBuilder.url(&quot;jdbc:h2:mem:test&quot;);
+        dataSourceBuilder.username(&quot;SA&quot;);
+        dataSourceBuilder.password(&quot;&quot;);
+        return dataSourceBuilder.build();
+    }
+}</code></pre>
+</section>
+<p>In this case, <strong>we used the convenience <em>DataSourceBuilder class</em></strong> - a non-fluent version of Joshua Bloch's builder pattern - <strong>to create programmatically our custom <em>DataSource</em> object.</strong></p>
+<p>This approach is really nice because the builder makes it easy to configure a <em>DataSource</em> using some common properties. Additionally, it uses the underlying connection pool as well.</p>
+<p><a href="#TOC">TOC</a></p>
+</section>
+<section class="level-2">
+<p><a name="DataServices"></p>
+<h3 id="data-services">Data Services</h3>
+</a>
+</section>
+<section class="level-3">
+<p>As always, we can go to https://start.spring.io to create our maven project. For the example project that we are going to create, we must include the following dependencies: <strong>Spring Data Rest, H2, JPA</strong>, and <strong>Lombok</strong></p>
+<p>Once we have imported the project into our preferred IDE, we will have to modify the application.properties file to define certain parameters:</p>
+<section class="level-4">
+<pre><code>#H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+#JPA
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+# Datasource
+spring.datasource.url=jdbc:h2:file:~/test
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+# Data Rest
+spring.data.rest.base-path: /api</code></pre>
+</section>
+<p>From this file, the only entry related to the Data Rest library is the last one. Here, we specify the address where REST calls should be implemented to access the different tables that our application have. In our case, it will be accessed through the URL: http://localhost: 8080/api</p>
+<p>The other lines configure the H2 database that we will use, as well as certain JPA properties. Of course, we will let JPA create the structure of the database through the defined entities, thanks to the sentence: <em>spring.jpa.hibernate.ddl-auto = create-drop</em></p>
+<p>We will define two tables (entities), which are: <strong>City</strong> and <strong>Customer</strong>. We also define the corresponding <strong>CustomerRepository</strong> and <strong>CityRepository</strong> repositories.</p>
+<p>The <strong>CityEntity.java</strong> class is the following:</p>
+<section class="level-4">
+<pre><code>@Entity
+@Data
+@RestResource(rel=&quot;customers&quot;, path=&quot;customer&quot;)
+public class CustomerEntity {
+  @Id
+  long id;
+  @Column
+  String name;
+  @Column
+  String address;
+  @Column
+  String telephone;
+      @Column @JsonIgnore
+  String secret;
+  @OneToOne
+  CityEntity city;    
+}</code></pre>
+</section>
+<p>The particularities of this class are the following:</p>
+<ol style="list-style-type: decimal">
+<li><p>The <strong><span class="citation">@RestResource</span></strong> line where with the <strong>rel</strong> parameter we specify how the object should be called in the JSON output. The <strong>path</strong> parameter indicates where the request should be made.</p></li>
+<li><p>The annotation <strong><span class="citation">@JsonIgnore</span></strong> is applied to the <em>secret column</em>. With this label, that field will be ignored in such a way that neither will be shown in the outputs nor will it be updated, even if included in the requests.</p></li>
+</ol>
+<p>If we did not put the tag <strong><span class="citation">@RestResource</span></strong>, Spring would present the resource to access the entity at <strong>http://localhost:8080/api/customerEntities</strong> because, by default, Spring use the name of the class, putting it in plural form for which it adds 'es'.</p>
+<p>The repository of this entity is in CustomerRepository and contains only these lines:</p>
+<section class="level-4">
+<pre><code>public interface CustomerRepository  extends CrudRepository&lt;CustomerEntity, Long&gt;  {
+    public List&lt;CustomerEntity&gt; findByNameIgnoreCaseContaining(@Param(&quot;name&quot;) String name);
+}</code></pre>
+</section>
+<p>The function <strong>findByNameIgnoreCaseContaining</strong> that I have defined will allow searching the clients, ignoring case, whose name contains the string sent. Later, I will explain how to make a query through this call with <strong>Spring Data Rest</strong>.</p>
+<p>You have more documentation on how to create custom queries in Spring in this entry http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/ (in Spanish.. What? Okay..)</p>
+<p>The <strong>CityEntity.java</strong> class contains the following lines:</p>
+<section class="level-4">
+<pre><code>@Entity
+@Data
+@RestResource(exported=false)
+public class CityEntity {
+  @Id 
+  int id;
+  @Column
+  String name;
+  @Column
+  String province;
+}</code></pre>
+</section>
+<p>In this case, the <strong><span class="citation">@RestResource</span></strong> tag has the <em>exported</em> property set to <em>false</em> so that this entity is not treated by <strong>Data Rest</strong> and will not be accessible through any API.</p>
+<p><strong><a href="https://dzone.com/articles/easy-access-to-data-with-spring-rest-data">For Accessing the Data Reset Api Go Here</a></strong></p>
+<h2 id="application.properties">Application.Properties</h2>
+<section class="level-2">
+<p><a name="ChangeDB"></p>
+<h3 id="change-database-information">Change Database Information</h3>
+<p></a> <a name="AppPropName"></p>
+<ul>
+<li><strong>Change Name of File</strong> </a></li>
+</ul>
+<section class="level-3">
+<p>Spring boot provides command line configuration called spring.config.name using that we can change the name of application.properties.</p>
+<p>Here properties file name will be my-config.properties which should be available proper location, guild line for properties file location is defined here,</p>
+<section class="level-4">
+<pre><code>-spring.config.name=my-config.properties is wrong configuration no need to pass extension of file.</code></pre>
+<pre><code>
+&gt; java -jar spring-boot-example-1.0-SNAPSHOT.jar --spring.config.name=my-config</code></pre>
+</section>
+</section>
+<p><a name="AppURL"></p>
+<ul>
+<li><strong>Change URL</strong> </a></li>
+</ul>
+<section class="level-3">
+<p>You can secure specific URLs of your application and make them accessible by users of a specific Role only. For example, in the application.properties file above, we have configured the Role of a default user to be a manager. Let's now configure access for a specific URL in our application, so that only user with a role &quot;manager&quot; can access it.</p>
+<p>In your Spring Boot project create a new Java class and:</p>
+<ul>
+<li>Annotate it with <span class="citation">@EnableWebSecurity</span> annotation,</li>
+<li>Make this Java class extend WebSecurityConfigurerAdapter,</li>
+<li>Override the configure(HttpSecurity http) method like in the example below;</li>
+</ul>
+<section class="level-4">
+<pre><code>import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+@EnableWebSecurity
+
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception { 
+        http
+        .cors().and()
+        .csrf().disable().authorizeRequests()
+        .antMatchers(&quot;/users&quot;).hasRole(&quot;manager&quot;)
+        .anyRequest().authenticated()
+        .and()
+        .formLogin();
+    }
+}</code></pre>
+</section>
+</section>
+<p><a name="AppPW"></p>
+<ul>
+<li><strong>Change Password</strong> </a></li>
+</ul>
+<section class="level-3">
+<p>To configure the default username, password and role, open application.properties file of your Spring Boot project and add the following three properties with the values you prefer.</p>
+<section class="level-4">
+<pre><code>spring.security.user.name=sergey
+spring.security.user.password=sergey
+spring.security.user.roles=manager</code></pre>
+</section>
+</section>
+<p><a href="#TOC">TOC</a></p>
+</section>
